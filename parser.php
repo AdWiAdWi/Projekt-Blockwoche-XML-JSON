@@ -6,7 +6,6 @@ function parse()
     $getRoot = $doc->createElement("Get");
     $doc->appendChild($getRoot);
     setValues($getRoot, $doc, $_GET);
-    
     $postRoot = $doc->createElement("Post");
     setValues($postRoot, $doc, $_POST);
     $doc->appendChild($postRoot);
