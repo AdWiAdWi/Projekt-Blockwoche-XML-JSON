@@ -1,4 +1,5 @@
-<?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="events">
         <xs:complexType>
             <xs:sequence>
@@ -14,49 +15,75 @@
     <xs:element name="event">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="numberOfDays" type="xs:positiveInteger"/>
-                <xs:element name="dateFromTo" type="xs:string"/>
-                <xs:element ref="disabilityList"/>
-                <xs:element name="numberOfMemberPossible" type="xs:positiveInteger"/>
-                <xs:element name="numberOfRegisteredMembers" type="xs:positiveInteger"/>
-                <xs:element name="willTakePlace" type="xs:boolean"/>
+                <xs:element name="dauerInTagen" type="xs:positiveInteger"/>
+                <xs:element name="vonBisDatum" type="xs:string"/>
+                <xs:element ref="handicapListe"/>
+                <xs:element name="anzahlMöglicheTeilnehmer" type="xs:positiveInteger"/>
+                <xs:element name="anzahlTeilnehmer" type="xs:positiveInteger"/>
+                <!--Ist findetStatt notwendig? - aw -->
+                <xs:element name="findetStatt" type="xs:boolean"/>
+                <xs:element ref="teilnehmer"/>
             </xs:sequence>
             <xs:attribute name="name" type="eventType" use="required"/>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="disabilityList">
+
+    <xs:element name="teilnehmer">
+        <xs:complexType>
+            <xs:all minOccurs="0">
+                <xs:element name="vorname" type="xs:string"/>
+                <xs:element name="nachname" type="xs:string"/>
+                <xs:element name="geschlecht" type="gender"/>
+                <xs:element ref="behinderung"/>
+                <xs:element name="einzelzimmer" type="xs:boolean"/>
+                <xs:element name="spezielles" type="xs:string"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+    
+        
+
+    <xs:element name="handicapListe">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="disability" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="behinderung" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     
-    <xs:element name="disability">
+    <xs:element name="behinderung">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="Alle"/>
-                <xs:enumeration value="Psychologisch"/>
-                <xs:enumeration value="Beine"/>
-                <xs:enumeration value="Arme"/>
-                <xs:enumeration value="Füsse"/>
-                <xs:enumeration value="Hände"/>
+                <xs:enumeration value="alle"/>
+                <xs:enumeration value="psychologisch"/>
+                <xs:enumeration value="beine"/>
+                <xs:enumeration value="arme"/>
+                <xs:enumeration value="füsse"/>
+                <xs:enumeration value="querschnittgelähmt"/>
+                <xs:enumeration value="sonstiges"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
 
     <xs:simpleType name="eventType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Fussball"/>
-            <xs:enumeration value="Basketball"/>
-            <xs:enumeration value="Ballsport"/>
-            <xs:enumeration value="Schwimmen"/>
-            <xs:enumeration value="Handball"/>
-            <xs:enumeration value="Klettern"/>
-            <xs:enumeration value="Spiel und Spass"/>
-            <xs:enumeration value="Ski und Snowboard"/>
-            <xs:enumeration value="Wandern"/>
+            <xs:enumeration value="fussball"/>
+            <xs:enumeration value="basketball"/>
+            <xs:enumeration value="schwimmen"/>
+            <xs:enumeration value="klettern"/>
+            <xs:enumeration value="skiUndSnowboard"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="weiblich"/>
+            <xs:enumeration value="männlich"/>
+            <xs:enumeration value="anderes"/>
+        </xs:restriction>
+    </xs:simpleType>
+        
+
 </xs:schema>
