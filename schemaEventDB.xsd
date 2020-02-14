@@ -56,13 +56,13 @@
     <xs:element name="behinderung">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:enumeration value="alle"/>
-                <xs:enumeration value="psychologisch"/>
-                <xs:enumeration value="beine"/>
-                <xs:enumeration value="arme"/>
-                <xs:enumeration value="füsse"/>
-                <xs:enumeration value="querschnittgelähmt"/>
-                <xs:enumeration value="sonstiges"/>
+                <xs:enumeration value="geistige Behinderung"/>
+                <xs:enumeration value="hörbehinderung"/>
+                <xs:enumeration value="körperbehinderung"/>
+                <xs:enumeration value="psychische Behinderung"/>
+                <xs:enumeration value="sehbehinderung"/>
+                <xs:enumeration value="nichtbehindert"/>
+                <xs:enumeration value="diverse Behinderungen"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
