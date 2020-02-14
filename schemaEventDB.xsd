@@ -1,0 +1,62 @@
+<?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="events">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="event" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="eventID">
+            <xs:selector xpath="event"/>
+            <xs:field xpath="@number"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:element name="event">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numberOfDays" type="xs:positiveInteger"/>
+                <xs:element name="dateFromTo" type="xs:string"/>
+                <xs:element ref="disabilityList"/>
+                <xs:element name="numberOfMemberPossible" type="xs:positiveInteger"/>
+                <xs:element name="numberOfRegisteredMembers" type="xs:positiveInteger"/>
+                <xs:element name="willTakePlace" type="xs:boolean"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="eventType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="disabilityList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="disability" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="disability">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Alle"/>
+                <xs:enumeration value="Psychologisch"/>
+                <xs:enumeration value="Beine"/>
+                <xs:enumeration value="Arme"/>
+                <xs:enumeration value="Füsse"/>
+                <xs:enumeration value="Hände"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="eventType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Fussball"/>
+            <xs:enumeration value="Basketball"/>
+            <xs:enumeration value="Ballsport"/>
+            <xs:enumeration value="Schwimmen"/>
+            <xs:enumeration value="Handball"/>
+            <xs:enumeration value="Klettern"/>
+            <xs:enumeration value="Spiel und Spass"/>
+            <xs:enumeration value="Ski und Snowboard"/>
+            <xs:enumeration value="Wandern"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
