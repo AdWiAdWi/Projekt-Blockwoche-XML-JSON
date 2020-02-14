@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
+	<event name="fussball">
+		<dauerInTagen>5</dauerInTagen>
+		<startdatum>2020-05-20</startdatum>
+		<handicap>
+			<behinderung>psychische Behinderung</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>2</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+		 <vorname>Hans</vorname>
+      <nachname>Michel</nachname>
+      <geschlecht>männlich</geschlecht>
+      <behinderung>psychische Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      <teilnehmer>
+      <vorname>Hanna</vorname>
+      <nachname>Capital</nachname>
+      <geschlecht>weiblich</geschlecht>
+      <behinderung>psychische Behinderung</behinderung>
+      <einzelzimmer>false</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      </teilnehmerListe>
+	</event>
+	<event name="klettern">
+		<dauerInTagen>5</dauerInTagen>
+		<startdatum>2020-07-21</startdatum>
+		<handicap>
+			<behinderung>diverse Behinderungen</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+		 <vorname>Nico</vorname>
+      <nachname>Iseli</nachname>
+      <geschlecht>anderes</geschlecht>
+      <behinderung>diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles>Vegan</spezielles>
+      </teilnehmer>
+      <teilnehmer>
+      <vorname>Fredi</vorname>
+      <nachname>Fischer</nachname>
+      <geschlecht>männlich</geschlecht>
+      <behinderung>psychische Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Jonas</vorname>
+      <nachname>Wyss</nachname>
+      <geschlecht>männlich</geschlecht>
+      <behinderung>sehbehinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Adrian</vorname>
+      <nachname>Willi</nachname>
+      <geschlecht>weiblich</geschlecht>
+      <behinderung>diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      </teilnehmerListe>
+	</event>
+</events>
+
+

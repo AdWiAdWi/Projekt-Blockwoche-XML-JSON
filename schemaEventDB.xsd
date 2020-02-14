@@ -16,18 +16,25 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="dauerInTagen" type="xs:positiveInteger"/>
-                <xs:element name="vonBisDatum" type="xs:string"/>
-                <xs:element ref="handicapListe"/>
+                <xs:element name="startdatum" type="xs:date"/>
+                <xs:element ref="handicap"/>
                 <xs:element name="anzahlMöglicheTeilnehmer" type="xs:positiveInteger"/>
                 <xs:element name="anzahlTeilnehmer" type="xs:positiveInteger"/>
                 <!--Ist findetStatt notwendig? - aw -->
                 <xs:element name="findetStatt" type="xs:boolean"/>
-                <xs:element ref="teilnehmer"/>
+                <xs:element ref="teilnehmerListe"/>
             </xs:sequence>
             <xs:attribute name="name" type="eventType" use="required"/>
         </xs:complexType>
     </xs:element>
 
+	    <xs:element name="teilnehmerListe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="teilnehmer" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <xs:element name="teilnehmer">
         <xs:complexType>
@@ -45,7 +52,7 @@
     
         
 
-    <xs:element name="handicapListe">
+    <xs:element name="handicap">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="behinderung" minOccurs="1" maxOccurs="unbounded"/>
