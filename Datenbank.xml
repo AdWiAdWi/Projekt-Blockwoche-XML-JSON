@@ -14,6 +14,9 @@
 		 <vorname>Hans</vorname>
       <nachname>Michel</nachname>
       <geschlecht>männlich</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
@@ -22,6 +25,9 @@
       <vorname>Hanna</vorname>
       <nachname>Capital</nachname>
       <geschlecht>weiblich</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
       <einzelzimmer>false</einzelzimmer>
       <spezielles></spezielles>
@@ -42,6 +48,9 @@
 		 <vorname>Nico</vorname>
       <nachname>Iseli</nachname>
       <geschlecht>anderes</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>diverse Behinderungen</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles>Vegan</spezielles>
@@ -50,6 +59,9 @@
       <vorname>Fredi</vorname>
       <nachname>Fischer</nachname>
       <geschlecht>männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
@@ -58,6 +70,9 @@
       <vorname>Jonas</vorname>
       <nachname>Wyss</nachname>
       <geschlecht>männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
@@ -66,6 +81,9 @@
       <vorname>Adrian</vorname>
       <nachname>Willi</nachname>
       <geschlecht>weiblich</geschlecht>
+            <adresse>Strasse 1</adresse>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
       <behinderung>diverse Behinderungen</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>

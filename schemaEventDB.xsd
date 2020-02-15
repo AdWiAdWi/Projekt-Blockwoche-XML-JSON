@@ -1,96 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="events">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="event" minOccurs="1" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-        <xs:unique name="eventID">
-            <xs:selector xpath="event"/>
-            <xs:field xpath="@number"/>
-        </xs:unique>
-    </xs:element>
-
-    <xs:element name="event">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="dauerInTagen" type="xs:positiveInteger"/>
-                <xs:element name="startdatum" type="xs:date"/>
-                <xs:element ref="handicap"/>
-                <xs:element name="anzahlMöglicheTeilnehmer" type="xs:positiveInteger"/>
-                <xs:element name="anzahlTeilnehmer" type="xs:positiveInteger"/>
-                <!--Ist findetStatt notwendig? - aw -->
-                <xs:element name="findetStatt" type="xs:boolean"/>
-                <xs:element ref="teilnehmerListe"/>
-            </xs:sequence>
-            <xs:attribute name="name" type="eventType" use="required"/>
-        </xs:complexType>
-    </xs:element>
-
-	    <xs:element name="teilnehmerListe">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="teilnehmer" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="teilnehmer">
-        <xs:complexType>
-            <xs:all minOccurs="0">
-                <xs:element name="vorname" type="xs:string"/>
-                <xs:element name="nachname" type="xs:string"/>
-                <xs:element name="geschlecht" type="gender"/>
-                <xs:element ref="behinderung"/>
-                <xs:element name="einzelzimmer" type="xs:boolean"/>
-                <xs:element name="spezielles" type="xs:string"/>
-            </xs:all>
-        </xs:complexType>
-    </xs:element>
-    
-    
-        
-
-    <xs:element name="handicap">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="behinderung" minOccurs="1" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    
-    <xs:element name="behinderung">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:enumeration value="geistige Behinderung"/>
-                <xs:enumeration value="hörbehinderung"/>
-                <xs:enumeration value="körperbehinderung"/>
-                <xs:enumeration value="psychische Behinderung"/>
-                <xs:enumeration value="sehbehinderung"/>
-                <xs:enumeration value="nichtbehindert"/>
-                <xs:enumeration value="diverse Behinderungen"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
-
-    <xs:simpleType name="eventType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="fussball"/>
-            <xs:enumeration value="basketball"/>
-            <xs:enumeration value="schwimmen"/>
-            <xs:enumeration value="klettern"/>
-            <xs:enumeration value="skiUndSnowboard"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="gender">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="weiblich"/>
-            <xs:enumeration value="männlich"/>
-            <xs:enumeration value="anderes"/>
-        </xs:restriction>
-    </xs:simpleType>
-        
-
+	<xs:element name="events">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="event" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="eventID">
+			<xs:selector xpath="event"/>
+			<xs:field xpath="@number"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="event">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dauerInTagen" type="xs:positiveInteger"/>
+				<xs:element name="startdatum" type="xs:date"/>
+				<xs:element ref="handicap"/>
+				<xs:element name="anzahlMöglicheTeilnehmer" type="xs:positiveInteger"/>
+				<xs:element name="anzahlTeilnehmer" type="xs:positiveInteger"/>
+				<!--Ist findetStatt notwendig? - aw -->
+				<xs:element name="findetStatt" type="xs:boolean"/>
+				<xs:element ref="teilnehmerListe"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="eventType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="teilnehmerListe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="teilnehmer" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="teilnehmer">
+		<xs:complexType>
+			<xs:all minOccurs="0">
+				<xs:element name="vorname" type="xs:string"/>
+				<xs:element name="nachname" type="xs:string"/>
+				<xs:element name="geschlecht" type="gender"/>
+				<xs:element name="adresse" type="xs:string"/>
+				<xs:element name="telefonnummer" type="xs:positiveInteger"/>
+				<xs:element name="geburtstag" type="xs:date"/>
+				<xs:element ref="behinderung"/>
+				<xs:element name="einzelzimmer" type="xs:boolean"/>
+				<xs:element name="spezielles" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="handicap">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="behinderung" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="behinderung">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="geistige Behinderung"/>
+				<xs:enumeration value="hörbehinderung"/>
+				<xs:enumeration value="körperbehinderung"/>
+				<xs:enumeration value="psychische Behinderung"/>
+				<xs:enumeration value="sehbehinderung"/>
+				<xs:enumeration value="nichtbehindert"/>
+				<xs:enumeration value="diverse Behinderungen"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:simpleType name="eventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="fussball"/>
+			<xs:enumeration value="basketball"/>
+			<xs:enumeration value="schwimmen"/>
+			<xs:enumeration value="klettern"/>
+			<xs:enumeration value="skiUndSnowboard"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="gender">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="weiblich"/>
+			<xs:enumeration value="männlich"/>
+			<xs:enumeration value="anderes"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
