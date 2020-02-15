@@ -22,19 +22,22 @@
             <body>
 
 			<!--Homepage-->
-    		<section class="text-center h-100">
-        		<h1>"BEHINDERUNGEN MÜSSEN KEINE VERHINDERUNGEN SEIN!"</h1>
-				<h2>SPORTZENTRUM FÜR BEHINDERUNGEN</h2>	
+    		<section class="home text-center">
+        		<h1>SPORTZENTRUM FÜR BEHINDERUNGEN</h1>	
+				<br/>
+				<h3>Anstehende Events</h3>
+
     		</section>
 
 			<!--About-->
-			<section class="text-center h-100">
+			<section class="text-center">
 				<h1>ABOUT US</h1>
 			</section>
 
 			<!--Angebot-->
-			<section class="text-center h-100">
+			<section class="text-center">
 					<h1>SERVICES</h1>
+					<h2>Unsere Themenwochen</h2>
 			</section>
 
 			<!-- Formular für Registrierung Evt. bei entsprechendem event oder auf neuer seite? -->

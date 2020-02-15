@@ -1,0 +1,13 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+section{
+    padding-top: 30px;
+    min-height: 100vh;
+}
+
+.home{
+ background-color: #030e18;
+ color: #ddd8d8;
+}
