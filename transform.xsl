@@ -73,7 +73,7 @@
 					<div class="form-group">
 						<span>Behinderungen</span>
 						<select class="form-control" name="behinderungen[]" size="1" multiple="multiple">
-                        	<option id="männlich" name="behinderung" value="hörbehinderung">Höhrbehinderung</option>
+                        	<option id="männlich" name="behinderung" value="höhrbehinderung">Höhrbehinderung</option>
                         	<option id="weiblich" name="behinderung" value="geistige Behinderung">Geistige Behinderung</option>
                         	<option id="männlich" name="behinderung" value="nichtbehindert">Keine Behinderung</option>
 							<option id="anderes" name="behinderung" value="körperbehinderung">Körperbehinderung</option>

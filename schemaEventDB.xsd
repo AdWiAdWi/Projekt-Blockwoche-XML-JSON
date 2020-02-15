@@ -60,7 +60,7 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<xs:enumeration value="geistige Behinderung"/>
-				<xs:enumeration value="hörbehinderung"/>
+				<xs:enumeration value="höhrbehinderung"/>
 				<xs:enumeration value="körperbehinderung"/>
 				<xs:enumeration value="psychische Behinderung"/>
 				<xs:enumeration value="sehbehinderung"/>
