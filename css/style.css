@@ -1,3 +1,4 @@
+/*General*/
 body{
     font-family: 'Oswald', sans-serif;
 }
@@ -5,9 +6,59 @@ body{
 section{
     padding-top: 30px;
     min-height: 100vh;
+    padding-bottom: 30px;
 }
 
+.about, .service{
+    color: #030e18;
+}
+
+
+
+/*Home-page*/
 .home{
  background-color: #030e18;
  color: #ddd8d8;
 }
+
+
+/*About*/
+
+
+/*Angebot*/
+.service-title{
+    font-weight: bold;
+}
+
+
+.service-description{
+    text-align: justify;
+}
+
+
+.event-border{
+    border: 3px solid rgba(175, 143, 78, 0.966);
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.btn{
+    background-color: #030e18;
+    border: 2px solid rgba(175, 143, 78, 0.966);
+    color:  rgba(175, 143, 78, 0.966);
+}
+
+.btn:hover{
+    background-color: rgba(175, 143, 78, 0.966);
+    border: 2px solid rgba(175, 143, 78, 0.966);
+    color: #030e18;
+}
+
+
+
+
+
+
+
+
