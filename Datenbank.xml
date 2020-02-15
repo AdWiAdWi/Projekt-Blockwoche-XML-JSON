@@ -15,6 +15,7 @@
       <nachname>Michel</nachname>
       <geschlecht>männlich</geschlecht>
       <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
@@ -26,6 +27,7 @@
       <nachname>Capital</nachname>
       <geschlecht>weiblich</geschlecht>
       <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
@@ -49,6 +51,7 @@
       <nachname>Iseli</nachname>
       <geschlecht>anderes</geschlecht>
       <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>diverse Behinderungen</behinderung>
@@ -60,6 +63,7 @@
       <nachname>Fischer</nachname>
       <geschlecht>männlich</geschlecht>
             <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>psychische Behinderung</behinderung>
@@ -71,6 +75,7 @@
       <nachname>Wyss</nachname>
       <geschlecht>männlich</geschlecht>
             <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>sehbehinderung</behinderung>
@@ -82,6 +87,7 @@
       <nachname>Willi</nachname>
       <geschlecht>weiblich</geschlecht>
             <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>diverse Behinderungen</behinderung>

@@ -40,6 +40,7 @@
 				<xs:element name="nachname" type="xs:string"/>
 				<xs:element name="geschlecht" type="gender"/>
 				<xs:element name="adresse" type="xs:string"/>
+				<xs:element name="stadt" type="xs:string"/>
 				<xs:element name="telefonnummer" type="xs:positiveInteger"/>
 				<xs:element name="geburtstag" type="xs:date"/>
 				<xs:element ref="behinderung"/>
