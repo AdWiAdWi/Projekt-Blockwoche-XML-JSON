@@ -23,10 +23,14 @@
 
 			<!--Homepage-->
     		<section class="home text-center">
-        		<h1>SPORTZENTRUM FÜR BEHINDERUNGEN</h1>	
-				<br/>
-				<h3>Anstehende Events</h3>
-
+				<div class="container">
+					<h1 class="display-4">SPORTZENTRUM FÜR BEHINDERUNGEN</h1>
+					<br />
+					<h2>Anstehende Themenwochen</h2>
+					<div class="row">
+						<xsl:apply-templates select="//event"/>
+					</div>
+				</div>
     		</section>
 
 			<!--About-->
@@ -97,4 +101,18 @@
 			</body> 
 		</html>
 	</xsl:template>
+
+	<xsl:template match="event">
+		<div class="col-md-4 text-center">
+                    <p class="service-title">
+						<xsl:value-of select="@name" />	
+					</p>
+						
+                    <p>
+						<xsl:value-of select="handicap/behinderung/text()" />
+					</p>
+                </div>
+
+	</xsl:template>
+
 </xsl:stylesheet>
