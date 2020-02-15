@@ -10,6 +10,7 @@ function main()
     $result = $paramsXML->schemaValidate($xsd);
     echo "validation with schema:";
 
+    
     // create xhtml doc
     // this process should be used for every html we show to the user!
     $xsl = new DOMDocument();
@@ -20,3 +21,4 @@ function main()
     echo $dom->saveXML();
 }
 main();
+?>
