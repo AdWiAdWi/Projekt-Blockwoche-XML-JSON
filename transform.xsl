@@ -5,44 +5,93 @@
 
 	<xsl:template match="/">
 		<html>
-            <h1>Hello World!</h1>
-            
-            <!-- Formular für Registrierung Evt. bei entsprechendem event oder auf neuer seite? -->
+			<head>
+			<!-- Bootstrap -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+			
+			<!-- Google Font -->
+			<link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet" />
+
+			<!-- CSS -->
+    		<link href="css/style.css" rel="stylesheet" />
+
+			<!-- Title -->
+			<title>Sportzentrum für Behinderungen</title>
+			</head>
+
+            <body>
+
+			<!--Homepage-->
+    		<section class="text-center h-100">
+        		<h1>"BEHINDERUNGEN MÜSSEN KEINE VERHINDERUNGEN SEIN!"</h1>
+				<h2>SPORTZENTRUM FÜR BEHINDERUNGEN</h2>	
+    		</section>
+
+			<!--About-->
+			<section class="text-center h-100">
+				<h1>ABOUT US</h1>
+			</section>
+
+			<!--Angebot-->
+			<section class="text-center h-100">
+					<h1>SERVICES</h1>
+			</section>
+
+			<!-- Formular für Registrierung Evt. bei entsprechendem event oder auf neuer seite? -->
             <form action="reservation.php" method="post">
-				<p>Vorname: <input type="text" name="vorname"/></p>
-				<p>Nachname: <input type="text" name="nachname"/></p>
-				<p>Geschlecht:</p>
-				<input type="radio" id="männlich" name="geschlecht" value="männlich" />
-				<label for="männlich">Männlich</label><br/>
-				  <input type="radio" id="weiblich" name="geschlecht" value="weiblich" />
-				  <label for="weiblich">Weiblich</label><br/>
-				  <input type="radio" id="anderes" name="geschlecht" value="other" />
-				  <label for="other">Anderes</label>
-				 <p>Adresse: <input type="text" name="adresse"/></p>
-				 <p>Stadt: <input type="text" name="stadt"/></p>
-				 <p>Telefonnummer: <input type="text" name="telefonnummer"/></p>
-				<label>
-				Geburtsdatum: 
-				<input type="date" id="geburtstag"/>
-				</label>
-				<label>Behinderung (Mehrfachauswahl möglich):
-					<select name="behinderungen[]" size="1" multiple="multiple">
-					  <option>geistige Behinderung</option>
-					  <option>höhrbehinderung</option>
-					  <option>sehrbehinderung</option>
-					  <option>psychische Behinderung</option>
-					  <option>nichtbehindert</option>
-					  <option>körperbehinderung</option>
-					  <option>diverse Behinderungen</option>
-					</select>
-				</label>
-				<p>Einzelzimmer gewünscht:</p>
-				<input type="radio" id="ja" name="einzelzimmer" value="Ja" />
-				<label for="ja">Ja</label><br/>
-				<input type="radio" id="nein" name="einzelzimmer" value="Nein" />
-				<label for="nein">Nein</label><br/>
-				<input type="submit" value="Senden" />
+				<div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+					<div class="form-group">
+						<input class="form-control" type="text" name="vorname" placeholder="Vorname*" />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="nachname" placeholder="Nachname*" />
+					</div>
+					<div class="form-group">
+						<span>Geschlecht</span>
+						<select class="form-control">
+                        	<option id="männlich" name="geschlecht" value="männlich">Männlich</option>
+                        	<option id="weiblich" name="geschlecht" value="weiblich">Weiblich</option>
+                        	<option id="anderes" name="geschlecht" value="other">anderes</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="adresse" placeholder="Adresse*" />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="stadt" placeholder="Stadt*" />
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="telefonnummer" placeholder="Telefonnummer*" />
+					</div>
+					<div class="form-group">
+						<span>Geburtsdatum</span>
+						<input class="form-control" type="date" name="geburtstag" />
+					</div>
+					<div class="form-group">
+						<span>Behinderungen</span>
+						<select class="form-control" name="behinderungen[]" size="1" multiple="multiple">
+                        	<option id="männlich" name="behinderung" value="hörbehinderung">Höhrbehinderung</option>
+                        	<option id="weiblich" name="behinderung" value="geistige Behinderung">Geistige Behinderung</option>
+                        	<option id="männlich" name="behinderung" value="nichtbehindert">Keine Behinderung</option>
+							<option id="anderes" name="behinderung" value="körperbehinderung">Körperbehinderung</option>
+                        	<option id="weiblich" name="behinderung" value="psychische Behinderung">Psychische Behinderung</option>
+                        	<option id="anderes" name="behinderung" value="sehbehinderung">Sehbehinderung</option>
+							<option id="anderes" name="behinderung" value="diverse Behinderungen">Diverse Behinderungen</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<span>Einzelzimmer</span>
+						<select class="form-control">
+                        	<option  id="ja" name="einzelzimmer" value="Ja">Ja</option>
+                        	<option  id="nein" name="einzelzimmer" value="Nein">Nein</option>
+						</select>
+					</div>
+					<div class="col-12 text-center">
+                    <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Senden</button>
+                	</div>
+				</div>	
             </form>
+			</body> 
 		</html>
 	</xsl:template>
 </xsl:stylesheet>
