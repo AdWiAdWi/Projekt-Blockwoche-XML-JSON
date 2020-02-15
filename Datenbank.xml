@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
-	<event name="fussball">
+<Events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
+	<Event name="Fussball">
 		<dauerInTagen>5</dauerInTagen>
 		<startdatum>2020-05-20</startdatum>
 		<handicap>
-			<behinderung>psychische Behinderung</behinderung>
+			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
 		<anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
 		<anzahlTeilnehmer>2</anzahlTeilnehmer>
@@ -13,34 +13,34 @@
 		<teilnehmer>
 		 <vorname>Hans</vorname>
       <nachname>Michel</nachname>
-      <geschlecht>männlich</geschlecht>
+      <geschlecht>Männlich</geschlecht>
       <adresse>Strasse 1</adresse>
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>psychische Behinderung</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
       <teilnehmer>
       <vorname>Hanna</vorname>
       <nachname>Capital</nachname>
-      <geschlecht>weiblich</geschlecht>
+      <geschlecht>Weiblich</geschlecht>
       <adresse>Strasse 1</adresse>
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>psychische Behinderung</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>false</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
-	<event name="klettern">
+	<event name="Klettern">
 		<dauerInTagen>5</dauerInTagen>
 		<startdatum>2020-07-21</startdatum>
 		<handicap>
-			<behinderung>diverse Behinderungen</behinderung>
+			<behinderung>Diverse Behinderungen</behinderung>
 		</handicap>
 		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
 		<anzahlTeilnehmer>4</anzahlTeilnehmer>
@@ -49,36 +49,36 @@
 		<teilnehmer>
 		 <vorname>Nico</vorname>
       <nachname>Iseli</nachname>
-      <geschlecht>anderes</geschlecht>
+      <geschlecht>Anderes</geschlecht>
       <adresse>Strasse 1</adresse>
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>diverse Behinderungen</behinderung>
+      <behinderung>Diverse Behinderungen</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles>Vegan</spezielles>
       </teilnehmer>
       <teilnehmer>
       <vorname>Fredi</vorname>
       <nachname>Fischer</nachname>
-      <geschlecht>männlich</geschlecht>
+      <geschlecht>Männlich</geschlecht>
             <adresse>Strasse 1</adresse>
             <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>psychische Behinderung</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
        <teilnehmer>
       <vorname>Jonas</vorname>
       <nachname>Wyss</nachname>
-      <geschlecht>männlich</geschlecht>
+      <geschlecht>Männlich</geschlecht>
             <adresse>Strasse 1</adresse>
             <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>sehbehinderung</behinderung>
+      <behinderung>Sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
@@ -90,7 +90,7 @@
             <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>diverse Behinderungen</behinderung>
+      <behinderung>Diverse Behinderungen</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
