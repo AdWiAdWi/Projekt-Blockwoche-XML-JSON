@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
-	<Event name="Fussball">
+<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
+	<event name="Fussball">
 		<dauerInTagen>5</dauerInTagen>
 		<startdatum>2020-05-20</startdatum>
 		<handicap>
