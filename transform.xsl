@@ -27,22 +27,40 @@
 					<h1 class="display-4">SPORTZENTRUM FÜR BEHINDERUNGEN</h1>
 					<br />
 					<h2>Anstehende Themenwochen</h2>
+					<br />
+					<br />
 					<div class="row">
-						<xsl:apply-templates select="//event"/>
+						<xsl:apply-templates select="//event[1]"/>
 					</div>
 				</div>
     		</section>
 
 			<!--About-->
-			<section class="text-center">
-				<h1>ABOUT US</h1>
-			</section>
+			<section class="about text-center">
+				<div class="container">
+					<h1 class="display-4">ABOUT US</h1>
+					<br />
+					<p style="font-weight:bold">Liebe Gäste,</p>
+					<p>
+					Es freut uns, Sie auf unserer Webseite begrüssen zu dürfen. bla bla bla...
+					</p>
+					
+				</div>
+    		</section>
 
 			<!--Angebot-->
-			<section class="text-center">
-					<h1>SERVICES</h1>
+			<section class="service text-center">
+				<div class="container">
+					<h1 class="display-4">SERVICES</h1>
+					<br />
 					<h2>Unsere Themenwochen</h2>
-			</section>
+					<br />
+					<br />
+					<div class="row">
+						<xsl:apply-templates select="//event"/>
+					</div>
+				</div>
+    		</section>
 
 			<!-- Formular für Registrierung Evt. bei entsprechendem event oder auf neuer seite? -->
             <form action="reservation.php" method="post">
@@ -56,9 +74,9 @@
 					<div class="form-group">
 						<span>Geschlecht</span>
 						<select class="form-control">
-                        	<option id="männlich" name="geschlecht" value="männlich">Männlich</option>
-                        	<option id="weiblich" name="geschlecht" value="weiblich">Weiblich</option>
-                        	<option id="anderes" name="geschlecht" value="other">anderes</option>
+                        	<option name="geschlecht" value="Männlich">Männlich</option>
+                        	<option name="geschlecht" value="Weiblich">Weiblich</option>
+                        	<option name="geschlecht" value="Anderes">anderes</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -77,24 +95,24 @@
 					<div class="form-group">
 						<span>Behinderungen</span>
 						<select class="form-control" name="behinderungen[]" size="1" multiple="multiple">
-                        	<option id="männlich" name="behinderung" value="höhrbehinderung">Höhrbehinderung</option>
-                        	<option id="weiblich" name="behinderung" value="geistige Behinderung">Geistige Behinderung</option>
-                        	<option id="männlich" name="behinderung" value="nichtbehindert">Keine Behinderung</option>
-							<option id="anderes" name="behinderung" value="körperbehinderung">Körperbehinderung</option>
-                        	<option id="weiblich" name="behinderung" value="psychische Behinderung">Psychische Behinderung</option>
-                        	<option id="anderes" name="behinderung" value="sehbehinderung">Sehbehinderung</option>
-							<option id="anderes" name="behinderung" value="diverse Behinderungen">Diverse Behinderungen</option>
+                        	<option name="behinderung" value="Höhrbehinderung">Höhrbehinderung</option>
+                        	<option name="behinderung" value="Geistige Behinderung">Geistige Behinderung</option>
+                        	<option name="behinderung" value="Keine Behinderung">Keine Behinderung</option>
+							<option name="behinderung" value="Körperbehinderung">Körperbehinderung</option>
+                        	<option name="behinderung" value="Psychische Behinderung">Psychische Behinderung</option>
+                        	<option name="behinderung" value="Sehbehinderung">Sehbehinderung</option>
+							<option name="behinderung" value="Diverse Behinderungen">Diverse Behinderungen</option>
 						</select>
 					</div>
 					<div class="form-group">
 						<span>Einzelzimmer</span>
 						<select class="form-control">
-                        	<option  id="ja" name="einzelzimmer" value="Ja">Ja</option>
-                        	<option  id="nein" name="einzelzimmer" value="Nein">Nein</option>
+                        	<option name="einzelzimmer" value="Ja">Ja</option>
+                        	<option name="einzelzimmer" value="Nein">Nein</option>
 						</select>
 					</div>
 					<div class="col-12 text-center">
-                    <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Senden</button>
+                    <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
                 	</div>
 				</div>	
             </form>
@@ -103,16 +121,28 @@
 	</xsl:template>
 
 	<xsl:template match="event">
-		<div class="col-md-4 text-center">
-                    <p class="service-title">
+		<div class="event-field col-md-4 text-center">
+                    <div class="event-border mt-2 mr-0.2 mb-2 ml-0.2">
+					<p class="service-title">
 						<xsl:value-of select="@name" />	
 					</p>
-						
-                    <p>
+					<p class="service-content">
+						<xsl:value-of select="startdatum/text()" />
+					</p>
+                    <p class="service-content">
+						Dauer des Anlasses:  
+						<xsl:value-of select="dauerInTagen/text()" />
+						Tage
+					</p>
+					<p class="service-content">
 						<xsl:value-of select="handicap/behinderung/text()" />
 					</p>
+					<p class="service-description">
+						<xsl:value-of select="beschreibung/text()" />
+					</p>
+					<button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
+					</div>
                 </div>
-
 	</xsl:template>
 
 </xsl:stylesheet>
