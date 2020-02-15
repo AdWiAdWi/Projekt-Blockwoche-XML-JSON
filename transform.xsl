@@ -127,6 +127,7 @@
 						<xsl:value-of select="@name" />	
 					</p>
 					<p class="service-content">
+						Beginn: 
 						<xsl:value-of select="startdatum/text()" />
 					</p>
                     <p class="service-content">
@@ -135,6 +136,7 @@
 						Tage
 					</p>
 					<p class="service-content">
+						Teilnahmeberechtigt: 
 						<xsl:value-of select="handicap/behinderung/text()" />
 					</p>
 					<p class="service-description">
