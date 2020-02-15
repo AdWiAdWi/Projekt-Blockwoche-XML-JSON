@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
-	<event name="Fussball">
+	<event name="Fussballturnier">
 		<dauerInTagen>5</dauerInTagen>
-		<startdatum>2020-05-20</startdatum>
+		<startdatum>2020-03-16</startdatum>
+            <beschreibung>Fünftägiges Indoor-Fussballturnier mit verschiedenen Disziplinen wie Torwandschiessen, Jonglieren, und Team-Matches. Die Gewinner dürfen attraktive Preise erwarten!</beschreibung>
 		<handicap>
 			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
@@ -38,7 +39,200 @@
 	</event>
 	<event name="Klettern">
 		<dauerInTagen>5</dauerInTagen>
-		<startdatum>2020-07-21</startdatum>
+		<startdatum>2020-03-23</startdatum>
+            <beschreibung>Diverse Kletteraktivitäten wie Bouldern, Tyrolienne und Bouldern in der umgebenen Berglandschaft sowie in unserer Kletterhalle!</beschreibung>
+		<handicap>
+			<behinderung>Diverse Behinderungen</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+		 <vorname>Nico</vorname>
+      <nachname>Iseli</nachname>
+      <geschlecht>Anderes</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles>Vegan</spezielles>
+      </teilnehmer>
+      <teilnehmer>
+      <vorname>Fredi</vorname>
+      <nachname>Fischer</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Psychische Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Jonas</vorname>
+      <nachname>Wyss</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Sehbehinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Adrian</vorname>
+      <nachname>Willi</nachname>
+      <geschlecht>weiblich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      </teilnehmerListe>
+	</event>
+
+    
+    
+      <event name="Klettern">
+		<dauerInTagen>5</dauerInTagen>
+		<startdatum>2020-03-30</startdatum>
+            <beschreibung>Diverse Kletteraktivitäten wie Bouldern, Tyrolienne und Bouldern in der umgebenen Berglandschaft sowie in unserer Kletterhalle</beschreibung>
+		<handicap>
+			<behinderung>Diverse Behinderungen</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+		 <vorname>Nico</vorname>
+      <nachname>Iseli</nachname>
+      <geschlecht>Anderes</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles>Vegan</spezielles>
+      </teilnehmer>
+      <teilnehmer>
+      <vorname>Fredi</vorname>
+      <nachname>Fischer</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Psychische Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Jonas</vorname>
+      <nachname>Wyss</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Sehbehinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Adrian</vorname>
+      <nachname>Willi</nachname>
+      <geschlecht>weiblich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      </teilnehmerListe>
+	</event>
+     
+     
+     
+      <event name="Klettern">
+		<dauerInTagen>5</dauerInTagen>
+		<startdatum>2020-04-06</startdatum>
+            <beschreibung>Diverse Kletteraktivitäten wie Bouldern, Tyrolienne und Bouldern in der umgebenen Berglandschaft sowie in unserer Kletterhalle</beschreibung>
+		<handicap>
+			<behinderung>Diverse Behinderungen</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+		 <vorname>Nico</vorname>
+      <nachname>Iseli</nachname>
+      <geschlecht>Anderes</geschlecht>
+      <adresse>Strasse 1</adresse>
+      <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles>Vegan</spezielles>
+      </teilnehmer>
+      <teilnehmer>
+      <vorname>Fredi</vorname>
+      <nachname>Fischer</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Psychische Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Jonas</vorname>
+      <nachname>Wyss</nachname>
+      <geschlecht>Männlich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Sehbehinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+       <teilnehmer>
+      <vorname>Adrian</vorname>
+      <nachname>Willi</nachname>
+      <geschlecht>weiblich</geschlecht>
+            <adresse>Strasse 1</adresse>
+            <stadt>Burgdorf</stadt>
+      <telefonnummer>0834875937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Diverse Behinderungen</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
+      </teilnehmerListe>
+	</event>
+     
+     
+     
+      <event name="Klettern">
+		<dauerInTagen>5</dauerInTagen>
+		<startdatum>2020-04-13</startdatum>
+            <beschreibung>Diverse Kletteraktivitäten wie Bouldern, Tyrolienne und Bouldern in der umgebenen Berglandschaft sowie in unserer Kletterhalle</beschreibung>
 		<handicap>
 			<behinderung>Diverse Behinderungen</behinderung>
 		</handicap>
