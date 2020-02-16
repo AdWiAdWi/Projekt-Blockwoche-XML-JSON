@@ -3,7 +3,7 @@
 	<event name="Fussball">
 		<dauerInTagen>3</dauerInTagen>
 		<startdatum>2020-03-16</startdatum>
-            <beschreibung>Fünftägiges Fussballturnier mit verschiedenen Disziplinen wie Torwandschiessen, Jonglieren sowie Teamspiele!</beschreibung>
+            <beschreibung>Dreitägiges Fussballturnier mit verschiedenen Disziplinen wie Torwandschiessen, Jonglieren sowie Teamspiele!</beschreibung>
 		<handicap>
 			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
