@@ -36,8 +36,7 @@
 	<xsl:template match="event">
 
         <!--XSL-Variables-->
-        <xsl:variable name="event" select="@name"/>
-        <xsl:variable name="startdatum" select="startdatum/text()"/>
+        <xsl:variable name="event" select="@id"/>
 
         <!--Form-->
 		<div class="event-field col-md-12 text-center">
@@ -69,9 +68,6 @@
                         <div class="text-left">
                             <div class="form-group">
                                 <input type="hidden" name="event" value="{$event}" />
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" name="startdatum" value="{$startdatum}" />
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" name="vorname" placeholder="Vorname*" />
