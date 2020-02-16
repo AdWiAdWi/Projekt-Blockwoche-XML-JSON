@@ -76,7 +76,7 @@
                                 <input class="form-control" type="text" name="nachname" placeholder="Nachname*" />
                             </div>
                             <div class="form-group">
-                                <span>Geschlecht</span>
+                                <label>Geschlecht</label>
                                 <select class="form-control">
                                     <option name="geschlecht" value="Männlich">Männlich</option>
                                     <option name="geschlecht" value="Weiblich">Weiblich</option>
@@ -93,11 +93,11 @@
                                 <input class="form-control" type="text" name="telefonnummer" placeholder="Telefonnummer*" />
                             </div>
                             <div class="form-group">
-                                <span>Geburtsdatum</span>
+                                <label>Geburtsdatum</label>
                                 <input class="form-control" type="date" name="geburtstag" />
                             </div>
                             <div class="form-group">
-                                <span>Behinderungen</span>
+                                <label>Behinderungen</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="behinderung" value="Höhrbehinderung" id="höhrBehinderung" />
                                     <label class="form-check-label" for="höhrBehinderung">Höhrbehinderung</label>
@@ -128,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <span>Einzelzimmer</span>
+                                <label>Einzelzimmer</label>
                                 <select class="form-control">
                                     <option name="einzelzimmer" value="true">Ja</option>
                                     <option name="einzelzimmer" value="false">Nein</option>
@@ -138,11 +138,12 @@
                                 <input class="form-control" type="text" name="spezielles" placeholder="Spezielles*" />
                             </div>
                             <div class="col-12 text-center">
-                            <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
+                            <a href="index.php"><button class="btn btn-lg btn-primary center-block mr-1">Zurück</button></a>
+                            <button class="btn btn-lg btn-primary center-block ml-1" type="submit" value="Senden">Buchen</button>
                             </div>
                             </div>
                         </div>	
-                    </form>
+                    </form> 
                 </div>
 	</xsl:template>
 
