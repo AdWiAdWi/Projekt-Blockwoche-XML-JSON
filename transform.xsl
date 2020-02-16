@@ -39,10 +39,18 @@
 						<h1 class="display-4">ABOUT US</h1>
 						<br />
 						<p style="font-weight:bold">Liebe Gäste,</p>
-						<p>
-						Es freut uns, Sie auf unserer Webseite begrüssen zu dürfen. bla bla bla...
+						<p class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+						Wir sind ein Sportzentrum und Hotelbetrieb für Athleten mit Leidenschaft. Unser Motto ist "Sport für alle!" - Denn Sport ist gesund und sollte jedem zugänglich gemacht werden. Deshalb versuchen wir auch stark im Behindertensport Fuss zu fassen und unser Angebot bestmöglich auf die jeweiligen Fähigkeiten unserer Kunden auszurichten.
+						<br />
+						<br />
+						Unsere Infastruktur umfasst eine Schwimmanlage, Fussballplätze, eine Sporthalle sowie eine Rennbahn. Unsere Anlage ist umgegeben von atemberaubenden Berlandschaften, Flüssen und Wälder - Der perfekte Rückzugsort, um sich zu erholen oder sportlich auszutoben.
+						<br />
+						<br />
+						Unseren Kundinnen und Kunden bieten wir diverse Themenwochen, die auf ihre Bedürfnisse angepasst sind. Wir sind bestrebt unser Angebot stets auszubauen und mit neuen kreativen Ideen zu ergänzen! 
+						<br />
+						<br />
+						Wir hoffen, auch Sie zu unseren Kunden zählen zu dürfen!
 						</p>
-						
 					</div>
 				</section>
 
@@ -50,6 +58,23 @@
 				<section class="service text-center">
 					<div class="container">
 						<h1 class="display-4">UNSERE THEMENWOCHEN</h1>
+						<br />
+						<br />
+						<form method="get" action="filter.php">
+							<label>Filter</label>
+							<input type="date" id="start"></input> <!-- start date should be param -->
+							<select> <!-- options should come from db -->
+								<option>Ballsport</option>
+								<option>Leichtatletik</option>
+								<option>Fangis</option>
+							</select>
+							<select> <!-- options should come from db -->
+								<option>Sehbehindert</option>
+								<option>Gehbehindert</option>
+								<option>Komplett behindert</option>
+							</select>
+							<input type="submit">Suchen</input>
+						</form>
 						<br />
 						<br />
 						<div class="row">
