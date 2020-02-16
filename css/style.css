@@ -15,6 +15,13 @@ section{
 
 
 /*Navbar*/
+.navbar{
+    background-color: #030e18 !important;
+}
+
+.nav-link{
+    color: #ddd8d8 !important;
+}
 
 
 /*Home-page*/
@@ -132,6 +139,11 @@ p{
     color: white;
 }
 
+
+/*Filter*/
+.filtered-service {
+    padding-top: 30px;
+}
 
 
 
