@@ -66,6 +66,7 @@
 					</p>
 					</div>
                     <h2>Jetzt buchen</h2>
+                        <div class="text-left">
                             <div class="form-group">
                                 <input type="hidden" name="event" value="{$event}" />
                             </div>
@@ -107,25 +108,45 @@
                             </div>
                             <div class="form-group">
                                 <span>Behinderungen</span>
-                                <select class="form-control" name="behinderungen[]" size="1" multiple="multiple">
-                                    <option name="behinderung" value="Höhrbehinderung">Höhrbehinderung</option>
-                                    <option name="behinderung" value="Geistige Behinderung">Geistige Behinderung</option>
-                                    <option name="behinderung" value="Keine Behinderung">Keine Behinderung</option>
-                                    <option name="behinderung" value="Körperbehinderung">Körperbehinderung</option>
-                                    <option name="behinderung" value="Psychische Behinderung">Psychische Behinderung</option>
-                                    <option name="behinderung" value="Sehbehinderung">Sehbehinderung</option>
-                                    <option name="behinderung" value="Diverse Behinderungen">Diverse Behinderungen</option>
-                                </select>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Höhrbehinderung" id="höhrBehinderung" />
+                                    <label class="form-check-label" for="höhrBehinderung">Höhrbehinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Geistige Behinderung" id="geistigeBehinderung" />
+                                    <label class="form-check-label" for="geistigeBehinderung">Geistige Behinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Keine Behinderung" id="noBehinderung" />
+                                    <label class="form-check-label" for="noBehinderung">Keine Behinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Körperbehinderung" id="körperBehinderung" />
+                                    <label class="form-check-label" for="körperBehinderung">Körperliche Behinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Psychische Behinderung" id="psychischeBehinderung" />
+                                    <label class="form-check-label" for="psychischeBehinderung">Psychische Behinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Sehbehinderung" id="sehBehinderung" />
+                                    <label class="form-check-label" for="sehBehinderung">Sehbehinderung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="behinderung" value="Diverse Behinderungen" id="diverseBehinderungen" />
+                                    <label class="form-check-label" for="diverseBehinderungen">Diverse Behinderungen</label>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <span>Einzelzimmer</span>
                                 <select class="form-control">
-                                    <option name="einzelzimmer" value="Ja">Ja</option>
-                                    <option name="einzelzimmer" value="Nein">Nein</option>
+                                    <option name="einzelzimmer" value="true">Ja</option>
+                                    <option name="einzelzimmer" value="false">Nein</option>
                                 </select>
                             </div>
                             <div class="col-12 text-center">
                             <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
+                            </div>
                             </div>
                         </div>	
                     </form>
