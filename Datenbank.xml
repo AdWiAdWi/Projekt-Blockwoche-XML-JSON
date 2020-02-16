@@ -337,6 +337,18 @@
       <einzelzimmer>false</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
+      <teilnehmer>
+      <vorname>Matt</vorname>
+      <nachname>Müller</nachname>
+      <geschlecht>Männlich</geschlecht>
+      <adresse>Strasse 76</adresse>
+      <stadt>Windisch</stadt>
+      <telefonnummer>0797652378</telefonnummer>
+      <geburtstag>1999-07-02</geburtstag>
+      <behinderung>Keine Behinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles></spezielles>
+      </teilnehmer>
       </teilnehmerListe>
 	</event>
 </events>
