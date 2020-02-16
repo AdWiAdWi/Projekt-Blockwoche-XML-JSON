@@ -21,6 +21,25 @@ section{
  color: #ddd8d8;
 }
 
+.home .event-border{
+    border: 3px solid #ddd8d8;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.home .btn{
+    background-color: #030e18;
+    border: 2px solid #ddd8d8;
+    color:  #ddd8d8;
+}
+
+.home .btn:hover{
+    background-color: #ddd8d8;
+    border: 2px solid #ddd8d8;
+    color: #030e18;
+}
+
 
 /*About*/
 
@@ -33,26 +52,27 @@ section{
 
 .service-description{
     text-align: justify;
+    hyphens: auto;
 }
 
 
-.event-border{
-    border: 3px solid rgba(175, 143, 78, 0.966);
+.service .event-border{
+    border: 3px solid #030e18;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
     
 }
 
-.btn{
-    background-color: #030e18;
-    border: 2px solid rgba(175, 143, 78, 0.966);
-    color:  rgba(175, 143, 78, 0.966);
+.service .btn{
+    background-color: white;
+    border: 2px solid #030e18;
+    color:  #030e18;
 }
 
-.btn:hover{
-    background-color: rgba(175, 143, 78, 0.966);
-    border: 2px solid rgba(175, 143, 78, 0.966);
-    color: #030e18;
+.service .btn:hover{
+    background-color: #030e18;
+    border: 2px solid #030e18;
+    color: white;
 }
 
 
