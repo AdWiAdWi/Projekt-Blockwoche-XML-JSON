@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
-	<event name="Fussballturnier">
+	<event name="Fussball">
 		<dauerInTagen>3</dauerInTagen>
 		<startdatum>2020-03-16</startdatum>
             <beschreibung>Fünftägiges Fussballturnier mit verschiedenen Disziplinen wie Torwandschiessen, Jonglieren sowie Teamspiele!</beschreibung>
@@ -104,7 +104,7 @@
 
     
     
-      <event name="Grosse Wassersportwoche">
+      <event name="Schwimmen">
 		<dauerInTagen>5</dauerInTagen>
 		<startdatum>2020-03-30</startdatum>
             <beschreibung>Auf Sie warten tolle Wassersportaktivitäten wie Wasserball, Tauchen, Schwimmen und ein Sprungturm mit unterschiedlichen Höhen!</beschreibung>
@@ -167,7 +167,7 @@
      
      
      
-      <event name="Ab auf die Schnitzeljagd">
+      <event name="Schnitzeljagd">
 		<dauerInTagen>3</dauerInTagen>
 		<startdatum>2020-04-06</startdatum>
             <beschreibung>Gemeinsam in einem Team löst Ihr Rätsel und folgt Hinweisen, um ans Ziel zu gelangen. Dort warten attraktive Preise auf Euch!</beschreibung>
@@ -295,7 +295,7 @@
 
 
 
-      <event name="Velotouren">
+      <event name="Fahrrad">
 		<dauerInTagen>3</dauerInTagen>
 		<startdatum>2020-03-16</startdatum>
             <beschreibung>Unsere schöne Landschaftsumgebung lässt sich super mit dem Fahrrad erkunden. Wir bieten täglich unterschiedliche Längen von Strecken an!</beschreibung>

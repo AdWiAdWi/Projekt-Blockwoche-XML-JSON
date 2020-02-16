@@ -77,6 +77,9 @@
 			<xs:enumeration value="Schwimmen"/>
 			<xs:enumeration value="Klettern"/>
 			<xs:enumeration value="Ski und Snowboard"/>
+			<xs:enumeration value="Schnitzeljagd"/>
+			<xs:enumeration value="Wandern"/>
+			<xs:enumeration value="Fahrrad"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="gender">

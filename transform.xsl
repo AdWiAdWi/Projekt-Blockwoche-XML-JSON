@@ -28,7 +28,6 @@
 					<br />
 					<h2>Anstehende Themenwochen</h2>
 					<br />
-					<br />
 					<div class="row">
 						<xsl:apply-templates select="//event[position() &lt;= 3]"/>
 					</div>
@@ -51,9 +50,7 @@
 			<!--Angebot-->
 			<section class="service text-center">
 				<div class="container">
-					<h1 class="display-4">SERVICES</h1>
-					<br />
-					<h2>Unsere Themenwochen</h2>
+					<h1 class="display-4">UNSERE THEMENWOCHEN</h1>
 					<br />
 					<br />
 					<div class="row">
