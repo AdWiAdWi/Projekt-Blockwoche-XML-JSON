@@ -1,8 +1,10 @@
 <?php
 
 include("index.php");
+
 $vorname = $_POST["vorname"];
 $nachname = $_POST["nachname"];
+$geschlecht = $_POST["geschlecht"];
 $adresse = $_POST["adresse"];
 $stadt = $_POST["stadt"];
 $telefonnummer = $_POST["telefonnummer"];
@@ -10,12 +12,12 @@ $geburtstag = $_POST["geburtstag"];
 $behinderungen = $_POST["behinderungen"];
 $einzelzimmer = $_POST["einzelzimmer"];
 $spezielles = $_POST["spezielles"];
-$event = $_POST["event"];
+// $event = $_POST["event"];
 
-createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event);
-// addReservation($_POST["vorname"], $_POST["nachname"], $_POST["geschlecht"], $_POST["adresse"], $_POST["stadt"], $_POST["telefonnummer"], $_POST["geburtstag"], $_POST["behinderungen"], $_POST["einzelzimmer"], $_POST["spezielles"], $_POST["event"]);
+$validatedXML = createNewXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event);
+addReservation($validatedXML);
 
-function createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event){
+function createNewXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event){
 
     $xml = new DomDocument('1.0', 'UTF-8');
     $example_element = $xml->createElement('teilnehmer');
@@ -25,6 +27,9 @@ function createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnum
     $example_element->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('nachname', $nachname);
+    $example_element->appendChild($subnode1_element);
+
+    $subnode1_element = $xml->createElement('geschlecht', $geschlecht);
     $example_element->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('adresse', $adresse);
@@ -39,29 +44,55 @@ function createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnum
     $subnode1_element = $xml->createElement('geburtstag', $geburtstag);
     $example_element->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('behinderungen', $behinderungen);
+    $subnode1_element = $xml->createElement('behinderung', 'Psychische Behinderung');
     $example_element->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('einzelzimmer', $einzelzimmer);
+    $subnode1_element = $xml->createElement('einzelzimmer', 'true');
     $example_element->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $example_element->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('event', $event);
+    $subnode1_element = $xml->createElement('event', 'Fussball');
     $example_element->appendChild($subnode1_element);
 
     $xml->appendChild($example_element);
     $xml->formatOutput = TRUE;
-    // $xml->save("test.xml");
     
-    $xsd = "get.xsd";
-    $result = $paramsXML->schemaValidate($xsd);
-    echo "validation with schema:";
+    if (validationOfNewXML($xml, "schemaEventDB.xsd")){
+        echo "Validation successfull";
+        $xml->save("test.xml");
+        return $xml;
+    } else {
+        echo "Problem with creating and validating new Registration!";
+        return null;
+    }
+
+}
+
+function validationOfNewXML($xml, $xsd) {
+        // disable error output to client   
+        libxml_use_internal_errors(true);
+
+        $result = $xml->schemaValidate($xsd);
+    
+        // show errors   
+        if (!$result) {     
+            $errors = libxml_get_errors();     
+            foreach ($errors as $error) {       
+                echo sprintf('Line [%d]: %s', $error->line, $error->message);     
+            }     
+            libxml_clear_errors();   
+            return false;
+        } else {
+            echo "Validation successfull";
+            return true;
+        }
+
 }
 
 // Fügt Reservation in der Datenbank ein
-function addReservation($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event){
+function addReservation($xmlToInsert){
     
     // Pfad zur Datenbank
     $eventXMLPath = "Datenbank.xml";
@@ -69,22 +100,17 @@ function addReservation($vorname, $nachname, $geschlecht, $adresse, $stadt, $tel
     // XML Datenbank laden
     $eventXML = simplexml_load_file($eventXMLPath);
 
+    //Event-Typ herauslesen
+    $eventElementFromNewMember = $xmlToInsert->getElementsByTagName('event');
+
+
     //Xpath um auf die Teilnehmerliste des angemeldeten Events zuzugreifen
-    $path ="//event[@name=". $event ."]/teilnehmerliste";
+    $path ="//event[@name=". $eventElementFromNewMember[0] ."]/teilnehmerliste";
     $element = $eventXML->xpath($path);
 
-    //Neuen Teilnehmer als Child hinzufügen
-    $newMember = $element->addChild('teilnehmer');
-    $newMember->addChild('vorname', $vorname);
-    $newMember->addChild('nachname', $nachname);
-    $newMember->addChild('geschlecht', $geschlecht);
-    $newMember->addChild('adresse', $adresse);
-    $newMember->addChild('stadt', $stadt);
-    $newMember->addChild('telefonnummer', $telefonnummer);
-    $newMember->addChild('geburtstag', $geburtstag); //muss evt. noch angepasst werden da Datum im XML das Format YYYY-MM-DD verwendet
-    $newMember->addChild('behinderung', $behinderungen);
-    $newMember->addChild('einzelzimmer', $einzelzimmer);
-    $newMember->addChild('spezielles', $spezielles);
+    //Neuen Teilnehmer als Child hinzufügen und validieren
+    $element->appendChild($xmlToInsert);
+    validationOfNewXML($eventXML, "schemaEventDB.xsd");
 
     //TO-DO: PDF generieren
 
