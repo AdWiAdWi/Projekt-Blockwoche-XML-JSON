@@ -58,7 +58,7 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $teilnehmer->appendChild($subnode1_element);
 
-    $event = $eventXML->getElementByID($eventID);
+    $event = $eventXML->getElementById($eventID);
     $reservation->appendChild($event);
 
     $reservationen = $reservationXML->getElementsByTagName('reservationen');
