@@ -125,6 +125,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Geistige Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
+      <spezielles>irgendein Problem</spezielles>
       </teilnehmer>
       <teilnehmer>
       <vorname>Peter</vorname>
@@ -236,7 +237,7 @@
 		<startdatum>2020-04-13</startdatum>
             <beschreibung>Loslassen vom Alltagsstress und wieder einmal frische Bergluft schnuppern? Dann ist unser Wanderangebot das richtige für Sie!</beschreibung>
 		<handicap>
-			<behinderung>Psychische Behinderungen</behinderung>
+			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
 		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
 		<anzahlTeilnehmer>4</anzahlTeilnehmer>
@@ -250,7 +251,7 @@
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Psychische Behinderungen</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles>Vegan</spezielles>
       </teilnehmer>
@@ -262,7 +263,7 @@
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Psychische Behinderungen</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
@@ -274,7 +275,7 @@
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Psychische Behinderungen</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
@@ -286,7 +287,7 @@
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
       <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Psychische Behinderungen</behinderung>
+      <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
       <spezielles></spezielles>
       </teilnehmer>
