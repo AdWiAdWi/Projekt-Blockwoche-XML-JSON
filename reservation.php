@@ -9,65 +9,84 @@ $adresse = $_POST["adresse"];
 $stadt = $_POST["stadt"];
 $telefonnummer = $_POST["telefonnummer"];
 $geburtstag = $_POST["geburtstag"];
-$behinderungen = $_POST["behinderungen"];
+$behinderungen = $_POST["behinderung"];
 $einzelzimmer = $_POST["einzelzimmer"];
 $spezielles = $_POST["spezielles"];
-$eventID = $_POST["eventID"];
+$eventID = $_POST["event"];
 
-$validatedXML = createNewXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event);
-addReservation($validatedXML);
+$eventXML = loadingAndReturnMainDB();
+$reservationXML = loadingAndReturnReservationDB();
 
-function createNewXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event){
+$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML);
+//addReservation($validatedXML);
 
+function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML){
+
+    // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
-    $example_element = $xml->createElement('teilnehmer');
-
+    $reservation = $xml->createElement('reservation');
+    $teilnehmer = $xml->createElement('teilnehmer');
+    $reservation->appendChild($teilnehmer);
 
     $subnode1_element = $xml->createElement('vorname', $vorname);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('nachname', $nachname);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('geschlecht', $geschlecht);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('adresse', $adresse);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('stadt', $stadt);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('telefonnummer', $telefonnummer);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('geburtstag', $geburtstag);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('behinderung', 'Psychische Behinderung');
-    $example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('behinderung', $behinderungen);
+    $teilnehmer->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('einzelzimmer', 'true');
-    $example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('einzelzimmer', $einzelzimmer);
+    $teilnehmer->appendChild($subnode1_element);
 
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
-    $example_element->appendChild($subnode1_element);
+    $teilnehmer->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('event', 'Fussball');
-    $example_element->appendChild($subnode1_element);
+    $event = $eventXML->getElementByID($eventID);
+    $reservation->appendChild($event);
 
-    $xml->appendChild($example_element);
-    $xml->formatOutput = TRUE;
-    
-    if (validationOfNewXML($xml, "schemaEventDB.xsd")){
+    $reservationen = $reservationXML->getElementsByTagName('reservationen');
+    $reservationen[0]->appendChild($reservation);
+
+    if (validationOfNewXML($reservationen[0], "schemaReservation.xsd")){
         echo "Validation successfull";
-        $xml->save("test.xml");
+        $reservationXML->save("test.xml");
         return $xml;
     } else {
         echo "Problem with creating and validating new Registration!";
         return null;
     }
 
+}
+
+function loadingAndReturnMainDB(){
+    $data = file_get_contents('Datenbank.xml');
+    $eventXML = new DOMDocument();
+    $eventXML->loadXML($data);
+    return $eventXML;
+}
+
+function loadingAndReturnReservationDB(){
+    $data = file_get_contents('Reservationen.xml');
+    $reservationXML = new DOMDocument();
+    $reservationXML->loadXML($data);
+    return $reservationXML;
 }
 
 function validationOfNewXML($xml, $xsd) {

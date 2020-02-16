@@ -73,12 +73,6 @@
                                 <input class="form-control" type="text" name="vorname" placeholder="Vorname*" />
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="vorname" placeholder="Vorname*" />
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="vorname" placeholder="Vorname*" />
-                            </div>
-                            <div class="form-group">
                                 <input class="form-control" type="text" name="nachname" placeholder="Nachname*" />
                             </div>
                             <div class="form-group">
@@ -139,6 +133,9 @@
                                     <option name="einzelzimmer" value="true">Ja</option>
                                     <option name="einzelzimmer" value="false">Nein</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="spezielles" placeholder="Spezielles*" />
                             </div>
                             <div class="col-12 text-center">
                             <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
