@@ -20,8 +20,23 @@
 			</head>
 
             <body>
+				<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#home">HOME<span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">ABOUT US</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#services">ANGEBOT</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 				<!--Homepage-->
-				<section class="home text-center">
+				<section class="home text-center" id="home">
 					<div class="container">
 						<h1 class="display-4">SPORTZENTRUM FÜR BEHINDERUNGEN</h1>
 						<br />
@@ -34,7 +49,7 @@
 				</section>
 
 				<!--About-->
-				<section class="about text-center">
+				<section class="about text-center" id="about">
 					<div class="container">
 						<h1 class="display-4">ABOUT US</h1>
 						<br />
@@ -55,25 +70,34 @@
 				</section>
 
 				<!--Angebot-->
-				<section class="service text-center">
+				<section class="service text-center" id="services">
 					<div class="container">
 						<h1 class="display-4">UNSERE THEMENWOCHEN</h1>
 						<br />
 						<br />
-						<form method="get" action="filter.php">
-							<label>Filter</label>
+						<h3>Filtern</h3>
+						<form class="filter" method="get" action="filter.php">
 							<input type="date" id="start"></input> <!-- start date should be param -->
 							<select> <!-- options should come from db -->
-								<option>Ballsport</option>
-								<option>Leichtatletik</option>
-								<option>Fangis</option>
+								<option name="eventType" value="Basketball">Basketball</option>
+                                <option name="eventType" value="Fahrrad">Fahrrad</option>
+                                <option name="eventType" value="Fussball">Fussball</option>
+								<option name="eventType" value="Klettern">Klettern</option>
+                                <option name="eventType" value="Schnitzeljagd">Schnitzeljagd</option>
+                                <option name="eventType" value="Schwimmen">Schwimmen</option>
+								<option name="eventType" value="Ski und Snowboard">Ski und Snowboard</option>
+								<option name="eventType" value="Wandern">Wandern</option>
 							</select>
 							<select> <!-- options should come from db -->
-								<option>Sehbehindert</option>
-								<option>Gehbehindert</option>
-								<option>Komplett behindert</option>
+								<option name="behinderung" value="Geistige Behinderung">Geistige Behinderung</option>
+                                <option name="behinderung" value="Höhrbehinderung">Höhrbehinderung</option>
+                                <option name="behinderung" value="Körperbehinderung">Körperbehinderung</option>
+								<option name="behinderung" value="Psychische Behinderung">Psychische Behinderung</option>
+                                <option name="behinderung" value="Sehbehinderung">Sehbehinderung</option>
+                                <option name="behinderung" value="Keine Behinderung">Keine Behinderung</option>
+								<option name="behinderung" value="Diverse Behinderungen">Diverse Behinderungen</option>
 							</select>
-							<input type="submit">Suchen</input>
+							<a href="filter.php"><button>Suchen</button></a>
 						</form>
 						<br />
 						<br />
