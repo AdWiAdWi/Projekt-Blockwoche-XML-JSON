@@ -12,7 +12,7 @@ $geburtstag = $_POST["geburtstag"];
 $behinderungen = $_POST["behinderungen"];
 $einzelzimmer = $_POST["einzelzimmer"];
 $spezielles = $_POST["spezielles"];
-// $event = $_POST["event"];
+$eventID = $_POST["eventID"];
 
 $validatedXML = createNewXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event);
 addReservation($validatedXML);
