@@ -17,43 +17,47 @@ createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnummer, $geb
 
 function createAndValidateXML($vorname, $nachname, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $event){
 
-$xml = new DomDocument('1.0', 'UTF-8');
+    $xml = new DomDocument('1.0', 'UTF-8');
     $example_element = $xml->createElement('teilnehmer');
 
 
-$subnode1_element = $xml->createElement('vorname', $vorname);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('vorname', $vorname);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('nachname', $nachname);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('nachname', $nachname);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('adresse', $adresse);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('adresse', $adresse);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('stadt', $stadt);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('stadt', $stadt);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('telefonnummer', $telefonnummer);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('telefonnummer', $telefonnummer);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('geburtstag', $geburtstag);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('geburtstag', $geburtstag);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('behinderungen', $behinderungen);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('behinderungen', $behinderungen);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('einzelzimmer', $einzelzimmer);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('einzelzimmer', $einzelzimmer);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('spezielles', $spezielles);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('spezielles', $spezielles);
+    $example_element->appendChild($subnode1_element);
 
-$subnode1_element = $xml->createElement('event', $event);
-$example_element->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('event', $event);
+    $example_element->appendChild($subnode1_element);
 
-$xml->appendChild($example_element);
-$xml->formatOutput = TRUE;
-$xml->save("test.xml");
+    $xml->appendChild($example_element);
+    $xml->formatOutput = TRUE;
+    // $xml->save("test.xml");
+    
+    $xsd = "get.xsd";
+    $result = $paramsXML->schemaValidate($xsd);
+    echo "validation with schema:";
 }
 
 // Fügt Reservation in der Datenbank ein
