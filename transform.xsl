@@ -4,7 +4,7 @@
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
 
 	<xsl:template match="/">
-		<html>
+		<html lang="de">
 			<head>
 			<!-- Bootstrap -->
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
@@ -30,7 +30,7 @@
 					<br />
 					<br />
 					<div class="row">
-						<xsl:apply-templates select="//event[1]"/>
+						<xsl:apply-templates select="//event[position() &lt;= 3]"/>
 					</div>
 				</div>
     		</section>
