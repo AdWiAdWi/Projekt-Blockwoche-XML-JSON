@@ -78,24 +78,24 @@
 						<h3>Filtern</h3>
 						<form class="filter" method="get" action="filter.php">
 							<input type="date" id="start"></input> <!-- start date should be param -->
-							<select> <!-- options should come from db -->
-								<option name="eventType" value="Basketball">Basketball</option>
-                                <option name="eventType" value="Fahrrad">Fahrrad</option>
-                                <option name="eventType" value="Fussball">Fussball</option>
-								<option name="eventType" value="Klettern">Klettern</option>
-                                <option name="eventType" value="Schnitzeljagd">Schnitzeljagd</option>
-                                <option name="eventType" value="Schwimmen">Schwimmen</option>
-								<option name="eventType" value="Ski und Snowboard">Ski und Snowboard</option>
-								<option name="eventType" value="Wandern">Wandern</option>
+							<select name="eventType"> <!-- options should come from db -->
+								<option value="Basketball">Basketball</option>
+                                <option value="Fahrrad">Fahrrad</option>
+                                <option value="Fussball">Fussball</option>
+								<option value="Klettern">Klettern</option>
+                                <option value="Schnitzeljagd">Schnitzeljagd</option>
+                                <option value="Schwimmen">Schwimmen</option>
+								<option value="Ski und Snowboard">Ski und Snowboard</option>
+								<option value="Wandern">Wandern</option>
 							</select>
-							<select> <!-- options should come from db -->
-								<option name="behinderung" value="Geistige Behinderung">Geistige Behinderung</option>
-                                <option name="behinderung" value="Höhrbehinderung">Höhrbehinderung</option>
-                                <option name="behinderung" value="Körperbehinderung">Körperbehinderung</option>
-								<option name="behinderung" value="Psychische Behinderung">Psychische Behinderung</option>
-                                <option name="behinderung" value="Sehbehinderung">Sehbehinderung</option>
-                                <option name="behinderung" value="Keine Behinderung">Keine Behinderung</option>
-								<option name="behinderung" value="Diverse Behinderungen">Diverse Behinderungen</option>
+							<select name="behinderung"> <!-- options should come from db -->
+								<option value="Geistige Behinderung">Geistige Behinderung</option>
+                                <option value="Höhrbehinderung">Höhrbehinderung</option>
+                                <option value="Körperbehinderung">Körperbehinderung</option>
+								<option value="Psychische Behinderung">Psychische Behinderung</option>
+                                <option value="Sehbehinderung">Sehbehinderung</option>
+                                <option value="Keine Behinderung">Keine Behinderung</option>
+								<option value="Diverse Behinderungen">Diverse Behinderungen</option>
 							</select>
 							<a href="filter.php"><button>Suchen</button></a>
 						</form>
