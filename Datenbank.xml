@@ -15,7 +15,7 @@
 		<teilnehmer>
 		 <vorname>Hans</vorname>
       <nachname>Michel</nachname>
-      <geschlecht>Männlich</geschlecht>
+      <geschlecht>Anderes</geschlecht>
       <adresse>Strasse 1</adresse>
       <stadt>Burgdorf</stadt>
       <telefonnummer>0834875937374</telefonnummer>
@@ -244,7 +244,7 @@
 		<handicap>
 			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
-		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+		<anzahlMöglicheTeilnehmer>10</anzahlMöglicheTeilnehmer>
 		<anzahlTeilnehmer>4</anzahlTeilnehmer>
 		<findetStatt>true</findetStatt>
 		<teilnehmerListe>
@@ -309,8 +309,8 @@
 		<handicap>
 			<behinderung>Diverse Behinderungen</behinderung>
 		</handicap>
-		<anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>2</anzahlTeilnehmer>
+		<anzahlMöglicheTeilnehmer>5</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>3</anzahlTeilnehmer>
 		<findetStatt>true</findetStatt>
 		<teilnehmerListe>
 		<teilnehmer>
