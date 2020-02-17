@@ -15,19 +15,17 @@ $spezielles = $_POST["spezielles"];
 $eventID = $_POST["event"];
 
 $eventXML = loadingAndReturnMainDB();
-$reservationXML = loadingAndReturnReservationDB();
 
-$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML);
-//addReservation($validatedXML);
+$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
 
-function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML){
+
+function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
     // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
-    $reservation = $xml->createElement('reservation');
     $teilnehmer = $xml->createElement('teilnehmer');
-    $reservation->appendChild($teilnehmer);
 
+    // creating new Teilnehmer
     $subnode1_element = $xml->createElement('vorname', $vorname);
     $teilnehmer->appendChild($subnode1_element);
 
@@ -58,35 +56,43 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $teilnehmer->appendChild($subnode1_element);
 
-    $event = $eventXML->getElementById($eventID);
-    $reservation->appendChild($event);
+    // teilnehmer in Datenbank hinzufügen
+    $xpath = new DOMXPath( $eventXML );
+    $eventIDforXpath = '//event[@id="'.$eventID.'"]/teilnehmerListe';
+    $eventTeilnehmerListe = $xpath->query( $eventIDforXpath )->item(0);
+    $importedEvent = $eventXML->importNode($teilnehmer, true);
+    $eventTeilnehmerListe->appendChild($importedEvent);
 
-    $reservationen = $reservationXML->getElementsByTagName('reservationen');
-    $reservationen[0]->appendChild($reservation);
+    //Teilnehmeranzahl erhöhen. Wenn Teilnehmeranzahl maximalgrösse erreicht hat, schlägt Reservation fehl.
+    $anzahlMöglicheTeilnehmerInEventXpath = '//event[@id="'.$eventID.'"]/anzahlMöglicheTeilnehmer';
+    $anzahlAngemeldeteTeilnehmerXpath = '//event[@id="'.$eventID.'"]/anzahlTeilnehmer';
+    $anzahlMöglicheTeilnehmerInEvent = $xpath->query($anzahlMöglicheTeilnehmerInEventXpath)->item(0)->nodeValue;
+    $anzahlAngemeldeteTeilnehmerNode = $xpath->query($anzahlAngemeldeteTeilnehmerXpath)->item(0);
 
-    if (validationOfNewXML($reservationen[0], "schemaReservation.xsd")){
-        echo "Validation successfull";
-        $reservationXML->save("test.xml");
-        return $xml;
+    if ($anzahlMöglicheTeilnehmerInEvent > $anzahlAngemeldeteTeilnehmerNode->nodeValue) {
+        echo "Es hat noch genug Platz in diesem Event";
+        // Anzahl Teilnehmer um 1 erhöhen
+        $anzahlAngemeldeteTeilnehmerNode->nodeValue = $anzahlAngemeldeteTeilnehmerNode->nodeValue + 1;
+        // $teilnehmer und event mit $eventIDforXpath ein PDF generieren!
+        if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
+            echo "Validation successfull";
+            $eventXML->save("Datenbank.xml");
+            return true;
+        } else {
+            echo "Problem with creating and validating new Registration!";
+            return false;
+        }
     } else {
-        echo "Problem with creating and validating new Registration!";
-        return null;
+        echo "Maximale Anzahl Teilnehmer am Event bereits erreicht!";
     }
-
 }
 
 function loadingAndReturnMainDB(){
-    $data = file_get_contents('Datenbank.xml');
-    $eventXML = new DOMDocument();
-    $eventXML->loadXML($data);
+    $data = 'Datenbank.xml';
+    $eventXML = new DOMDocument('1.0', 'UTF-8');
+    $eventXML->load($data);
+    $eventXML->formatOutput = true;
     return $eventXML;
-}
-
-function loadingAndReturnReservationDB(){
-    $data = file_get_contents('Reservationen.xml');
-    $reservationXML = new DOMDocument();
-    $reservationXML->loadXML($data);
-    return $reservationXML;
 }
 
 function validationOfNewXML($xml, $xsd) {
