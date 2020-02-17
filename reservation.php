@@ -24,9 +24,8 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
 
     // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
-    $reservation = $xml->createElement('reservation');
     $teilnehmer = $xml->createElement('teilnehmer');
-    $reservation->appendChild($teilnehmer);
+
 
     $subnode1_element = $xml->createElement('vorname', $vorname);
     $teilnehmer->appendChild($subnode1_element);
@@ -58,13 +57,14 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $teilnehmer->appendChild($subnode1_element);
 
-    $event = $eventXML->getElementById($eventID);
-    $reservation->appendChild($event);
+    $xpath = new DOMXPath( $eventXML );
+    $eventIDforXpath = '//event[@id="'.$eventID.'"]/teilnehmerListe';
+    $eventTeilnehmerListe = $xpath->query( $eventIDforXpath )->item(0);
+    $importedEvent = $eventXML->importNode($teilnehmer, true);
+    $eventTeilnehmerListe->appendChild($importedEvent);
 
-    $reservationen = $reservationXML->getElementsByTagName('reservationen');
-    $reservationen[0]->appendChild($reservation);
 
-    if (validationOfNewXML($reservationen[0], "schemaReservation.xsd")){
+    if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
         echo "Validation successfull";
         $reservationXML->save("test.xml");
         return $xml;
@@ -76,16 +76,18 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
 }
 
 function loadingAndReturnMainDB(){
-    $data = file_get_contents('Datenbank.xml');
-    $eventXML = new DOMDocument();
-    $eventXML->loadXML($data);
+    $data = 'Datenbank.xml';
+    $eventXML = new DOMDocument('1.0', 'UTF-8');
+    $eventXML->load($data);
+    $eventXML->formatOutput = true;
     return $eventXML;
 }
 
 function loadingAndReturnReservationDB(){
-    $data = file_get_contents('Reservationen.xml');
+    $data = 'Reservationen.xml';
     $reservationXML = new DOMDocument();
-    $reservationXML->loadXML($data);
+    $reservationXML->formatOutput = true;
+    $reservationXML->load($data);
     return $reservationXML;
 }
 

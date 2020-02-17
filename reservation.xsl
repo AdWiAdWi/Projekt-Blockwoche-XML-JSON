@@ -76,10 +76,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Geschlecht</label>
-                                    <select class="form-control">
-                                        <option name="geschlecht" value="Männlich">Männlich</option>
-                                        <option name="geschlecht" value="Weiblich">Weiblich</option>
-                                        <option name="geschlecht" value="Anderes">anderes</option>
+                                    <select class="form-control" name="geschlecht">
+                                        <option value="Männlich">Männlich</option>
+                                        <option value="Weiblich">Weiblich</option>
+                                        <option value="Anderes">anderes</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -128,9 +128,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Einzelzimmer</label>
-                                    <select class="form-control">
-                                        <option name="einzelzimmer" value="true">Ja</option>
-                                        <option name="einzelzimmer" value="false">Nein</option>
+                                    <select class="form-control" name="einzelzimmer">
+                                        <option value="true">Ja</option>
+                                        <option value="false">Nein</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

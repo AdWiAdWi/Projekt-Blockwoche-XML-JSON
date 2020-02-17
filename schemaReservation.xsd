@@ -2,23 +2,22 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:include schemaLocation="schemaEventDB.xsd"/>
 	<xs:element name="reservationen">
-	<xs:complexType>
-	<xs:sequence>
-	<xs:element ref="reservation" minOccurs="0" maxOccurs="unbounded"/>
-	</xs:sequence>
-	</xs:complexType>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="reservation" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
 	<xs:element name="reservation">
 		<xs:complexType>
-		<xs:all>
-			<xs:element ref="teilnehmer"/>
-			<xs:element name="teilnehmerNummer" type="xs:positiveInteger"/>
-		</xs:all>
-	</xs:complexType>
-	<xs:unique name="reservationsID">
+			<xs:all>
+				<xs:element ref="teilnehmer"/>
+				<xs:element ref="event"/>
+			</xs:all>
+		</xs:complexType>
+		<xs:unique name="reservationsID">
 			<xs:selector xpath="Reservation"/>
 			<xs:field xpath="@id"/>
 		</xs:unique>
 	</xs:element>
-
 </xs:schema>
