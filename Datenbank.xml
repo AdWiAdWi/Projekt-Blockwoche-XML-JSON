@@ -22,7 +22,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       <teilnehmer>
       <vorname>Hanna</vorname>
@@ -34,9 +34,9 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>false</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
-      </teilnehmerListe>
+      <teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
 	</event>
 
 
@@ -75,7 +75,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Höhrbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Jonas</vorname>
@@ -87,7 +87,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Höhrbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       <teilnehmer>
       <vorname>Adrian</vorname>
@@ -99,7 +99,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Höhrbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
@@ -140,7 +140,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Geistige Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Tamara</vorname>
@@ -152,7 +152,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Geistige Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Nadja</vorname>
@@ -164,7 +164,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Geistige Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
@@ -193,7 +193,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       <teilnehmer>
       <vorname>Marianne</vorname>
@@ -205,7 +205,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Kurt</vorname>
@@ -217,7 +217,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Remo</vorname>
@@ -229,7 +229,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Sehbehinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
@@ -270,7 +270,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Hans</vorname>
@@ -282,7 +282,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
        <teilnehmer>
       <vorname>Samuel</vorname>
@@ -294,7 +294,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Psychische Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
@@ -323,7 +323,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Diverse Behinderungen</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       <teilnehmer>
       <vorname>Sina</vorname>
@@ -335,7 +335,7 @@
       <geburtstag>1995-05-02</geburtstag>
       <behinderung>Diverse Behinderungen</behinderung>
       <einzelzimmer>false</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       <teilnehmer>
       <vorname>Matt</vorname>
@@ -347,10 +347,8 @@
       <geburtstag>1999-07-02</geburtstag>
       <behinderung>Keine Behinderung</behinderung>
       <einzelzimmer>true</einzelzimmer>
-      <spezielles></spezielles>
+      <spezielles/>
       </teilnehmer>
       </teilnehmerListe>
 	</event>
 </events>
-
-

@@ -17,10 +17,10 @@ $eventID = $_POST["event"];
 $eventXML = loadingAndReturnMainDB();
 $reservationXML = loadingAndReturnReservationDB();
 
-$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML);
+$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
 //addReservation($validatedXML);
 
-function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML, $reservationXML){
+function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
     // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
@@ -57,17 +57,20 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $teilnehmer->appendChild($subnode1_element);
 
+    echo $eventXML->nodeValue;
     $xpath = new DOMXPath( $eventXML );
     $eventIDforXpath = '//event[@id="'.$eventID.'"]/teilnehmerListe';
     $eventTeilnehmerListe = $xpath->query( $eventIDforXpath )->item(0);
     $importedEvent = $eventXML->importNode($teilnehmer, true);
     $eventTeilnehmerListe->appendChild($importedEvent);
 
+    // $teilnehmer und event mit $eventIDforXpath ein PDF generieren!
+
 
     if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
         echo "Validation successfull";
-        $reservationXML->save("test.xml");
-        return $xml;
+        $eventXML->save("Datenbank.xml");
+        return $eventXML;
     } else {
         echo "Problem with creating and validating new Registration!";
         return null;
