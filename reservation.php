@@ -15,10 +15,9 @@ $spezielles = $_POST["spezielles"];
 $eventID = $_POST["event"];
 
 $eventXML = loadingAndReturnMainDB();
-$reservationXML = loadingAndReturnReservationDB();
 
 $validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
-//addReservation($validatedXML);
+
 
 function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
@@ -26,7 +25,7 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $xml = new DomDocument('1.0', 'UTF-8');
     $teilnehmer = $xml->createElement('teilnehmer');
 
-
+    // creating new Teilnehmer
     $subnode1_element = $xml->createElement('vorname', $vorname);
     $teilnehmer->appendChild($subnode1_element);
 
@@ -57,25 +56,35 @@ function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $s
     $subnode1_element = $xml->createElement('spezielles', $spezielles);
     $teilnehmer->appendChild($subnode1_element);
 
-    echo $eventXML->nodeValue;
+    // teilnehmer in Datenbank hinzufügen
     $xpath = new DOMXPath( $eventXML );
     $eventIDforXpath = '//event[@id="'.$eventID.'"]/teilnehmerListe';
     $eventTeilnehmerListe = $xpath->query( $eventIDforXpath )->item(0);
     $importedEvent = $eventXML->importNode($teilnehmer, true);
     $eventTeilnehmerListe->appendChild($importedEvent);
 
-    // $teilnehmer und event mit $eventIDforXpath ein PDF generieren!
+    //Teilnehmeranzahl erhöhen. Wenn Teilnehmeranzahl maximalgrösse erreicht hat, schlägt Reservation fehl.
+    $anzahlMöglicheTeilnehmerInEventXpath = '//event[@id="'.$eventID.'"]/anzahlMöglicheTeilnehmer';
+    $anzahlAngemeldeteTeilnehmerXpath = '//event[@id="'.$eventID.'"]/anzahlTeilnehmer';
+    $anzahlMöglicheTeilnehmerInEvent = $xpath->query($anzahlMöglicheTeilnehmerInEventXpath)->item(0)->nodeValue;
+    $anzahlAngemeldeteTeilnehmerNode = $xpath->query($anzahlAngemeldeteTeilnehmerXpath)->item(0);
 
-
-    if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
-        echo "Validation successfull";
-        $eventXML->save("Datenbank.xml");
-        return $eventXML;
+    if ($anzahlMöglicheTeilnehmerInEvent > $anzahlAngemeldeteTeilnehmerNode->nodeValue) {
+        echo "Es hat noch genug Platz in diesem Event";
+        // Anzahl Teilnehmer um 1 erhöhen
+        $anzahlAngemeldeteTeilnehmerNode->nodeValue = $anzahlAngemeldeteTeilnehmerNode->nodeValue + 1;
+        // $teilnehmer und event mit $eventIDforXpath ein PDF generieren!
+        if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
+            echo "Validation successfull";
+            $eventXML->save("Datenbank.xml");
+            return true;
+        } else {
+            echo "Problem with creating and validating new Registration!";
+            return false;
+        }
     } else {
-        echo "Problem with creating and validating new Registration!";
-        return null;
+        echo "Maximale Anzahl Teilnehmer am Event bereits erreicht!";
     }
-
 }
 
 function loadingAndReturnMainDB(){
@@ -84,14 +93,6 @@ function loadingAndReturnMainDB(){
     $eventXML->load($data);
     $eventXML->formatOutput = true;
     return $eventXML;
-}
-
-function loadingAndReturnReservationDB(){
-    $data = 'Reservationen.xml';
-    $reservationXML = new DOMDocument();
-    $reservationXML->formatOutput = true;
-    $reservationXML->load($data);
-    return $reservationXML;
 }
 
 function validationOfNewXML($xml, $xsd) {
