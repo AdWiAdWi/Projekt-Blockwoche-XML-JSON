@@ -77,7 +77,7 @@
 						<br />
 						<h3>Filtern</h3>
 						<form class="filter" method="get" action="filter.php">
-							<input type="date" id="start"></input> <!-- start date should be param -->
+							<input type="date" id="start" name="startdatum"></input> <!-- start date should be param -->
 							<select name="eventType"> <!-- options should come from db -->
 								<option value="Basketball">Basketball</option>
                                 <option value="Fahrrad">Fahrrad</option>
