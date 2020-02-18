@@ -33,6 +33,7 @@
 								<a class="nav-link" href="#services">ANGEBOT</a>
 							</li>
 						</ul>
+						<a href="administration.php"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Administration</button></a>	
 					</div>
 				</nav>
 				<!--Homepage-->

@@ -22,7 +22,7 @@
             <body>
 				
 				<!--Eventeingabe-->
-				<section class="service text-center" id="services">
+				<section class="administration text-center" id="services">
 					<div class="container">
 						<h1 class="display-4">ADMINISTRATION</h1>
 						<br />
