@@ -14,6 +14,7 @@ section{
 }
 
 
+
 /*Navbar*/
 .navbar{
     background-color: #030e18 !important;
@@ -22,6 +23,7 @@ section{
 .nav-link{
     color: #ddd8d8 !important;
 }
+
 
 
 /*Home-page*/
@@ -54,7 +56,9 @@ p{
 }
 
 
+
 /*About*/
+
 
 
 /*Angebot*/
@@ -110,8 +114,8 @@ p{
 }
 
 
-/*Reservation*/
 
+/*Reservation*/
 .reservation .service-description{
     text-align: center;
     -moz-hyphens: auto;
@@ -163,6 +167,10 @@ p{
     border: 2px solid #030e18;
     color: white;
 }
+
+
+
+/*Administration*/
 
 
 
