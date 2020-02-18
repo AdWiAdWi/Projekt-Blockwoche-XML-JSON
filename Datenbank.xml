@@ -351,4 +351,32 @@
       </teilnehmer>
       </teilnehmerListe>
 	</event>
+
+
+      <event name="Fahrrad" id="7">
+      <title>Rennradwoche</title>
+		<dauerInTagen>3</dauerInTagen>
+		<startdatum>2020-09-16</startdatum>
+            <beschreibung>Ein Woche mit dem Rad durch die schöne Landschaft für Anfänger bis Fortgeschrittene</beschreibung>
+		<handicap>
+			<behinderung>Diverse Behinderungen</behinderung>
+		</handicap>
+		<anzahlMöglicheTeilnehmer>3</anzahlMöglicheTeilnehmer>
+		<anzahlTeilnehmer>1</anzahlTeilnehmer>
+		<findetStatt>true</findetStatt>
+		<teilnehmerListe>
+		<teilnehmer>
+	<vorname>Max</vorname>
+      <nachname>Muster</nachname>
+      <geschlecht>Männlich</geschlecht>
+      <adresse>Guter Weg 8</adresse>
+      <stadt>Luzern</stadt>
+      <telefonnummer>083483937374</telefonnummer>
+      <geburtstag>1995-05-02</geburtstag>
+      <behinderung>Höhrbehinderung</behinderung>
+      <einzelzimmer>true</einzelzimmer>
+      <spezielles/>
+      </teilnehmer>
+       </teilnehmerListe>
+       </event>
 </events>
