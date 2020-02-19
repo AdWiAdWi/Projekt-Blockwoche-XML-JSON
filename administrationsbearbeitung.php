@@ -16,9 +16,9 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
 
     // Creating new DOM
     $xml = new DomDocument('1.0', 'UTF-8');
-    $teilnehmer = $xml->createElement('teilnehmer');
+    $event = $xml->createElement('event');
 
-    // creating new Teilnehmer
+    // inserting elements into event
     $subnode1_element = $xml->createElement('vorname', $vorname);
     $teilnehmer->appendChild($subnode1_element);
 

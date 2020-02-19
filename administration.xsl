@@ -44,6 +44,9 @@
                                             <option value="Wandern">Wandern</option>
                                         </select>
                                     </div>
+                                                                         <div class="form-group">
+                                        <textarea class="form-control" name="title" placeholder="Titel des Events*" rows="1"></textarea>
+                                    </div>
                                     <div class="form-group">
                                         <input class="form-control" type="number" name="dauerInTagen" min="1" max="7" placeholder="Dauer*"/>
                                     </div>
