@@ -53,6 +53,9 @@
                                      <div class="form-group">
                                         <textarea class="form-control" name="beschreibung" placeholder="Beschreibung*" rows="3"></textarea>
                                     </div>
+                                                                        <div class="form-group">
+                                        <input class="form-control" type="number" name="maximaleAnzahlTeilnehmer" min="1" max="50" placeholder="Maximale Anzahl Teilnehmer*"/>
+                                    </div>
                                     <div class="form-group">
                                         <label>Behinderungen</label>
                                         <div class="form-check">

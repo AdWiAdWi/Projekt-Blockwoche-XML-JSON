@@ -16,10 +16,10 @@ $eventID = $_POST["event"];
 
 $eventXML = loadingAndReturnMainDB();
 
-$validatedXML = insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
+$validatedXML = insertIntoEventXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
 
 
-function insertIntoReservationXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
+function insertIntoEventXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
     // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
