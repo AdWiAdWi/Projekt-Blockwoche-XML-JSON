@@ -1,6 +1,7 @@
 <?php
 
 include("index.php");
+include("xmlVerarbeitung.php");
 
 $vorname = $_POST["vorname"];
 $nachname = $_POST["nachname"];
@@ -16,10 +17,10 @@ $eventID = $_POST["event"];
 
 $eventXML = loadingAndReturnMainDB();
 
-$validatedXML = insertIntoEventXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
+$validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
 
 
-function insertIntoEventXML($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
+function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
     // Creating new DOM 
     $xml = new DomDocument('1.0', 'UTF-8');
@@ -84,37 +85,10 @@ function insertIntoEventXML($vorname, $nachname, $geschlecht, $adresse, $stadt, 
         }
     } else {
         echo "Maximale Anzahl Teilnehmer am Event bereits erreicht!";
+        return false;
     }
 }
 
-function loadingAndReturnMainDB(){
-    $data = 'Datenbank.xml';
-    $eventXML = new DOMDocument('1.0', 'UTF-8');
-    $eventXML->load($data);
-    $eventXML->formatOutput = true;
-    return $eventXML;
-}
-
-function validationOfNewXML($xml, $xsd) {
-        // disable error output to client   
-        libxml_use_internal_errors(true);
-
-        $result = $xml->schemaValidate($xsd);
-    
-        // show errors   
-        if (!$result) {     
-            $errors = libxml_get_errors();     
-            foreach ($errors as $error) {       
-                echo sprintf('Line [%d]: %s', $error->line, $error->message);     
-            }     
-            libxml_clear_errors();   
-            return false;
-        } else {
-            echo "Validation successfull";
-            return true;
-        }
-
-}
 
 // Fügt Reservation in der Datenbank ein
 function addReservation($xmlToInsert){

@@ -1,18 +1,22 @@
 <?php
 
-include("reservation.php");
+include("index.php");
+include("xmlVerarbeitung.php");
 
 $eventType = $_POST["eventType"];
 $startDatum = $_POST["startdatum"];
 $dauerInTagen = $_POST["dauerInTagen"];
 $beschreibung = $_POST["beschreibung"];
-$behinderungen = $_POST["behinderung"];
+$behinderungen = $_POST["behinderungen"];
 $title = $_POST["title"];
 $anzahlMöglicheTeilnehmer = $_POST["maximaleAnzahlTeilnehmer"];
 
-$eventDatenbank = loadingAndReturnMaindDB();
+$eventDatenbank = loadingAndReturnMainDB();
 
-$validiertesXML = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank);
+if(insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer)){
+    echo "Insertion successfull";
+    main();
+}
 
 function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer) {
 
@@ -53,13 +57,14 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     $subnode1_element = $xml->createElement('findetStatt', true);
     $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('teilnehmerliste');
+    $subnode1_element = $xml->createElement('teilnehmerListe');
     $event->appendChild($subnode1_element);
 
     // eventID vom letzten Event herausfinden und inkrementieren und in neues Event hinzufügen
     $xpath = new DOMXPath($eventDatenbank);
     $eventsLength = $xpath->query('//event/@id')->length;
-    $newEventID = $xpath->query('//event/@id')->item($eventsLength - 1) + 1;
+    $newEventID = $xpath->query('//event/@id')->item($eventsLength - 1)->nodeValue + 1;
+    echo $newEventID;
     $idAttribute = $xml->createAttribute('id');
     $event->appendChild($idAttribute);
     $event->setAttribute('id', $newEventID);
@@ -75,12 +80,11 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
         echo "Validation succesfull";
         $eventDatenbank->save("Datenbank.xml");
+        return true;
     } else {
         echo "Problem with creating and validation new Registration!";
         return false;
     }
-
-
 }
 
 ?>

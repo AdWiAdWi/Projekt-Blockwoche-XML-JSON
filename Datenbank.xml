@@ -9,7 +9,7 @@
 			<behinderung>Psychische Behinderung</behinderung>
 		</handicap>
 		<anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<anzahlTeilnehmer>5</anzahlTeilnehmer>
 		<findetStatt>true</findetStatt>
 		<teilnehmerListe>
 		<teilnehmer>
@@ -36,7 +36,7 @@
       <einzelzimmer>false</einzelzimmer>
       <spezielles/>
       </teilnehmer>
-      <teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
+      <teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Männlich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>2020-02-21</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
 	</event>
 
 
