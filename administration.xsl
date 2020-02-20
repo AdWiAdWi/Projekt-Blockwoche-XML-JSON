@@ -28,7 +28,7 @@
 						<br />
 						<br />
 						<h3>Event hinzufügen</h3>
-                        <form action="reservation.php" method="post">
+                        <form action="administrationsbearbeitung.php" method="post">
                             <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                                 <div class="text-left">
                                     <div class="form-group">

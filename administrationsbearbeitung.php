@@ -68,11 +68,17 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     // event in Datenbank.xml hinzufügen
     $xpath = new DOMXPath($eventDatenbank);
     $eventsNode = $xpath->query('//events')->item(0);
-    $eventsNode->appendChild($event);
+    $importedEvent = $eventDatenbank->importNode($event, true);
+    $eventsNode->appendChild($importedEvent);
 
     // Neues XML validieren und abspeichern
-
-    if (validationOfNewXML)
+    if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
+        echo "Validation succesfull";
+        $eventDatenbank->save("Datenbank.xml");
+    } else {
+        echo "Problem with creating and validation new Registration!";
+        return false;
+    }
 
 
 }
