@@ -3,30 +3,33 @@
 include("index.php");
 include("xmlVerarbeitung.php");
 
-$eventType = $_POST["eventType"];
-$startDatum = $_POST["startdatum"];
-$dauerInTagen = $_POST["dauerInTagen"];
-$beschreibung = $_POST["beschreibung"];
-$behinderungen = $_POST["behinderungen"];
-$title = $_POST["title"];
-$anzahlMöglicheTeilnehmer = $_POST["maximaleAnzahlTeilnehmer"];
+if ($_POST["absenden"]) {
+    $eventType = $_POST["eventType"];
+    $startDatum = $_POST["startdatum"];
+    $dauerInTagen = $_POST["dauerInTagen"];
+    $beschreibung = $_POST["beschreibung"];
+    $behinderungen = $_POST["behinderungen"];
+    $title = $_POST["title"];
+    $anzahlMöglicheTeilnehmer = $_POST["maximaleAnzahlTeilnehmer"];
 
-$eventDatenbank = loadingAndReturnMainDB();
+    $eventDatenbank = loadingAndReturnMainDB();
+    $insertIntoEventDB = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer);
 
-if(insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer)){
-    echo "Insertion successfull";
-    main();
+    if ($insertIntoEventDB) {
+        echo "Insertion successfull";
+        main();
+    }
+
 }
 
 function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer) {
 
-    // Creating new DOM
+    // Creating new DOM event
     $xml = new DomDocument('1.0', 'UTF-8');
     $event = $xml->createElement('event');
     $nameAttribute = $xml->createAttribute('name');
     $event->appendChild($nameAttribute);
     $event->setAttribute('name', $eventType);
-    // Todo: setting ID
 
     // inserting elements into event
     $subnode1_element = $xml->createElement('title', $title);

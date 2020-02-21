@@ -91,7 +91,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Einfügen</button>
+                                        <button class="btn btn-lg btn-primary center-block" type="submit" name="absenden" value="Senden">Einfügen</button>
                                     </div>
                                 </div>    
                             </div>	

@@ -3,22 +3,24 @@
 include("index.php");
 include("xmlVerarbeitung.php");
 
-$vorname = $_POST["vorname"];
-$nachname = $_POST["nachname"];
-$geschlecht = $_POST["geschlecht"];
-$adresse = $_POST["adresse"];
-$stadt = $_POST["stadt"];
-$telefonnummer = $_POST["telefonnummer"];
-$geburtstag = $_POST["geburtstag"];
-$behinderungen = $_POST["behinderung"];
-$einzelzimmer = $_POST["einzelzimmer"];
-$spezielles = $_POST["spezielles"];
-$eventID = $_POST["event"];
+if ($_POST["absenden"]) {
+    $vorname = $_POST["vorname"];
+    $nachname = $_POST["nachname"];
+    $geschlecht = $_POST["geschlecht"];
+    $adresse = $_POST["adresse"];
+    $stadt = $_POST["stadt"];
+    $telefonnummer = $_POST["telefonnummer"];
+    $geburtstag = $_POST["geburtstag"];
+    $behinderungen = $_POST["behinderung"];
+    $einzelzimmer = $_POST["einzelzimmer"];
+    $spezielles = $_POST["spezielles"];
+    $eventID = $_POST["event"];
 
-$eventXML = loadingAndReturnMainDB();
 
-$validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
+    $eventXML = loadingAndReturnMainDB();
 
+    $validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
+}
 
 function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
 
