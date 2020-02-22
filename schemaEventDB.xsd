@@ -20,7 +20,7 @@
 				<xs:element name="beschreibung" type="xs:string"/>
 				<xs:element ref="handicap"/>
 				<xs:element name="anzahlMöglicheTeilnehmer" type="xs:positiveInteger"/>
-				<xs:element name="anzahlTeilnehmer" type="xs:positiveInteger"/>
+				<xs:element name="anzahlTeilnehmer" type="xs:nonNegativeInteger"/>
 				<!--Ist findetStatt notwendig? - aw -->
 				<xs:element name="findetStatt" type="xs:boolean"/>
 				<xs:element ref="teilnehmerListe"/>

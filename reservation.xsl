@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="col-12 text-center">
                                     <a href="index.php"><button class="btn btn-lg btn-primary center-block mr-1">Zurück</button></a>
-                                    <button class="btn btn-lg btn-primary center-block ml-1" type="submit" value="Senden">Buchen</button>
+                                    <button class="btn btn-lg btn-primary center-block ml-1" type="submit" name="absenden" value="Senden">Buchen</button>
                                 </div>
                             </div>
                         </div>	

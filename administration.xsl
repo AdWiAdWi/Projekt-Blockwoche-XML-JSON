@@ -28,7 +28,7 @@
 						<br />
 						<br />
 						<h3>Event hinzufügen</h3>
-                        <form action="reservation.php" method="post">
+                        <form action="administrationsbearbeitung.php" method="post">
                             <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                                 <div class="text-left">
                                     <div class="form-group">
@@ -62,36 +62,36 @@
                                     <div class="form-group">
                                         <label>Behinderungen</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Höhrbehinderung" id="höhrBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Höhrbehinderung" id="höhrBehinderung" />
                                             <label class="form-check-label" for="höhrBehinderung">Höhrbehinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Geistige Behinderung" id="geistigeBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Geistige Behinderung" id="geistigeBehinderung" />
                                             <label class="form-check-label" for="geistigeBehinderung">Geistige Behinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Keine Behinderung" id="noBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Keine Behinderung" id="noBehinderung" />
                                             <label class="form-check-label" for="noBehinderung">Keine Behinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Körperbehinderung" id="körperBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Körperbehinderung" id="körperBehinderung" />
                                             <label class="form-check-label" for="körperBehinderung">Körperliche Behinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Psychische Behinderung" id="psychischeBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Psychische Behinderung" id="psychischeBehinderung" />
                                             <label class="form-check-label" for="psychischeBehinderung">Psychische Behinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Sehbehinderung" id="sehBehinderung" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Sehbehinderung" id="sehBehinderung" />
                                             <label class="form-check-label" for="sehBehinderung">Sehbehinderung</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="behinderung" value="Diverse Behinderungen" id="diverseBehinderungen" />
+                                            <input class="form-check-input" type="checkbox" name="behinderungen[]" value="Diverse Behinderungen" id="diverseBehinderungen" />
                                             <label class="form-check-label" for="diverseBehinderungen">Diverse Behinderungen</label>
                                         </div>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Einfügen</button>
+                                        <button class="btn btn-lg btn-primary center-block" type="submit" name="absenden" value="Senden">Einfügen</button>
                                     </div>
                                 </div>    
                             </div>	

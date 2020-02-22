@@ -1,54 +1,93 @@
 <?php
 
-include("reservation.php");
+include("index.php");
+include("xmlVerarbeitung.php");
 
-$eventType = $_POST["eventType"];
-$startDatum = $_POST["startdatum"];
-$dauerInTagen = $_POST["dauerInTagen"];
-$beschreibung = $_POST["beschreibung"];
-$behinderungen = $_POST["behinderung"];
+if ($_POST["absenden"]) {
+    $eventType = $_POST["eventType"];
+    $startDatum = $_POST["startdatum"];
+    $dauerInTagen = $_POST["dauerInTagen"];
+    $beschreibung = $_POST["beschreibung"];
+    $behinderungen = $_POST["behinderungen"];
+    $title = $_POST["title"];
+    $anzahlMöglicheTeilnehmer = $_POST["maximaleAnzahlTeilnehmer"];
 
-$eventDatenbank = loadingAndReturnMaindDB();
+    $eventDatenbank = loadingAndReturnMainDB();
+    $insertIntoEventDB = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer);
 
-$validiertesXML = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank);
+    if ($insertIntoEventDB) {
+        echo "Insertion successfull";
+        main();
+    }
 
-function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank) {
+}
 
-    // Creating new DOM
+function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer) {
+
+    // Creating new DOM event
     $xml = new DomDocument('1.0', 'UTF-8');
     $event = $xml->createElement('event');
+    $nameAttribute = $xml->createAttribute('name');
+    $event->appendChild($nameAttribute);
+    $event->setAttribute('name', $eventType);
 
     // inserting elements into event
-    $subnode1_element = $xml->createElement('vorname', $vorname);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('title', $title);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('nachname', $nachname);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('dauerInTagen', $dauerInTagen);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('geschlecht', $geschlecht);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('startdatum', $startDatum);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('adresse', $adresse);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('beschreibung', $beschreibung);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('stadt', $stadt);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('handicap');
+    foreach ($behinderungen as $item) {
+        $subnode2_element = $xml->createElement('behinderung', $item);
+        $subnode1_element->appendChild($subnode2_element);
+    }
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('telefonnummer', $telefonnummer);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('anzahlMöglicheTeilnehmer', $anzahlMöglicheTeilnehmer);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('geburtstag', $geburtstag);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('anzahlTeilnehmer', 0);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('behinderung', $behinderungen);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('findetStatt', true);
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('einzelzimmer', $einzelzimmer);
-    $teilnehmer->appendChild($subnode1_element);
+    $subnode1_element = $xml->createElement('teilnehmerListe');
+    $event->appendChild($subnode1_element);
 
-    $subnode1_element = $xml->createElement('spezielles', $spezielles);
-    $teilnehmer->appendChild($subnode1_element);
+    // eventID vom letzten Event herausfinden und inkrementieren und in neues Event hinzufügen
+    $xpath = new DOMXPath($eventDatenbank);
+    $eventsLength = $xpath->query('//event/@id')->length;
+    $newEventID = $xpath->query('//event/@id')->item($eventsLength - 1)->nodeValue + 1;
+    echo $newEventID;
+    $idAttribute = $xml->createAttribute('id');
+    $event->appendChild($idAttribute);
+    $event->setAttribute('id', $newEventID);
 
+
+    // event in Datenbank.xml hinzufügen
+    $xpath = new DOMXPath($eventDatenbank);
+    $eventsNode = $xpath->query('//events')->item(0);
+    $importedEvent = $eventDatenbank->importNode($event, true);
+    $eventsNode->appendChild($importedEvent);
+
+    // Neues XML validieren und abspeichern
+    if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
+        echo "Validation succesfull";
+        $eventDatenbank->save("Datenbank.xml");
+        return true;
+    } else {
+        echo "Problem with creating and validation new Registration!";
+        return false;
+    }
 }
 
 ?>
