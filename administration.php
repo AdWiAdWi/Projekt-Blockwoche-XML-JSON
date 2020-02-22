@@ -1,8 +1,10 @@
 <?php
+include("xmlVerarbeitung.php");
+loadXSLwithMainDB("administration.xsl");
 
-loadReservation();
+// function inserted into xmlVerarbeitung.php
 
-function loadReservation() {
+/* function loadReservation() {
        // load XML
        $data = file_get_contents('Datenbank.xml');
        $xml = new DOMDocument();
@@ -16,6 +18,6 @@ function loadReservation() {
        $processor->importStylesheet($xsl);
        $dom = $processor->transformToDoc($xml);
        echo $dom->saveXML();
-}
+} */
 
 ?>

@@ -1,6 +1,5 @@
 <?php
 
-include("index.php");
 include("xmlVerarbeitung.php");
 
 if ($_POST["absenden"]) {
@@ -17,7 +16,10 @@ if ($_POST["absenden"]) {
 
     if ($insertIntoEventDB) {
         echo "Insertion successfull";
-        main();
+        loadXSLwithMainDB('bestätigungEventHinzufuegen.xsl');
+    } else {
+        echo "Insertion not successfull";
+
     }
 
 }
