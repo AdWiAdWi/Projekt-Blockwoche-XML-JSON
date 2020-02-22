@@ -19,7 +19,7 @@ if ($_POST["absenden"]) {
         loadXSLwithMainDB('bestätigungEventHinzufuegen.xsl');
     } else {
         echo "Insertion not successfull";
-
+        loadXSLwithMainDB('fehlerEventHinzufuegen.xsl');
     }
 
 }
@@ -83,7 +83,6 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
 
     // Neues XML validieren und abspeichern
     if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
-        echo "Validation succesfull";
         $eventDatenbank->save("Datenbank.xml");
         return true;
     } else {
