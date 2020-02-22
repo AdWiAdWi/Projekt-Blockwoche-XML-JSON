@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"> 
-
+    <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
     
     <!--Durchschnittliche Auslastung insgesamt in Prozenten-->
     <xsl:variable name="anzahlPlätze" select="sum(//anzahlMöglicheTeilnehmer/text())"/>
     <xsl:variable name="anzahlGebucht" select="sum(//anzahlTeilnehmer/text())"/>
     <xsl:variable name="auslastungInsgesamt" select="(($anzahlGebucht div $anzahlPlätze))"/>
     <xsl:variable name="auslastungInsgesamtProzent" select="format-number($auslastungInsgesamt, '##%')"/>
+
 
 
     <!--Behinderungen-->
@@ -79,133 +80,150 @@
 
 
 <xsl:template match="/">
-    <html>
-    <body>
+    <html lang="de">
+			<head>
+			<!-- Bootstrap -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+			
+			<!-- Google Font -->
+			<link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet" />
+
+			<!-- CSS -->
+    		<link href="css/style.css" rel="stylesheet" />
+
+			<!-- Title -->
+			<title>Home</title>
+			</head>
+
+      <body>
 
 
 
-<!--Auslastung der angebotenen Plätze in Prozent-->
-    <h3>Auslastung der Plätze insgesamt in Prozent</h3>
+        <!--Auslastung der angebotenen Plätze in Prozent-->
+        <div class="statistic-box mt-5 ml-5">
+          <h1 class="display-4 text-center">STATISTIK</h1>
+          <br />
+          <br />
+          <h3>Auslastung der Plätze insgesamt in Prozent</h3>
+
+            <svg width="90%" height="65px"
+            viewBox="0 0 1132 65" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg" version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+                
+            <g class='bars'>
+              <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
+              <rect class='data' fill='red' width="{$auslastungInsgesamtProzent}" height='25'></rect>
+            </g>
+            <g class='markers'>
+              <rect fill='#030e18' x='0%' y='0' width='2px' height='35'></rect>
+              <rect fill='#030e18' x='25%' y='0' width='2px' height='35'></rect>
+              <rect fill='#030e18' x='50%' y='0' width='2px' height='35'></rect>
+              <rect fill='#030e18' x='75%' y='0' width='2px' height='35'></rect>
+              <rect text-anchor='' fill='#030e18' x='1130' y='0' width='2px' height='35'></rect>
+            </g>
+            <g text-anchor='middle'>
+              <text text-anchor='start' fill='#030e18' x='0' y='60'>0%</text>
+              <text fill='#030e18' x='25%' y='60'>25%</text>
+              <text fill='#030e18' x='50%' y='60'>50%</text>
+              <text fill='#030e18' x='75%' y='60'>75%</text>
+              <text text-anchor='end' fill='#030e18' x='100%' y='60'>100%</text>
+            </g>
+          </svg>
+      </div>
 
 
-      <svg width="90%" height="65px"
-			 viewBox="0 0 1132 65" preserveAspectRatio="none"
-			 xmlns="http://www.w3.org/2000/svg" version="1.1"
-			 xmlns:xlink="http://www.w3.org/1999/xlink">
-           
+    <!--Prozentuale Verteilung der Geschlechter-->
+    <div class="statistic-box mt-5 ml-5">
+    <h3>Aufteilung der Geschlechter der Teilnehmer</h3>
 
-  <g class='bars'>
-    <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-    <rect class='data' fill='#0074d9' width="{$auslastungInsgesamtProzent}" height='25'></rect>
-  </g>
-  <g class='markers'>
-    <rect fill='#001f3f' x='0%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='25%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='50%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='75%' y='0' width='2px' height='35'></rect>
-    <rect text-anchor='' fill='#001f3f' x='1130' y='0' width='2px' height='35'></rect>
-  </g>
-  <g text-anchor='middle'>
-    <text text-anchor='start' fill='#0074d9' x='0' y='60'>0%</text>
-    <text fill='#0074d9' x='25%' y='60'>25%</text>
-    <text fill='#0074d9' x='50%' y='60'>50%</text>
-    <text fill='#0074d9' x='75%' y='60'>75%</text>
-    <text text-anchor='end' fill='#0074d9' x='100%' y='60'>100%</text>
-  </g>
-</svg>
-
-
-<!--Prozentuale Verteilung der Geschlechter-->
- <h3>Aufteilung der Geschlechter der Teilnehmer</h3>
-
-
-      <svg width="90%" height="65px"
-			 viewBox="0 0 1132 65" preserveAspectRatio="none"
-			 xmlns="http://www.w3.org/2000/svg" version="1.1"
-			 xmlns:xlink="http://www.w3.org/1999/xlink">
-           
-  
-
-  <g class='bars'>
-    <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-    <rect class='data' fill='blue' width="{$weiblichProzent}" height='25'></rect>
-    <rect class='data' fill='red' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
-    <rect class='data' fill='yellow' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
-  
-  </g>
-  <g class='markers'>
-    <rect fill='#001f3f' x='0%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='25%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='50%' y='0' width='2px' height='35'></rect>
-    <rect fill='#001f3f' x='75%' y='0' width='2px' height='35'></rect>
-    <rect text-anchor='' fill='#001f3f' x='1130' y='0' width='2px' height='35'></rect>
-  </g>
-  <g text-anchor='middle'>
-    <text text-anchor='start' fill='#0074d9' x='0' y='60'>0%</text>
-    <text fill='#0074d9' x='25%' y='60'>25%</text>
-    <text fill='#0074d9' x='50%' y='60'>50%</text>
-    <text fill='#0074d9' x='75%' y='60'>75%</text>
-    <text text-anchor='end' fill='#0074d9' x='100%' y='60'>100%</text>
-  </g>
-</svg>
-
+       <svg width="90%" height="65px"
+        viewBox="0 0 1132 65" preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+              
+        <g class='bars'>
+          <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
+          <rect class='data' fill='blue' width="{$weiblichProzent}" height='25'></rect>
+          <rect class='data' fill='red' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
+          <rect class='data' fill='yellow' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
+        
+        </g>
+        <g class='markers'>
+          <rect fill='#030e18' x='0%' y='0' width='2px' height='35'></rect>
+          <rect fill='#030e18' x='25%' y='0' width='2px' height='35'></rect>
+          <rect fill='#030e18' x='50%' y='0' width='2px' height='35'></rect>
+          <rect fill='#030e18' x='75%' y='0' width='2px' height='35'></rect>
+          <rect text-anchor='' fill='#030e18' x='1130' y='0' width='2px' height='35'></rect>
+        </g>
+        <g text-anchor='middle'>
+          <text text-anchor='start' fill='#030e18' x='0' y='60'>0%</text>
+          <text fill='#030e18' x='25%' y='60'>25%</text>
+          <text fill='#030e18' x='50%' y='60'>50%</text>
+          <text fill='#030e18' x='75%' y='60'>75%</text>
+          <text text-anchor='end' fill='#030e18' x='100%' y='60'>100%</text>
+        </g>
+      </svg>
+    </div>
 
 <!--Prozentuale Verteilung Sportarten-->
- <h3>Aufteilung Veranstaltungen pro Sportart</h3>
+ <div class="statistic-box mt-5 ml-5">
+    <h3>Aufteilung Veranstaltungen pro Sportart</h3>
 
 
-        <svg width="90%" height="500px"
-			
-			 xmlns="http://www.w3.org/2000/svg" version="1.1"
-			 xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="90%" height="500px"
+          
+          xmlns="http://www.w3.org/2000/svg" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
 
+          
+              
       
-           
-  
-	<g transform="translate(40,20)">
-	<g class="x axis" transform="translate(0,450)">
-			<g class="tick" transform="translate(25.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
-		
-		</g>
-		
-		
-		<path class="domain" d="M0,6V0H900V6"></path>
-	</g>
-		<g class="y axis">
-			<g class="tick" transform="translate(0,450)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">0%</text>
-		</g>
-			<g class="tick" transform="translate(0,337.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">25%</text>
-		</g>
-				<g class="tick" transform="translate(0,225)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">50%</text>
-		</g>
-			<g class="tick" transform="translate(0,112.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
-		</g>
-			<g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
-		</g>
-			
-		<path class="domain" d="M-6,0H0V450H-6"></path>
-	
-	</g>
-		<rect class="bar" x="20" width="31" y="{$kletternAbstand}" height="{$kletternProzent}"></rect>
-		<rect class="bar" x="100" width="31" y="{$basketballAbstand}" height="{$basketballProzent}"></rect>
-		<rect class="bar" x="180" width="31" y="{$schwimmenAbstand}" height="{$schwimmenProzent}"></rect>
-		<rect class="bar" x="260" width="31" y="{$schnitzeljagdAbstand}" height="{$schnitzeljagdProzent}"></rect>
-		<rect class="bar" x="340" width="31" y="{$wandernAbstand}" height="{$wandernProzent}"></rect>
-		<rect class="bar" x="420" width="31" y="{$fahrradAbstand}" height="{$fahrradProzent}"></rect>
-		<rect class="bar" x="500" width="31" y="{$skiAbstand}" height="{$skiProzent}"></rect>
-    <rect class="bar" x="580" width="31" y="{$fussballAbstand}" height="{$fussballProzent}"></rect>
+      <g transform="translate(40,20)">
+      <g class="x axis" transform="translate(0,450)">
+          <g class="tick" transform="translate(25.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+        
+        </g>
+        
+        
+        <path class="domain" d="M0,6V0H900V6"></path>
+      </g>
+        <g class="y axis">
+          <g class="tick" transform="translate(0,450)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">0%</text>
+        </g>
+          <g class="tick" transform="translate(0,337.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">25%</text>
+        </g>
+            <g class="tick" transform="translate(0,225)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">50%</text>
+        </g>
+          <g class="tick" transform="translate(0,112.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
+        </g>
+          <g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
+        </g>
+          
+        <path class="domain" d="M-6,0H0V450H-6"></path>
+      
+      </g>
+        <rect class="bar" fill="saddlebrown" x="20" width="31" y="{$kletternAbstand}" height="{$kletternProzent}"></rect>
+        <rect class="bar" fill="peru" x="100" width="31" y="{$basketballAbstand}" height="{$basketballProzent}"></rect>
+        <rect class="bar" fill="darkgoldenrod" x="180" width="31" y="{$schwimmenAbstand}" height="{$schwimmenProzent}"></rect>
+        <rect class="bar" fill="goldenrod" x="260" width="31" y="{$schnitzeljagdAbstand}" height="{$schnitzeljagdProzent}"></rect>
+        <rect class="bar" fill="burlywood" x="340" width="31" y="{$wandernAbstand}" height="{$wandernProzent}"></rect>
+        <rect class="bar" fill="bisque" x="420" width="31" y="{$fahrradAbstand}" height="{$fahrradProzent}"></rect>
+        <rect class="bar" fill="beige" x="500" width="31" y="{$skiAbstand}" height="{$skiProzent}"></rect>
+        <rect class="bar" fill="floralwhite" x="580" width="31" y="{$fussballAbstand}" height="{$fussballProzent}"></rect>
 
-		
-	</g>
-</svg>
+      </g>
+    </svg>
+  </div>
 
 <!--Prozentuale Verteilung Behinderungen-->
- <h3>Aufteilung Behinderung aller Teilnehmenden</h3>
+ <div class="statistic-box mt-5 ml-5">
+    <h3>Aufteilung Behinderung aller Teilnehmenden</h3>
 
 
         <svg width="90%" height="500px"
@@ -215,61 +233,51 @@
 
       
            
-  
-	<g transform="translate(40,20)">
-	<g class="x axis" transform="translate(0,450)">
-			<g class="tick" transform="translate(25.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
-			
-		</g>
-		
-		
-		<path class="domain" d="M0,6V0H900V6"></path>
-	</g>
-		<g class="y axis">
-			<g class="tick" transform="translate(0,450)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">0%</text>
-		</g>
-			<g class="tick" transform="translate(0,337.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">25%</text>
-		</g>
-				<g class="tick" transform="translate(0,225)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">50%</text>
-		</g>
-			<g class="tick" transform="translate(0,112.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
-		</g>
-			<g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-			<text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
-		</g>
-			
-		<path class="domain" d="M-6,0H0V450H-6"></path>
-	
-	</g>
-		<rect class="bar" x="20" width="31" y="{$diverseBehinderungenAbstand}" height="{$diverseBehinderungenProzent}"></rect>
-		<rect class="bar" x="100" width="31" y="{$hörbehinderungAbstand}" height="{$hörbehinderungProzent}"></rect>
-		<rect class="bar" x="180" width="31" y="{$körperbehinderungAbstand}" height="{$körperbehinderungProzent}"></rect>
-		<rect class="bar" x="260" width="31" y="{$psychischeBehinderungAbstand}" height="{$psychischeBehinderungProzent}"></rect>
-		<rect class="bar" x="340" width="31" y="{$sehbehinderungAbstand}" height="{$sehbehinderungProzent}"></rect>
-		<rect class="bar" x="420" width="31" y="{$keineBehinderungAbstand}" height="{$keineBehinderungProzent}"></rect>
-		<rect class="bar" x="500" width="31" y="{$geistigeBehinderungAbstand}" height="{$geistigeBehinderungProzent}"></rect>
-   
-
-		
-	</g>
-</svg>
-
-
-
-
-  
-
-
-
-    </body>
-    </html>
+      
+      <g transform="translate(40,20)">
+      <g class="x axis" transform="translate(0,450)">
+          <g class="tick" transform="translate(25.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line>
+          
+        </g>
         
+        
+        <path class="domain" d="M0,6V0H900V6"></path>
+      </g>
+        <g class="y axis">
+          <g class="tick" transform="translate(0,450)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">0%</text>
+        </g>
+          <g class="tick" transform="translate(0,337.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">25%</text>
+        </g>
+            <g class="tick" transform="translate(0,225)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">50%</text>
+        </g>
+          <g class="tick" transform="translate(0,112.5)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
+        </g>
+          <g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
+          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
+        </g>
+          
+        <path class="domain" d="M-6,0H0V450H-6"></path>
+      
+      </g>
+        <rect class="bar" fill="saddlebrown" x="20" width="31" y="{$diverseBehinderungenAbstand}" height="{$diverseBehinderungenProzent}"></rect>
+        <rect class="bar" fill="peru" x="100" width="31" y="{$hörbehinderungAbstand}" height="{$hörbehinderungProzent}"></rect>
+        <rect class="bar" fill="darkgoldenrod" x="180" width="31" y="{$körperbehinderungAbstand}" height="{$körperbehinderungProzent}"></rect>
+        <rect class="bar" fill="goldenrod" x="260" width="31" y="{$psychischeBehinderungAbstand}" height="{$psychischeBehinderungProzent}"></rect>
+        <rect class="bar" fill="burlywood" x="340" width="31" y="{$sehbehinderungAbstand}" height="{$sehbehinderungProzent}"></rect>
+        <rect class="bar" fill="bisque" x="420" width="31" y="{$keineBehinderungAbstand}" height="{$keineBehinderungProzent}"></rect>
+        <rect class="bar" fill="floralwhite" x="500" width="31" y="{$geistigeBehinderungAbstand}" height="{$geistigeBehinderungProzent}"></rect>
+     
+      </g>
+    </svg>
+  </div>
 
-    </xsl:template>
-
+</body>
+</html>
+        
+</xsl:template>
     
 </xsl:stylesheet>
