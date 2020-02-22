@@ -100,7 +100,7 @@
 
 
         <!--Auslastung der angebotenen Plätze in Prozent-->
-        <div class="statistic-box mt-5 ml-5">
+        <div class="statistic-box">
           <h1 class="display-4 text-center">STATISTIK</h1>
           <br />
           <br />
@@ -113,7 +113,7 @@
                 
             <g class='bars'>
               <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-              <rect class='data' fill='red' width="{$auslastungInsgesamtProzent}" height='25'></rect>
+              <rect class='data' fill='#ce4b99' width="{$auslastungInsgesamtProzent}" height='25'></rect>
             </g>
             <g class='markers'>
               <rect fill='#030e18' x='0%' y='0' width='2px' height='35'></rect>
@@ -130,11 +130,20 @@
               <text text-anchor='end' fill='#030e18' x='100%' y='60'>100%</text>
             </g>
           </svg>
+
+          <figcaption class="figure-key">
+    
+    <ul class="figure-key-list" aria-hidden="true" role="presentation">
+      <li>
+        <span class="shape-circle shape-first"></span> Auslastung in Prozent
+      </li>
+    </ul>
+  </figcaption>
       </div>
 
 
     <!--Prozentuale Verteilung der Geschlechter-->
-    <div class="statistic-box mt-5 ml-5">
+    <div class="statistic-box">
     <h3>Aufteilung der Geschlechter der Teilnehmer</h3>
 
        <svg width="90%" height="65px"
@@ -144,9 +153,9 @@
               
         <g class='bars'>
           <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-          <rect class='data' fill='blue' width="{$weiblichProzent}" height='25'></rect>
-          <rect class='data' fill='red' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
-          <rect class='data' fill='yellow' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
+          <rect class='data' fill='#ce4b99' width="{$weiblichProzent}" height='25'></rect>
+          <rect class='data' fill='#b1c94e' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
+          <rect class='data' fill='#377bbc' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
         
         </g>
         <g class='markers'>
@@ -164,10 +173,26 @@
           <text text-anchor='end' fill='#030e18' x='100%' y='60'>100%</text>
         </g>
       </svg>
+
+
+      <figcaption class="figure-key">
+    
+    <ul class="figure-key-list" aria-hidden="true" role="presentation">
+      <li>
+        <span class="shape-circle shape-first"></span> Weiblich
+      </li>
+      <li>
+        <span class="shape-circle shape-second"></span> Männlich
+      </li>
+      <li>
+        <span class="shape-circle shape-third"></span> Andere
+      </li>
+    </ul>
+  </figcaption>
     </div>
 
 <!--Prozentuale Verteilung Sportarten-->
- <div class="statistic-box mt-5 ml-5">
+ <div class="statistic-box">
     <h3>Aufteilung Veranstaltungen pro Sportart</h3>
 
 
@@ -202,7 +227,7 @@
           <text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
         </g>
           <g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
+          <text dy=".32em" x="-4.5" y="0" style="text-anchor: end;">100%</text>
         </g>
           
         <path class="domain" d="M-6,0H0V450H-6"></path>
@@ -219,10 +244,47 @@
 
       </g>
     </svg>
+
+<div> 
+
+      <figcaption class="figure-key">
+    
+    <ul class="figure-key-list" aria-hidden="true" role="presentation">
+      <li>
+        <span class="shape-circle shape-first"></span> Klettern
+      </li>
+      <li>
+        <span class="shape-circle shape-second"></span> Basketball
+      </li>
+      <li>
+        <span class="shape-circle shape-third"></span> Schwimmen
+      </li>
+      <li>
+        <span class="shape-circle shape-4th"></span> Schnitzeljagd
+      </li>
+      <li>
+        <span class="shape-circle shape-5th"></span> Wandern
+      </li>
+      <li>
+        <span class="shape-circle shape-6th"></span> Fahrrad
+      </li>
+       <li>
+        <span class="shape-circle shape-7th"></span> Ski und Snowboard
+      </li>
+      <li>
+        <span class="shape-circle shape-8th"></span> Fussball
+      </li>
+    </ul>
+  </figcaption>
+
+
+</div>
+
+
   </div>
 
 <!--Prozentuale Verteilung Behinderungen-->
- <div class="statistic-box mt-5 ml-5">
+ <div class="statistic-box">
     <h3>Aufteilung Behinderung aller Teilnehmenden</h3>
 
 
@@ -257,7 +319,7 @@
           <text dy=".32em" x="-9" y="0" style="text-anchor: end;">75%</text>
         </g>
           <g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line>
-          <text dy=".32em" x="-9" y="0" style="text-anchor: end;">100%</text>
+          <text dy=".32em" x="-4.5" y="0" style="text-anchor: end;">100%</text>
         </g>
           
         <path class="domain" d="M-6,0H0V450H-6"></path>
@@ -273,6 +335,40 @@
      
       </g>
     </svg>
+
+<div> 
+
+      <figcaption class="figure-key">
+    
+    <ul class="figure-key-list" aria-hidden="true" role="presentation">
+      <li>
+        <span class="shape-circle shape-first"></span> Diverse Behinderungen
+      </li>
+      <li>
+        <span class="shape-circle shape-second"></span> Hörbehinderung
+      </li>
+      <li>
+        <span class="shape-circle shape-third"></span> Körperbehinderung
+      </li>
+      <li>
+        <span class="shape-circle shape-4th"></span> Psychische Behinderung
+      </li>
+      <li>
+        <span class="shape-circle shape-5th"></span> Sehbehinderung
+      </li>
+      <li>
+        <span class="shape-circle shape-6th"></span> Keine Behinderung
+      </li>
+       <li>
+        <span class="shape-circle shape-7th"></span> Geistige Behinderung
+      </li>
+    </ul>
+  </figcaption>
+
+
+</div>
+
+
   </div>
 
 </body>
