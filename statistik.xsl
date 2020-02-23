@@ -100,10 +100,8 @@
 
 
         <!--Auslastung der angebotenen Plätze in Prozent-->
+        <h1 class="display-4 text-center mt-5">STATISTIK</h1>
         <div class="statistic-box">
-          <h1 class="display-4 text-center">STATISTIK</h1>
-          <br />
-          <br />
           <h3>Auslastung der Plätze insgesamt in Prozent</h3>
 
             <svg width="90%" height="65px"
@@ -112,8 +110,8 @@
             xmlns:xlink="http://www.w3.org/1999/xlink">
                 
             <g class='bars'>
-              <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-              <rect class='data' fill='#ce4b99' width="{$auslastungInsgesamtProzent}" height='25'></rect>
+              <rect class='bg' fill='white' width='100%' height='25'></rect>
+              <rect class='data' fill='#fe938c' width="{$auslastungInsgesamtProzent}" height='25'></rect>
             </g>
             <g class='markers'>
               <rect fill='#030e18' x='0%' y='0' width='2px' height='35'></rect>
@@ -135,7 +133,7 @@
     
     <ul class="figure-key-list" aria-hidden="true" role="presentation">
       <li>
-        <span class="shape-circle shape-first"></span> Auslastung in Prozent
+        <span class="shape-circle shape-general-1"></span> Auslastung in Prozent
       </li>
     </ul>
   </figcaption>
@@ -153,9 +151,9 @@
               
         <g class='bars'>
           <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
-          <rect class='data' fill='#ce4b99' width="{$weiblichProzent}" height='25'></rect>
-          <rect class='data' fill='#b1c94e' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
-          <rect class='data' fill='#377bbc' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
+          <rect class='data' fill='#fe938c' width="{$weiblichProzent}" height='25'></rect>
+          <rect class='data' fill='#ead2ac' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
+          <rect class='data' fill='#4281a4' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
         
         </g>
         <g class='markers'>
@@ -179,13 +177,13 @@
     
     <ul class="figure-key-list" aria-hidden="true" role="presentation">
       <li>
-        <span class="shape-circle shape-first"></span> Weiblich
+        <span class="shape-circle shape-general-1"></span> Weiblich
       </li>
       <li>
-        <span class="shape-circle shape-second"></span> Männlich
+        <span class="shape-circle shape-general-2"></span> Männlich
       </li>
       <li>
-        <span class="shape-circle shape-third"></span> Andere
+        <span class="shape-circle shape-general-3"></span> Andere
       </li>
     </ul>
   </figcaption>
@@ -233,14 +231,14 @@
         <path class="domain" d="M-6,0H0V450H-6"></path>
       
       </g>
-        <rect class="bar" fill="saddlebrown" x="20" width="31" y="{$kletternAbstand}" height="{$kletternProzent}"></rect>
-        <rect class="bar" fill="peru" x="100" width="31" y="{$basketballAbstand}" height="{$basketballProzent}"></rect>
-        <rect class="bar" fill="darkgoldenrod" x="180" width="31" y="{$schwimmenAbstand}" height="{$schwimmenProzent}"></rect>
-        <rect class="bar" fill="goldenrod" x="260" width="31" y="{$schnitzeljagdAbstand}" height="{$schnitzeljagdProzent}"></rect>
-        <rect class="bar" fill="burlywood" x="340" width="31" y="{$wandernAbstand}" height="{$wandernProzent}"></rect>
-        <rect class="bar" fill="bisque" x="420" width="31" y="{$fahrradAbstand}" height="{$fahrradProzent}"></rect>
-        <rect class="bar" fill="beige" x="500" width="31" y="{$skiAbstand}" height="{$skiProzent}"></rect>
-        <rect class="bar" fill="floralwhite" x="580" width="31" y="{$fussballAbstand}" height="{$fussballProzent}"></rect>
+        <rect class="bar" fill="#513b56" x="20" width="31" y="{$kletternAbstand}" height="{$kletternProzent}"></rect>
+        <rect class="bar" fill="#9d8189" x="100" width="31" y="{$basketballAbstand}" height="{$basketballProzent}"></rect>
+        <rect class="bar" fill="#fe938c" x="180" width="31" y="{$schwimmenAbstand}" height="{$schwimmenProzent}"></rect>
+        <rect class="bar" fill="#e6b89c" x="260" width="31" y="{$schnitzeljagdAbstand}" height="{$schnitzeljagdProzent}"></rect>
+        <rect class="bar" fill="#ead2ac" x="340" width="31" y="{$wandernAbstand}" height="{$wandernProzent}"></rect>
+        <rect class="bar" fill="#9cafb7" x="420" width="31" y="{$fahrradAbstand}" height="{$fahrradProzent}"></rect>
+        <rect class="bar" fill="#4281a4" x="500" width="31" y="{$skiAbstand}" height="{$skiProzent}"></rect>
+        <rect class="bar" fill="#1a535c" x="580" width="31" y="{$fussballAbstand}" height="{$fussballProzent}"></rect>
 
       </g>
     </svg>
@@ -325,13 +323,13 @@
         <path class="domain" d="M-6,0H0V450H-6"></path>
       
       </g>
-        <rect class="bar" fill="saddlebrown" x="20" width="31" y="{$diverseBehinderungenAbstand}" height="{$diverseBehinderungenProzent}"></rect>
-        <rect class="bar" fill="peru" x="100" width="31" y="{$hörbehinderungAbstand}" height="{$hörbehinderungProzent}"></rect>
-        <rect class="bar" fill="darkgoldenrod" x="180" width="31" y="{$körperbehinderungAbstand}" height="{$körperbehinderungProzent}"></rect>
-        <rect class="bar" fill="goldenrod" x="260" width="31" y="{$psychischeBehinderungAbstand}" height="{$psychischeBehinderungProzent}"></rect>
-        <rect class="bar" fill="burlywood" x="340" width="31" y="{$sehbehinderungAbstand}" height="{$sehbehinderungProzent}"></rect>
-        <rect class="bar" fill="bisque" x="420" width="31" y="{$keineBehinderungAbstand}" height="{$keineBehinderungProzent}"></rect>
-        <rect class="bar" fill="floralwhite" x="500" width="31" y="{$geistigeBehinderungAbstand}" height="{$geistigeBehinderungProzent}"></rect>
+        <rect class="bar" fill="#513b56" x="20" width="31" y="{$diverseBehinderungenAbstand}" height="{$diverseBehinderungenProzent}"></rect>
+        <rect class="bar" fill="#9d8189" x="100" width="31" y="{$hörbehinderungAbstand}" height="{$hörbehinderungProzent}"></rect>
+        <rect class="bar" fill="#fe938c" x="180" width="31" y="{$körperbehinderungAbstand}" height="{$körperbehinderungProzent}"></rect>
+        <rect class="bar" fill="#e6b89c" x="260" width="31" y="{$psychischeBehinderungAbstand}" height="{$psychischeBehinderungProzent}"></rect>
+        <rect class="bar" fill="#ead2ac" x="340" width="31" y="{$sehbehinderungAbstand}" height="{$sehbehinderungProzent}"></rect>
+        <rect class="bar" fill="#9cafb7" x="420" width="31" y="{$keineBehinderungAbstand}" height="{$keineBehinderungProzent}"></rect>
+        <rect class="bar" fill="#4281a4" x="500" width="31" y="{$geistigeBehinderungAbstand}" height="{$geistigeBehinderungProzent}"></rect>
      
       </g>
     </svg>
@@ -342,7 +340,7 @@
     
     <ul class="figure-key-list" aria-hidden="true" role="presentation">
       <li>
-        <span class="shape-circle shape-first"></span> Diverse Behinderungen
+        <span class="shape-circle shape-first" fill="#513b56"></span> Diverse Behinderungen
       </li>
       <li>
         <span class="shape-circle shape-second"></span> Hörbehinderung
