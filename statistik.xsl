@@ -92,7 +92,7 @@
     		<link href="css/style.css" rel="stylesheet" />
 
 			<!-- Title -->
-			<title>Home</title>
+			<title>Statistik</title>
 			</head>
 
       <body>

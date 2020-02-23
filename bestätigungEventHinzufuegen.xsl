@@ -16,7 +16,7 @@
     		<link href="css/style.css" rel="stylesheet" />
 
 			<!-- Title -->
-			<title>Administration</title>
+			<title>Bestätigung</title>
 			</head>
 
             <body>

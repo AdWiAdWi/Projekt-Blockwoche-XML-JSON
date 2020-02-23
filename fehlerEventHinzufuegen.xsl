@@ -16,7 +16,7 @@
     		<link href="css/style.css" rel="stylesheet" />
 
 			<!-- Title -->
-			<title>Administration</title>
+			<title>Error</title>
 			</head>
 
             <body>

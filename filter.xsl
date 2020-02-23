@@ -16,7 +16,7 @@
     		<link href="css/style.css" rel="stylesheet" />
 
 			<!-- Title -->
-			<title>Filter</title>
+			<title>Angebot</title>
 			</head>
 
             <body>
