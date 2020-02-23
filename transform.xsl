@@ -27,7 +27,7 @@
 								<a class="nav-link" href="#home">HOME<span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#about">ABOUT US</a>
+								<a class="nav-link" href="#about">ÜBER UNS</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#services">ANGEBOT</a>
@@ -53,7 +53,7 @@
 				<!--About-->
 				<section class="about text-center" id="about">
 					<div class="container">
-						<h1 class="display-4">ABOUT US</h1>
+						<h1 class="display-4">ÜBER UNS</h1>
 						<br />
 						<p style="font-weight:bold">Liebe Gäste,</p>
 						<p class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
