@@ -20,10 +20,11 @@ if ($_POST["absenden"]) {
 
     $validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
     if ($validatedXML) {
-        loadXSLwithMainDB('transform.xsl');
+        loadXSLwithMainDB('bestätigungReservation.xsl');
     } else {
-        echo "error!";
+        loadXSLwithMainDB('fehlerReservation.xsl');
     }
+
 }
 
 function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
