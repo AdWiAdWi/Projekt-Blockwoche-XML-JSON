@@ -100,34 +100,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Behinderungen</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Höhrbehinderung" id="höhrBehinderung" />
-                                        <label class="form-check-label" for="höhrBehinderung">Höhrbehinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Geistige Behinderung" id="geistigeBehinderung" />
-                                        <label class="form-check-label" for="geistigeBehinderung">Geistige Behinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Keine Behinderung" id="noBehinderung" />
-                                        <label class="form-check-label" for="noBehinderung">Keine Behinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Körperbehinderung" id="körperBehinderung" />
-                                        <label class="form-check-label" for="körperBehinderung">Körperliche Behinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Psychische Behinderung" id="psychischeBehinderung" />
-                                        <label class="form-check-label" for="psychischeBehinderung">Psychische Behinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Sehbehinderung" id="sehBehinderung" />
-                                        <label class="form-check-label" for="sehBehinderung">Sehbehinderung</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="behinderung" value="Diverse Behinderungen" id="diverseBehinderungen" />
-                                        <label class="form-check-label" for="diverseBehinderungen">Diverse Behinderungen</label>
-                                    </div>
+                                    <select name="behinderung"> <!-- options should come from db -->
+                                        <option value="Geistige Behinderung">Geistige Behinderung</option>
+                                        <option value="Höhrbehinderung">Höhrbehinderung</option>
+                                        <option value="Körperbehinderung">Körperbehinderung</option>
+                                        <option value="Psychische Behinderung">Psychische Behinderung</option>
+                                        <option value="Sehbehinderung">Sehbehinderung</option>
+                                        <option value="Keine Behinderung">Keine Behinderung</option>
+                                        <option value="Diverse Behinderungen">Diverse Behinderungen</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Einzelzimmer</label>

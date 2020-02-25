@@ -113,6 +113,7 @@
 	</xsl:template>
 
 	<xsl:template match="event">
+		<xsl:variable name="title" select="@number" />
 		<div class="event-field col-md-4 text-center">
 			<div class="event-border mt-2 mr-0.2 mb-2 ml-0.2">
 				<p class="service-title">
@@ -134,7 +135,12 @@
 				<p class="service-description">
 					<xsl:value-of select="beschreibung/text()" />
 				</p>
+				<form action="makeReservation.php" method="GET">
+				<div class="form-group">
+					<input type="hidden" name="eventName" value="{$title}"></input>
+				</div>
 				<button class="btn btn-lg btn-primary center-block" type="submit" value="Senden">Buchen</button>
+				</form>
 			</div>
 		</div>
 	</xsl:template>
