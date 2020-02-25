@@ -1,6 +1,5 @@
 <?php
 
-include("index.php");
 include("xmlVerarbeitung.php");
 
 if ($_POST["absenden"]) {
@@ -20,6 +19,11 @@ if ($_POST["absenden"]) {
     $eventXML = loadingAndReturnMainDB();
 
     $validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
+    if ($validatedXML) {
+        loadXSLwithMainDB('transform.xsl');
+    } else {
+        echo "error!";
+    }
 }
 
 function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML){
@@ -116,5 +120,5 @@ function addReservation($xmlToInsert){
     //TO-DO: PDF generieren
 
     // Home wieder laden
-    main();
+    loadXSLwithMainDB('transform.xsl');
 }
