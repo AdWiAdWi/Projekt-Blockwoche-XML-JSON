@@ -1,8 +1,9 @@
 <?php
 include("xmlVerarbeitung.php");
 $eventDatenbank = loadingAndReturnMainDB();
-$event = $_GET['eventName'];
-$xPathOfEvent = '//event/title[text() = "'.$event.'"]/..';
+$event = $_POST['event'];
+echo $event;
+$xPathOfEvent = '/title[text() = "'.$event.'"]/..';
 loadReservation($xPathOfEvent);
 
 function loadReservation($xPathOfEvent) {
