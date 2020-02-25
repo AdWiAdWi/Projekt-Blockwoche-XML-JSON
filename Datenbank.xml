@@ -115,7 +115,7 @@
 			<behinderung>Geistige Behinderung</behinderung>
 		</handicap>
 		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>4</anzahlTeilnehmer>
+		<anzahlTeilnehmer>6</anzahlTeilnehmer>
 		<findetStatt>true</findetStatt>
 		<teilnehmerListe>
 		<teilnehmer>
@@ -166,7 +166,7 @@
       <einzelzimmer>true</einzelzimmer>
       <spezielles/>
       </teilnehmer>
-      </teilnehmerListe>
+      <teilnehmer><vorname>sadf</vorname><nachname>asdf</nachname><geschlecht>Männlich</geschlecht><adresse>sadf</adresse><stadt>asdf</stadt><telefonnummer>33434</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>sadf</vorname><nachname>asdf</nachname><geschlecht>Männlich</geschlecht><adresse>sadf</adresse><stadt>asdf</stadt><telefonnummer>33434</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
 	</event>
      
      
