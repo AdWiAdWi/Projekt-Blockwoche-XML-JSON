@@ -16,7 +16,7 @@
     		<link href="css/style.css" rel="stylesheet" />
 
 			<!-- Title -->
-			<title>Bestätigung</title>
+			<title>Bestätigung - Event hinzufügen</title>
 			</head>
 
             <body>
@@ -24,7 +24,7 @@
 				<!--Eventeingabe-->
 				<section class="administration text-center" id="services">
 					<div class="container">
-						<h1 class="display-4">ADMINISTRATION</h1>
+						<h1 class="display-4">BESTÄTIGUNG</h1>
 						<br />
 						<br />
 						<p>Das Hinzufügen eines Events hat geklappt.</p>
