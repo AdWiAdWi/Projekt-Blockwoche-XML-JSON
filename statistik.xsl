@@ -41,7 +41,7 @@
     <xsl:variable name="männlichProzent" select="format-number($männlich div $anzahlGebucht, '##%')"/>
     <xsl:variable name="anderes" select="count(//teilnehmer/geschlecht[text() = 'Anderes'])"/>
     <xsl:variable name="anderesProzent" select="format-number($anderes div $anzahlGebucht, '##%')"/>
-    <xsl:variable name="pointer" select="format-number(($weiblich + $männlich) div $anzahlGebucht, '##%')"/>
+    <xsl:variable name="pointer" select="format-number((($weiblich + $männlich) div $anzahlGebucht), '##%')"/>
 
 
     <!--Events-->
@@ -66,7 +66,7 @@
     <xsl:variable name="schnitzeljagdAbstand" select="450 - $schnitzeljagdProzent"/>
     <xsl:variable name="wandern" select="count(//event[@name = 'Wandern'])"/>
     <xsl:variable name="wandernProzent" select="(450 div $events) * $wandern"/>
-    <xsl:variable name="wandernAbstand" select="450 - $fussballProzent"/>
+    <xsl:variable name="wandernAbstand" select="450 - $wandernProzent"/>
     <xsl:variable name="fahrrad" select="count(//event[@name = 'Fahrrad'])"/>
     <xsl:variable name="fahrradProzent" select="(450 div $events) * $fahrrad"/>
     <xsl:variable name="fahrradAbstand" select="450 - $fahrradProzent"/>
@@ -110,7 +110,7 @@
             xmlns:xlink="http://www.w3.org/1999/xlink">
                 
             <g class='bars'>
-              <rect class='bg' fill='white' width='100%' height='25'></rect>
+              <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
               <rect class='data' fill='#fe938c' width="{$auslastungInsgesamtProzent}" height='25'></rect>
             </g>
             <g class='markers'>
@@ -150,7 +150,7 @@
         xmlns:xlink="http://www.w3.org/1999/xlink">
               
         <g class='bars'>
-          <rect class='bg' fill='#ccc' width='100%' height='25'></rect>
+          <rect class='bg' fill='#4281a4' width='100%' height='25'></rect>
           <rect class='data' fill='#fe938c' width="{$weiblichProzent}" height='25'></rect>
           <rect class='data' fill='#ead2ac' x='{$weiblichProzent}' width="{$männlichProzent}" height='25'></rect>
           <rect class='data' fill='#4281a4' x='{$pointer}' width="{$anderesProzent}" height='25'></rect>
