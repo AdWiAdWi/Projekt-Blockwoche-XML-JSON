@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
-	 <xsl:param name="selectedEvent" select="defaultEvent"/>
+	 <xsl:param name="selectedEvent"/>
 
 	<xsl:template match="/">
 		<html lang="de">
@@ -25,9 +25,7 @@
 			<!--Homepage-->
     		<section class="reservation text-center">
 				<div class="container">
-                    <xsl:apply-templates select="event">
-                    <xsl:with-param name="selectedEvent" select="$selectedEvent"/>
-                    </xsl:apply-templates>
+                    <xsl:apply-templates select="/events/event[@id = $selectedEvent]"/>
 				</div>
     		</section>
 

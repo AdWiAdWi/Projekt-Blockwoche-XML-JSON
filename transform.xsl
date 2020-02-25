@@ -115,7 +115,7 @@
 	<xsl:template match="event">
 		
 		<!--XSL-Variables-->
-        <xsl:variable name="event" select="/title/text()"/>
+        <xsl:variable name="event" select="@id"/>
 
 		<div class="event-field col-md-4 text-center">
 			<div class="event-border mt-2 mr-0.2 mb-2 ml-0.2">

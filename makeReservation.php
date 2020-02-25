@@ -1,12 +1,9 @@
 <?php
 include("xmlVerarbeitung.php");
-$eventDatenbank = loadingAndReturnMainDB();
-$event = $_POST['event'];
-echo $event;
-$xPathOfEvent = '/title[text() = "'.$event.'"]/..';
-loadReservation($xPathOfEvent);
+$eventID = $_POST['event'];
+loadReservation($eventID);
 
-function loadReservation($xPathOfEvent) {
+function loadReservation($eventID) {
        // load XML
        $data = file_get_contents('Datenbank.xml');
        $xml = new DOMDocument();
@@ -18,7 +15,7 @@ function loadReservation($xPathOfEvent) {
        $xsl->load('reservation.xsl');
        $processor = new XSLTProcessor();
        $processor->importStylesheet($xsl);
-       $processor->setParameter( '', 'selectedEvent', $xPathOfEvent);
+       $processor->setParameter( '', 'selectedEvent', $eventID);
        $dom = $processor->transformToDoc($xml);
        echo $dom->saveXML();
 }
