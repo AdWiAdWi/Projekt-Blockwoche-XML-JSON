@@ -97,6 +97,7 @@ p{
 }
 
 .service-title{
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -222,7 +223,7 @@ p{
     padding: 0;
     list-style: none;
   }
-  
+   
   .figure-key-list li {
     margin: 0 0 8px;
     padding: 0;
