@@ -111,9 +111,9 @@
                                     <input class="form-control" type="date" name="geburtstag" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Behinderungen</label>
-                                    <select name="behinderung"> <!-- options should come from db -->
-                                        <option value="Geistige Behinderung">Geistige Behinderung</option>
+                                    <label>Behinderung</label>
+                                    <select class="form-control" name="behinderung">
+                                         <option value="Geistige Behinderung">Geistige Behinderung</option>
                                         <option value="Höhrbehinderung">Höhrbehinderung</option>
                                         <option value="Körperbehinderung">Körperbehinderung</option>
                                         <option value="Psychische Behinderung">Psychische Behinderung</option>
@@ -133,12 +133,12 @@
                                     <input class="form-control" type="text" name="spezielles" placeholder="Spezielles*" />
                                 </div>
                                 <div class="col-12 text-center">
-                                    <a href="index.php"><button class="btn btn-lg btn-primary center-block mr-1">Zurück</button></a>
-                                    <button class="btn btn-lg btn-primary center-block ml-1" type="submit" name="absenden" value="Senden">Buchen</button>
+                                    <button class="btn btn-lg btn-primary center-block mb-1" type="submit" name="absenden" value="Senden">Buchen</button>
                                 </div>
                             </div>
                         </div>	
                     </form> 
+                    <a href="index.php"><button class="btn btn-lg btn-primary center-block mt-1">Zurück</button></a>
                 </div>
 	</xsl:template>
 
