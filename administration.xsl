@@ -20,6 +20,20 @@
 			</head>
 
             <body>
+             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="index.php">HOME<span class="sr-only">(current)</span></a>
+							</li>
+					
+						</ul>
+						<a href="administration.php"><button class="btn btn-outline-success my-2 my-sm-0 ml-3" type="submit">Administration</button></a>	
+						<a href="statistik.php"><button class="btn btn-outline-success my-2 my-sm-0 ml-3" type="submit">Statistik</button></a>	
+					</div>
+				</nav>
+
+                <br/>
 				
 				<!--Eventeingabe-->
 				<section class="administration text-center" id="services">
