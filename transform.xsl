@@ -62,11 +62,17 @@
 						<br />
 						Unsere Infastruktur umfasst eine Schwimmanlage, Fussballplätze, eine Sporthalle sowie eine Rennbahn. Unsere Anlage ist umgegeben von atemberaubenden Berlandschaften, Flüssen und Wälder - Der perfekte Rückzugsort, um sich zu erholen oder sportlich auszutoben.
 						<br />
-						<br />
-						Unseren Kundinnen und Kunden bieten wir diverse Themenwochen, die auf ihre Bedürfnisse angepasst sind. Wir sind bestrebt unser Angebot stets auszubauen und mit neuen kreativen Ideen zu ergänzen! 
-						<br />
-						<br />
-						Wir hoffen, auch Sie zu unseren Kunden zählen zu dürfen!
+						<div class="row offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+							<div class="iconborder col-md-4 text-center">
+								<img class="icon" src="img/ballsportart.png" alt="Bild: Schwimmen" />
+							</div>
+							<div class="iconborder col-md-4 text-center">
+								<img class="icon" src="img/schwimmen.png" alt="Bild: Ballsportart" />
+							</div>
+							<div class="iconborder col-md-4 text-center">
+								<img class="icon" src="img/wandern.png" alt="Bild: Wandern" />
+							</div>	
+						</div>
 						</p>
 					</div>
 				</section>
@@ -79,8 +85,8 @@
 						<br />
 						<h3>Filtern</h3>
 						<form class="filter" method="get" action="filter.php">
-							<input type="date" id="start" name="startdatum"></input> <!-- start date should be param -->
-							<select name="eventType"> <!-- options should come from db -->
+							<input type="date" id="start" name="startdatum"></input> 
+							<select name="eventType"> 
 								<option value="Basketball">Basketball</option>
                                 <option value="Fahrrad">Fahrrad</option>
                                 <option value="Fussball">Fussball</option>
@@ -90,7 +96,7 @@
 								<option value="Ski und Snowboard">Ski und Snowboard</option>
 								<option value="Wandern">Wandern</option>
 							</select>
-							<select name="behinderung"> <!-- options should come from db -->
+							<select name="behinderung"> 
 								<option value="Geistige Behinderung">Geistige Behinderung</option>
                                 <option value="Höhrbehinderung">Höhrbehinderung</option>
                                 <option value="Körperbehinderung">Körperbehinderung</option>
@@ -108,6 +114,7 @@
 						</div>
 					</div>
 				</section>
+				<div class ="text-center">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 			</body> 
 		</html>
 	</xsl:template>
