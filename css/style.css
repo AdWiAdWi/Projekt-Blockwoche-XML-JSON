@@ -10,34 +10,34 @@ section{
 }
 
 .about, .service, .reservation{
-    color: #131b24;
+    color: #333745;
 }
 
 
 
 /*Navbar*/
 .navbar{
-    background-color: #131b24 !important;
+    background-color: #333745 !important;
 }
 
 .nav-link{
-    color: #ddd8d8 !important;
+    color:rgb(230, 238, 252) !important;
 }
 
 .navbar .btn{
-    background-color: #131b24;
-    border: 2px solid #ceaba6;
-    color:  #ceaba6;
+    background-color: #333745;
+    border: 2px solid rgb(253, 163, 157);
+    color:  rgb(253, 163, 157);
 }
 
 .navbar .btn:hover{
-    background-color: #ceaba6;
-    border: 2px solid #ceaba6;
-    color: #131b24;
+    background-color: rgb(253, 163, 157);
+    border: 2px solid rgb(253, 163, 157);
+    color: #333745;
 }
 
 .btn:active{
-    background-color: #ceaba6;
+    background-color: rgb(253, 163, 157);
 }
 
 
@@ -46,28 +46,28 @@ section{
 
 /*Home-page*/
 .home{
- background-color: #131b24;
- color: #ceaba6;
+ background-color: #333745;
+ color: rgb(230, 238, 252);
 }
 
 .home .event-border{
-    border: 3px solid #ceaba6;
+    border: 3px solid rgb(230, 238, 252);
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-    color: #ceaba6;
+    color: rgb(230, 238, 252);
     
 }
 
 .home .btn{
-    background-color: #131b24;
-    border: 2px solid #ceaba6;
-    color:  #ceaba6;
+    background-color: #333745;
+    border: 2px solid rgb(230, 238, 252);
+    color:  rgb(230, 238, 252);
 }
 
 .home .btn:hover{
-    background-color: #ceaba6;
-    border: 2px solid #ceaba6;
-    color: #131b24;
+    background-color: rgb(230, 238, 252);
+    border: 2px solid rgb(230, 238, 252);
+    color: #333745;
 
 }
 
@@ -83,7 +83,7 @@ p{
 .icon{
     height: 80px;
     width: 80px;
-    color: #131b24;
+    color: #333745;
     
 }
 
@@ -97,18 +97,18 @@ p{
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 5px;
-    border-color: #131b24;
+    border-color: #333745;
 }
 
 .service form button{
     border-radius: 5px;
-    border-color: #131b24;
+    border-color: #333745;
 }
 
 .service form button:hover{
-    background-color: #131b24;
+    background-color: #333745;
     border-radius: 5px;
-    border-color: #131b24;
+    border-color: #333745;
     color: white;
 }
 
@@ -127,23 +127,23 @@ p{
 }
 
 .service .event-border{
-    border: 4px solid #131b24;
+    border: 4px solid #333745;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-    background-color: #ceaba6;
+    background-color: rgb(230, 238, 252);
     
 }
 
 .service .btn{
-    background-color: #ceaba6;
-    border: 2px solid #131b24;
-    color:  #131b24;
+    background-color: rgb(230, 238, 252);
+    border: 2px solid #333745;
+    color:  #333745;
 }
 
 .service .btn:hover{
-    background-color: #131b24;
-    border: 2px solid #131b24;
-    color: #ceaba6;
+    background-color: #333745;
+    border: 2px solid #333745;
+    color: rgb(230, 238, 252);
 }
 
 
@@ -158,7 +158,7 @@ p{
     hyphens: auto;
 }
 .reservation .event-border{
-    border: 3px solid #131b24;
+    border: 3px solid #333745;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
     
@@ -166,13 +166,13 @@ p{
 
 .reservation .btn{
     background-color: white;
-    border: 2px solid #131b24;
-    color:  #131b24;
+    border: 2px solid #333745;
+    color:  #333745;
 }
 
 .reservation .btn:hover{
-    background-color: #131b24;
-    border: 2px solid #131b24;
+    background-color: #333745;
+    border: 2px solid #333745;
     color: white;
 }
 
@@ -183,7 +183,7 @@ p{
 }
 
 .filtered-service .event-border{
-    border: 3px solid #131b24;
+    border: 3px solid #333745;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
     
@@ -191,13 +191,13 @@ p{
 
 .filtered-service .btn{
     background-color: white;
-    border: 2px solid #131b24;
-    color:  #131b24;
+    border: 2px solid #333745;
+    color:  #333745;
 }
 
 .filtered-service .btn:hover{
-    background-color: #131b24;
-    border: 2px solid #131b24;
+    background-color: #333745;
+    border: 2px solid #333745;
     color: white;
 }
 
@@ -210,13 +210,13 @@ p{
 
 .administration .btn{
     background-color: white;
-    border: 2px solid #131b24;
-    color:  #131b24;
+    border: 2px solid #333745;
+    color:  #333745;
 }
 
 .administration .btn:hover{
-    background-color: #131b24;
-    border: 2px solid #131b24;
+    background-color: #333745;
+    border: 2px solid #333745;
     color: white;
 }
 
