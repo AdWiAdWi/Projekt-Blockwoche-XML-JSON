@@ -81,7 +81,8 @@ function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telef
         echo "Es hat noch genug Platz in diesem Event";
         // Anzahl Teilnehmer um 1 erhöhen
         $anzahlAngemeldeteTeilnehmerNode->nodeValue = $anzahlAngemeldeteTeilnehmerNode->nodeValue + 1;
-        // $teilnehmer und event mit $eventIDforXpath ein PDF generieren!
+
+        // Validierung XML, Wenn OK, soll PDF generiert werden.
         if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
             echo "Validation successfull";
             $eventXML->save("Datenbank.xml");
@@ -94,32 +95,4 @@ function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telef
         echo "Maximale Anzahl Teilnehmer am Event bereits erreicht!";
         return false;
     }
-}
-
-
-// Fügt Reservation in der Datenbank ein
-function addReservation($xmlToInsert){
-    
-    // Pfad zur Datenbank
-    $eventXMLPath = "Datenbank.xml";
-
-    // XML Datenbank laden
-    $eventXML = simplexml_load_file($eventXMLPath);
-
-    //Event-Typ herauslesen
-    $eventElementFromNewMember = $xmlToInsert->getElementsByTagName('event');
-
-
-    //Xpath um auf die Teilnehmerliste des angemeldeten Events zuzugreifen
-    $path ="//event[@name=". $eventElementFromNewMember[0] ."]/teilnehmerliste";
-    $element = $eventXML->xpath($path);
-
-    //Neuen Teilnehmer als Child hinzufügen und validieren
-    $element->appendChild($xmlToInsert);
-    validationOfNewXML($eventXML, "schemaEventDB.xsd");
-
-    //TO-DO: PDF generieren
-
-    // Home wieder laden
-    loadXSLwithMainDB('transform.xsl');
 }
