@@ -21,7 +21,7 @@ section{
 }
 
 .nav-link{
-    color:rgb(230, 238, 252) !important;
+    color:rgb(233, 239, 250) !important;
 }
 
 .navbar .btn{
@@ -47,26 +47,26 @@ section{
 /*Home-page*/
 .home{
  background-color: #333745;
- color: rgb(230, 238, 252);
+ color: rgb(233, 239, 250);
 }
 
 .home .event-border{
-    border: 3px solid rgb(230, 238, 252);
+    border: 3px solid rgb(233, 239, 250);
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-    color: rgb(230, 238, 252);
+    color: rgb(233, 239, 250);
     
 }
 
 .home .btn{
     background-color: #333745;
-    border: 2px solid rgb(230, 238, 252);
-    color:  rgb(230, 238, 252);
+    border: 2px solid rgb(233, 239, 250);
+    color:  rgb(233, 239, 250);
 }
 
 .home .btn:hover{
-    background-color: rgb(230, 238, 252);
-    border: 2px solid rgb(230, 238, 252);
+    background-color: rgb(233, 239, 250);
+    border: 2px solid rgb(233, 239, 250);
     color: #333745;
 
 }
@@ -130,12 +130,12 @@ p{
     border: 4px solid #333745;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-    background-color: rgb(230, 238, 252);
+    background-color: rgb(233, 239, 250);
     
 }
 
 .service .btn{
-    background-color: rgb(230, 238, 252);
+    background-color: rgb(233, 239, 250);
     border: 2px solid #333745;
     color:  #333745;
 }
@@ -143,7 +143,7 @@ p{
 .service .btn:hover{
     background-color: #333745;
     border: 2px solid #333745;
-    color: rgb(230, 238, 252);
+    color: rgb(233, 239, 250);
 }
 
 
