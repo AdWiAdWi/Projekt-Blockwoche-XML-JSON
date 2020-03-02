@@ -1,4 +1,5 @@
 <?php
+require_once 'php/fo/fop_service_client.php';
 
 function validationOfNewXML($xml, $xsd) {
     // disable error output to client
@@ -44,5 +45,35 @@ function loadXSLwithMainDB($xslPath) {
     $dom = $processor->transformToDoc($xml);
     echo $dom->saveXML();
 }
+
+
+
+
+function transformXmlToPdf($eventID) {
+    $foData = generateFoFile($eventID);
+
+    $serviceClient = new FOPServiceClient();
+    $pdfFile = $serviceClient->processData($foData, tempnam(sys_get_temp_dir(), 'confirmation.') . '.pdf');
+
+    return sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
+}
+
+function generateFoFile($eventID){
+    $eventDB = loadingAndReturnMainDB();
+
+    // Need Information where xsl is located...
+    $xsl = new DOMDocument();
+    $xsl->load('confirmationReservation.xsl');
+
+    // transform
+    $xslt_proc = new XSLTProcessor();
+    $xslt_proc->importStylesheet($xsl);
+    $xslt_proc->setParameter('', 'eventID', $eventID);
+
+    $dom = $xslt_proc->transformToDoc($eventDB);
+    return $dom->saveXML();
+}
+
+
 
 ?>
