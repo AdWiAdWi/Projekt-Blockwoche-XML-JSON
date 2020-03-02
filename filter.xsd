@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="schemaEventDB.xsd"/>
+    <xs:element name="Get">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="eventType" type="xs:string"></xs:element>
+                <xs:element name="behinderung" type="xs:string"></xs:element>
+                <xs:element name="startdatum" type="xs:date"></xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
