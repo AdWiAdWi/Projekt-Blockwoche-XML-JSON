@@ -73,11 +73,21 @@ function loadIndex()
     $processor->setParameter('', 'date', date('Ymd'));
 
     $parsedParams = parse();
-    if($parsedParams->schemaValidate('filter.xsd')){
+    if ($parsedParams->schemaValidate('filter.xsd')) {
         if (isset($_GET['startdatum'])) {
             $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
         } else {
             $processor->setParameter('', 'selectedDate', date('Y-m-d'));
+        }
+        if (isset($_GET['behinderung'])) {
+            $processor->setParameter('', 'selectedHandicap', $_GET['behinderung']);
+        } else {
+            $processor->setParameter('', 'selectedHandicap', 'all');
+        }
+        if (isset($_GET['eventType'])) {
+            $processor->setParameter('', 'selectedEventType', $_GET['eventType']);
+        } else {
+            $processor->setParameter('', 'selectedEventType', 'all');
         }
     }
     transformAndEchoXSLT($processor, getMainDB());

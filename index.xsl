@@ -122,8 +122,8 @@
 						</form>
 						<br />
 						<br />
-						<div class="row">
-							<xsl:apply-templates select="//event"/>
+						<div class="row" value="{$selectedHandicap}">
+							<xsl:apply-templates select="//event[number(translate(startdatum,'-',''))&gt;=number(translate($selectedDate,'-',''))][*/behinderung=$selectedHandicap or $selectedHandicap='all'][@name=$selectedEventType or $selectedEventType='all']"/>
 						</div>
 					</div>
 				</section>
