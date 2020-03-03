@@ -168,7 +168,19 @@
                         <einzelzimmer>false</einzelzimmer>
                         <spezielles>asdf</spezielles>
                   </teilnehmer>
-            <teilnehmer><vorname>asdf</vorname><nachname>sadf</nachname><geschlecht>Weiblich</geschlecht><adresse>asdf</adresse><stadt>fdsaf</stadt><telefonnummer>234234</telefonnummer><geburtstag>2020-02-28</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>sadf</spezielles></teilnehmer></teilnehmerListe>
+                  <teilnehmer>
+                        <vorname>asdf</vorname>
+                        <nachname>sadf</nachname>
+                        <geschlecht>Weiblich</geschlecht>
+                        <adresse>asdf</adresse>
+                        <stadt>fdsaf</stadt>
+                        <telefonnummer>234234</telefonnummer>
+                        <geburtstag>2020-02-28</geburtstag>
+                        <behinderung>Psychische Behinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles>sadf</spezielles>
+                  </teilnehmer>
+            </teilnehmerListe>
       </event>
 
 
@@ -178,129 +190,165 @@
             <dauerInTagen>4</dauerInTagen>
             <startdatum>2020-03-23</startdatum>
             <beschreibung>Diverse Kletteraktivitäten wie Bouldern, Tyrolienne und Bouldern in der umgebenen Berglandschaft sowie in unserer Kletterhalle!</beschreibung>
-		<handicap>
-			<behinderung>Höhrbehinderung</behinderung>
-		</handicap>
-		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>5</anzahlTeilnehmer>
-		<findetStatt>true</findetStatt>
-		<teilnehmerListe>
-		<teilnehmer>
-	<vorname>Nico</vorname>
-      <nachname>Iseli</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Höhrbehinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles>Vegan</spezielles>
-      </teilnehmer>
-      <teilnehmer>
-      <vorname>Fredi</vorname>
-      <nachname>Fischer</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Höhrbehinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-       <teilnehmer>
-      <vorname>Jonas</vorname>
-      <nachname>Wyss</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Höhrbehinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-      <teilnehmer>
-      <vorname>Adrian</vorname>
-      <nachname>Willi</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Höhrbehinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-      <teilnehmer><vorname>fg</vorname><nachname>fg</nachname><geschlecht>Männlich</geschlecht><adresse>fg</adresse><stadt>df</stadt><telefonnummer>33</telefonnummer><geburtstag>2020-02-29</geburtstag><behinderung>Höhrbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>fh</spezielles></teilnehmer></teilnehmerListe>
-	</event>
+            <handicap>
+                  <behinderung>Höhrbehinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>5</anzahlTeilnehmer>
+            <findetStatt>true</findetStatt>
+            <teilnehmerListe>
+                  <teilnehmer>
+                        <vorname>Nico</vorname>
+                        <nachname>Iseli</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles>Vegan</spezielles>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Fredi</vorname>
+                        <nachname>Fischer</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Jonas</vorname>
+                        <nachname>Wyss</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Adrian</vorname>
+                        <nachname>Willi</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>fg</vorname>
+                        <nachname>fg</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>fg</adresse>
+                        <stadt>df</stadt>
+                        <telefonnummer>33</telefonnummer>
+                        <geburtstag>2020-02-29</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles>fh</spezielles>
+                  </teilnehmer>
+            </teilnehmerListe>
+      </event>
 
       <event name="Schwimmen" id="3">
             <title>Schwimmen am See</title>
             <dauerInTagen>5</dauerInTagen>
             <startdatum>2020-03-30</startdatum>
             <beschreibung>Auf Sie warten tolle Wassersportaktivitäten wie Wasserball, Tauchen, Schwimmen und ein Sprungturm mit unterschiedlichen Höhen!</beschreibung>
-		<handicap>
-			<behinderung>Geistige Behinderung</behinderung>
-		</handicap>
-		<anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>6</anzahlTeilnehmer>
-		<findetStatt>true</findetStatt>
-		<teilnehmerListe>
-		<teilnehmer>
-	<vorname>Hans</vorname>
-      <nachname>Müller</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Geistige Behinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles>irgendein Problem</spezielles>
-      </teilnehmer>
-      <teilnehmer>
-      <vorname>Peter</vorname>
-      <nachname>Imboden</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Geistige Behinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-       <teilnehmer>
-      <vorname>Tamara</vorname>
-      <nachname>Schweizer</nachname>
-      <geschlecht>Weiblich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Geistige Behinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-       <teilnehmer>
-      <vorname>Nadja</vorname>
-      <nachname>Roth</nachname>
-      <geschlecht>Weiblich</geschlecht>
-      <adresse>Strasse 1</adresse>
-      <stadt>Burgdorf</stadt>
-      <telefonnummer>0834875937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Geistige Behinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-      <teilnehmer><vorname>sadf</vorname><nachname>asdf</nachname><geschlecht>Männlich</geschlecht><adresse>sadf</adresse><stadt>asdf</stadt><telefonnummer>33434</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>sadf</vorname><nachname>asdf</nachname><geschlecht>Männlich</geschlecht><adresse>sadf</adresse><stadt>asdf</stadt><telefonnummer>33434</telefonnummer><geburtstag>2020-02-14</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
-	</event>
-     
-     
-     
+            <handicap>
+                  <behinderung>Geistige Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>6</anzahlTeilnehmer>
+            <findetStatt>true</findetStatt>
+            <teilnehmerListe>
+                  <teilnehmer>
+                        <vorname>Hans</vorname>
+                        <nachname>Müller</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles>irgendein Problem</spezielles>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Peter</vorname>
+                        <nachname>Imboden</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Tamara</vorname>
+                        <nachname>Schweizer</nachname>
+                        <geschlecht>Weiblich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>Nadja</vorname>
+                        <nachname>Roth</nachname>
+                        <geschlecht>Weiblich</geschlecht>
+                        <adresse>Strasse 1</adresse>
+                        <stadt>Burgdorf</stadt>
+                        <telefonnummer>0834875937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>sadf</vorname>
+                        <nachname>asdf</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>sadf</adresse>
+                        <stadt>asdf</stadt>
+                        <telefonnummer>33434</telefonnummer>
+                        <geburtstag>2020-02-14</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>false</einzelzimmer>
+                        <spezielles>asdf</spezielles>
+                  </teilnehmer>
+                  <teilnehmer>
+                        <vorname>sadf</vorname>
+                        <nachname>asdf</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>sadf</adresse>
+                        <stadt>asdf</stadt>
+                        <telefonnummer>33434</telefonnummer>
+                        <geburtstag>2020-02-14</geburtstag>
+                        <behinderung>Geistige Behinderung</behinderung>
+                        <einzelzimmer>false</einzelzimmer>
+                        <spezielles>asdf</spezielles>
+                  </teilnehmer>
+            </teilnehmerListe>
+      </event>
+
+
+
       <event name="Schnitzeljagd" id="4">
             <title>spiel und Spass im Wald</title>
             <dauerInTagen>3</dauerInTagen>
@@ -488,25 +536,132 @@
             <dauerInTagen>3</dauerInTagen>
             <startdatum>2020-09-16</startdatum>
             <beschreibung>Ein Woche mit dem Rad durch die schöne Landschaft für Anfänger bis Fortgeschrittene</beschreibung>
-		<handicap>
-			<behinderung>Diverse Behinderungen</behinderung>
-		</handicap>
-		<anzahlMöglicheTeilnehmer>3</anzahlMöglicheTeilnehmer>
-		<anzahlTeilnehmer>1</anzahlTeilnehmer>
-		<findetStatt>true</findetStatt>
-		<teilnehmerListe>
-		<teilnehmer>
-	<vorname>Max</vorname>
-      <nachname>Muster</nachname>
-      <geschlecht>Männlich</geschlecht>
-      <adresse>Guter Weg 8</adresse>
-      <stadt>Luzern</stadt>
-      <telefonnummer>083483937374</telefonnummer>
-      <geburtstag>1995-05-02</geburtstag>
-      <behinderung>Höhrbehinderung</behinderung>
-      <einzelzimmer>true</einzelzimmer>
-      <spezielles/>
-      </teilnehmer>
-       </teilnehmerListe>
-       </event>
-<event name="Basketball" id="8"><title>sadf</title><dauerInTagen>1</dauerInTagen><startdatum>2020-02-24</startdatum><beschreibung>sadf</beschreibung><handicap><behinderung>Höhrbehinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Basketball" id="9"><title>sadf</title><dauerInTagen>2</dauerInTagen><startdatum>2020-02-22</startdatum><beschreibung>sadf</beschreibung><handicap><behinderung>Geistige Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Schnitzeljagd" id="10"><title>sadf</title><dauerInTagen>6</dauerInTagen><startdatum>2020-02-23</startdatum><beschreibung>sadf</beschreibung><handicap><behinderung>Geistige Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Fussball" id="11"><title/><dauerInTagen>7</dauerInTagen><startdatum>2020-02-22</startdatum><beschreibung>asdf20</beschreibung><handicap><behinderung>Höhrbehinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>50</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Basketball" id="12"><title/><dauerInTagen>1</dauerInTagen><startdatum>2020-02-22</startdatum><beschreibung>sdf</beschreibung><handicap><behinderung>Geistige Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>1</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Fussball" id="13"><title>sadf</title><dauerInTagen>7</dauerInTagen><startdatum>2020-04-27</startdatum><beschreibung>asdf</beschreibung><handicap><behinderung>Keine Behinderung</behinderung><behinderung>Psychische Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Basketball" id="14"><title>lkdsjf</title><dauerInTagen>1</dauerInTagen><startdatum>2020-02-28</startdatum><beschreibung>lkdsjfldsj</beschreibung><handicap><behinderung>Geistige Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event><event name="Basketball" id="15"><title>Spiel und Spass mit Basketball</title><dauerInTagen>6</dauerInTagen><startdatum>2020-03-04</startdatum><beschreibung>blablabla</beschreibung><handicap><behinderung>Höhrbehinderung</behinderung><behinderung>Geistige Behinderung</behinderung><behinderung>Keine Behinderung</behinderung></handicap><anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer><anzahlTeilnehmer>0</anzahlTeilnehmer><findetStatt>1</findetStatt><teilnehmerListe/></event></events>
+            <handicap>
+                  <behinderung>Diverse Behinderungen</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>3</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>1</anzahlTeilnehmer>
+            <findetStatt>true</findetStatt>
+            <teilnehmerListe>
+                  <teilnehmer>
+                        <vorname>Max</vorname>
+                        <nachname>Muster</nachname>
+                        <geschlecht>Männlich</geschlecht>
+                        <adresse>Guter Weg 8</adresse>
+                        <stadt>Luzern</stadt>
+                        <telefonnummer>083483937374</telefonnummer>
+                        <geburtstag>1995-05-02</geburtstag>
+                        <behinderung>Höhrbehinderung</behinderung>
+                        <einzelzimmer>true</einzelzimmer>
+                        <spezielles/>
+                  </teilnehmer>
+            </teilnehmerListe>
+      </event>
+      <event name="Basketball" id="8">
+            <title>sadf</title>
+            <dauerInTagen>1</dauerInTagen>
+            <startdatum>2020-02-24</startdatum>
+            <beschreibung>sadf</beschreibung>
+            <handicap>
+                  <behinderung>Höhrbehinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Basketball" id="9">
+            <title>sadf</title>
+            <dauerInTagen>2</dauerInTagen>
+            <startdatum>2020-02-22</startdatum>
+            <beschreibung>sadf</beschreibung>
+            <handicap>
+                  <behinderung>Geistige Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Schnitzeljagd" id="10">
+            <title>sadf</title>
+            <dauerInTagen>6</dauerInTagen>
+            <startdatum>2020-02-23</startdatum>
+            <beschreibung>sadf</beschreibung>
+            <handicap>
+                  <behinderung>Geistige Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Fussball" id="11">
+            <title/>
+            <dauerInTagen>7</dauerInTagen>
+            <startdatum>2020-02-22</startdatum>
+            <beschreibung>asdf20</beschreibung>
+            <handicap>
+                  <behinderung>Höhrbehinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>50</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Basketball" id="12">
+            <title/>
+            <dauerInTagen>1</dauerInTagen>
+            <startdatum>2020-02-22</startdatum>
+            <beschreibung>sdf</beschreibung>
+            <handicap>
+                  <behinderung>Geistige Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>1</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Fussball" id="13">
+            <title>sadf</title>
+            <dauerInTagen>7</dauerInTagen>
+            <startdatum>2020-04-27</startdatum>
+            <beschreibung>asdf</beschreibung>
+            <handicap>
+                  <behinderung>Keine Behinderung</behinderung>
+                  <behinderung>Psychische Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Basketball" id="14">
+            <title>lkdsjf</title>
+            <dauerInTagen>1</dauerInTagen>
+            <startdatum>2020-02-28</startdatum>
+            <beschreibung>lkdsjfldsj</beschreibung>
+            <handicap>
+                  <behinderung>Geistige Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+      <event name="Basketball" id="15">
+            <title>Spiel und Spass mit Basketball</title>
+            <dauerInTagen>6</dauerInTagen>
+            <startdatum>2020-03-04</startdatum>
+            <beschreibung>blablabla</beschreibung>
+            <handicap>
+                  <behinderung>Höhrbehinderung</behinderung>
+                  <behinderung>Geistige Behinderung</behinderung>
+                  <behinderung>Keine Behinderung</behinderung>
+            </handicap>
+            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <findetStatt>1</findetStatt>
+            <teilnehmerListe/>
+      </event>
+</events>

@@ -16,7 +16,7 @@ if ($_POST["absenden"]) {
     $eventID = $_POST["event"];
 
 
-    $eventXML = loadingAndReturnMainDB();
+    $eventXML = getMainDB();
 
     $validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
     if ($validatedXML) {

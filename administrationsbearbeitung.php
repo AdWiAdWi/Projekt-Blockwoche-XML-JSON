@@ -11,7 +11,7 @@ if ($_POST["absenden"]) {
     $title = $_POST["title"];
     $anzahlMöglicheTeilnehmer = $_POST["maximaleAnzahlTeilnehmer"];
 
-    $eventDatenbank = loadingAndReturnMainDB();
+    $eventDatenbank = getMainDB();
     $insertIntoEventDB = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer);
 
     if ($insertIntoEventDB) {

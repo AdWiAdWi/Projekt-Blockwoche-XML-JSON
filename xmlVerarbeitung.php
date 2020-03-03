@@ -1,7 +1,9 @@
 <?php
 require_once 'php/fo/fop_service_client.php';
+require_once 'parser.php';
 
-function validationOfNewXML($xml, $xsd) {
+function validationOfNewXML($xml, $xsd)
+{
     // disable error output to client
     libxml_use_internal_errors(true);
 
@@ -19,10 +21,13 @@ function validationOfNewXML($xml, $xsd) {
         echo "Validation successfull";
         return true;
     }
-
 }
-
-function loadingAndReturnMainDB(){
+/**
+ * Loads the database
+ * @return      DOMNode
+ */
+function getMainDB()
+{
     $data = 'Datenbank.xml';
     $eventXML = new DOMDocument('1.0', 'UTF-8');
     $eventXML->load($data);
@@ -30,26 +35,53 @@ function loadingAndReturnMainDB(){
     return $eventXML;
 }
 
-function loadXSLwithMainDB($xslPath) {
-    // load XML
-    $data = file_get_contents('Datenbank.xml');
-    $xml = new DOMDocument();
-    $xml->loadXML($data);
+function loadXSLwithMainDB($xslPath)
+{
+    $processor = createXSLProcessor($xslPath);
+    $xml = getMainDB();
+    transformAndEchoXSLT($processor, $xml);
+}
 
-    // create xhtml doc
-    // this process should be used for every html we show to the user!
-    $xsl = new DOMDocument();
-    $xsl->load($xslPath);
-    $processor = new XSLTProcessor();
-    $processor->importStylesheet($xsl);
-    $dom = $processor->transformToDoc($xml);
+/**
+ * @param XSLTProcessor $xsltProcessor 
+ * @param DOMNode $xml
+ */
+function transformAndEchoXSLT($xsltProcessor, $xml)
+{
+    $dom = $xsltProcessor->transformToDoc($xml);
     echo $dom->saveXML();
 }
 
 
+/**
+ * @return XSLTProcessor
+ */
+function createXSLProcessor($xslPath)
+{
+    $xsl = new DOMDocument();
+    $xsl->load($xslPath);
+    $processor = new XSLTProcessor();
+    $processor->importStylesheet($xsl);
+    return $processor;
+}
 
 
-function transformXmlToPdf($eventID) {
+function loadIndex()
+{
+
+    $processor = createXSLProcessor('index.xsl');
+    $processor->setParameter('', 'date', date('Ymd'));
+    var_dump($_GET);
+    if (isset($_GET['startdatum'])) {
+        $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
+    } else {
+        $processor->setParameter('', 'selectedDate', date('Y-m-d'));
+    }
+    transformAndEchoXSLT($processor, getMainDB());
+}
+
+function transformXmlToPdf($eventID)
+{
     $foData = generateFoFile($eventID);
 
     $serviceClient = new FOPServiceClient();
@@ -58,8 +90,9 @@ function transformXmlToPdf($eventID) {
     return sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
 }
 
-function generateFoFile($eventID){
-    $eventDB = loadingAndReturnMainDB();
+function generateFoFile($eventID)
+{
+    $eventDB = getMainDB();
 
     // Need Information where xsl is located...
     $xsl = new DOMDocument();
@@ -73,7 +106,3 @@ function generateFoFile($eventID){
     $dom = $xslt_proc->transformToDoc($eventDB);
     return $dom->saveXML();
 }
-
-
-
-?>
