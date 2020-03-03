@@ -93,7 +93,7 @@
 						<br />
 						<br />
 						<h3>Filtern</h3>
-						<form class="filter" method="get" action="filter.php#services">
+						<form class="filter" method="get" action="#services">
 							<input type="date" id="start" name="startdatum" value="{$selectedDate}"></input>
 							<select name="eventType">
 								<option value="all">Alle</option>

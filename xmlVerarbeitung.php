@@ -71,11 +71,14 @@ function loadIndex()
 
     $processor = createXSLProcessor('index.xsl');
     $processor->setParameter('', 'date', date('Ymd'));
-    var_dump($_GET);
-    if (isset($_GET['startdatum'])) {
-        $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
-    } else {
-        $processor->setParameter('', 'selectedDate', date('Y-m-d'));
+
+    $parsedParams = parse();
+    if($parsedParams->schemaValidate('filter.xsd')){
+        if (isset($_GET['startdatum'])) {
+            $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
+        } else {
+            $processor->setParameter('', 'selectedDate', date('Y-m-d'));
+        }
     }
     transformAndEchoXSLT($processor, getMainDB());
 }
