@@ -194,7 +194,7 @@
                   <behinderung>Höhrbehinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>11</anzahlTeilnehmer>
+            <anzahlTeilnehmer>15</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -257,7 +257,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer><teilnehmer><vorname/><nachname/><geschlecht>Männlich</geschlecht><adresse/><stadt/><telefonnummer>0000000001</telefonnummer><geburtstag>2020-03-03</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer></teilnehmerListe>
+            <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer><teilnehmer><vorname/><nachname/><geschlecht>Männlich</geschlecht><adresse/><stadt/><telefonnummer>0000000001</telefonnummer><geburtstag>2020-03-03</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 3</adresse><stadt>Bern</stadt><telefonnummer>2348792357</telefonnummer><geburtstag>1995-05-14</geburtstag><behinderung>Sehbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>Nichts</spezielles></teilnehmer><teilnehmer><vorname>asdf</vorname><nachname>asdf</nachname><geschlecht>Weiblich</geschlecht><adresse>sdf</adresse><stadt>asdf</stadt><telefonnummer>3452435</telefonnummer><geburtstag>1990-03-28</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>asdf</vorname><nachname>asdf</nachname><geschlecht>Weiblich</geschlecht><adresse>sdf</adresse><stadt>asdf</stadt><telefonnummer>3452435</telefonnummer><geburtstag>1990-03-28</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>asdf</vorname><nachname>asdf</nachname><geschlecht>Weiblich</geschlecht><adresse>sdf</adresse><stadt>asdf</stadt><telefonnummer>3452435</telefonnummer><geburtstag>1990-03-28</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer><teilnehmer><vorname>asdf</vorname><nachname>asdf</nachname><geschlecht>Weiblich</geschlecht><adresse>sdf</adresse><stadt>asdf</stadt><telefonnummer>3452435</telefonnummer><geburtstag>1990-03-28</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
       </event>
 
       <event name="Schwimmen" id="3">
@@ -488,7 +488,7 @@
                   <behinderung>Diverse Behinderungen</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>5</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>3</anzahlTeilnehmer>
+            <anzahlTeilnehmer>4</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -527,7 +527,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Adrian</vorname><nachname>Fischer</nachname><geschlecht>Männlich</geschlecht><adresse>Steinhofstrasse9</adresse><stadt>Burgdorf</stadt><telefonnummer>234234</telefonnummer><geburtstag>1998-03-28</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Brauche ein grosses Zimmer</spezielles></teilnehmer></teilnehmerListe>
       </event>
 
 
@@ -540,7 +540,7 @@
                   <behinderung>Diverse Behinderungen</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>3</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>1</anzahlTeilnehmer>
+            <anzahlTeilnehmer>2</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -555,7 +555,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Weiblich</geschlecht><adresse>Elfenweg 8</adresse><stadt>Burgdorf</stadt><telefonnummer>3242345</telefonnummer><geburtstag>1990-03-28</geburtstag><behinderung>Höhrbehinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
       <event name="Basketball" id="8">
             <title>sadf</title>
@@ -583,8 +583,8 @@
                   <behinderung>Keine Behinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>10</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
+            <anzahlTeilnehmer>10</anzahlTeilnehmer>
             <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
+            <teilnehmerListe><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Willi</nachname><geschlecht>Männlich</geschlecht><adresse>asdf</adresse><stadt>sadfasdf</stadt><telefonnummer>432554325</telefonnummer><geburtstag>2020-03-18</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>234423</spezielles></teilnehmer></teilnehmerListe>
       </event>
 </events>

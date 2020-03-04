@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+	<xsl:param name="pdfLink"  />
 
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
 
@@ -27,8 +28,10 @@
 						<h1 class="display-4">BESTÄTIGUNG</h1>
 						<br />
 						<br />
-						<p>Die Reservation ist erfoglreich eingegangen - Sie können nun die PDF-Datei herunterladen und zur Startseite zurückkehren!</p>
+						<p>Die Reservation ist erfoglreich eingegangen - Sie können nun die PDF-Datei unter folgendem Link herunterladen und zur Startseite zurückkehren!</p>
                         <br />
+						<a href="{$pdfLink}"><button class="btn btn-outline-success my-2 my-sm-0 ml-3">Download PDF-Datei</button></a>
+						<br />
 						<br />
 						<a href="index.php"><button class="btn btn-outline-success my-2 my-sm-0 ml-3" type="submit">Zurück zur Startseite</button></a>
 					</div>

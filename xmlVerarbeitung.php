@@ -42,6 +42,18 @@ function loadXSLwithMainDB($xslPath)
     transformAndEchoXSLT($processor, $xml);
 }
 
+function loadXSLwithPdfLink($pdfLink)
+{
+    $xml = getMainDB();
+    $xsl = new DOMDocument();
+    $xsl->load('bestätigungReservation.xsl');
+    $processor = new XSLTProcessor();
+    $processor->importStylesheet($xsl);
+    $processor->setParameter( '', 'pdfLink', $pdfLink);
+    $dom = $processor->transformToDoc($xml);
+    echo $dom->saveXML();
+}
+
 /**
  * @param XSLTProcessor $xsltProcessor 
  * @param DOMNode $xml
@@ -95,12 +107,10 @@ function loadIndex()
 
 function transformXmlToPdf($eventID)
 {
-    $foData = generateFoFile($eventID);
-
+    generateFoFile($eventID);
+    $foFile = 'confirmation.fo';
     $serviceClient = new FOPServiceClient();
-    $pdfFile = $serviceClient->processData($foData, getcwd() . '/confirmations/' . 'confirmation' . rand() . '.pdf');
-
-    echo sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
+    return $serviceClient->processFile($foFile);;
 }
 
 function generateFoFile($eventID)
@@ -111,5 +121,5 @@ function generateFoFile($eventID)
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);
-    return $dom->saveXML();
+    $dom->save('confirmation.fo');
 }

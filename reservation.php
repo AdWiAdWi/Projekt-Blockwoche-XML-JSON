@@ -21,9 +21,8 @@ if ($_POST["absenden"]) {
     $validatedXML = insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telefonnummer, $geburtstag, $behinderungen, $einzelzimmer, $spezielles, $eventID, $eventXML);
     if ($validatedXML) {
         // TODO: PDF needs to be generated her.
-        transformXmlToPdf($eventID);
-        //
-       // loadXSLwithMainDB('bestätigungReservation.xsl');
+        $pdfLink = transformXmlToPdf($eventID);
+        loadXSLwithPdfLink($pdfLink);
     } else {
         loadXSLwithMainDB('fehlerReservation.xsl');
     }
