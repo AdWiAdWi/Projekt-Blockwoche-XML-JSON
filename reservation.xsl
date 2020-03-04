@@ -16,6 +16,8 @@
 			<!-- CSS -->
     		<link href="css/style.css" rel="stylesheet" />
 
+            <script src="formValidation.js"></script>
+
 			<!-- Title -->
 			<title>Reservation</title>
 			</head>
@@ -55,7 +57,7 @@
 
         <!--Form-->
 		<div class="event-field col-md-12 text-center">
-					<form action="reservation.php" method="post">
+					<form name="myForm" action="reservation.php" onsubmit="return validateForm()" method="post">
                         <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
                             <div class="event-border mt-2 mr-0.2 mb-2 ml-0.2">
                                 <p class="service-title">
