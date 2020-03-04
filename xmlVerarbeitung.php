@@ -98,22 +98,16 @@ function transformXmlToPdf($eventID)
     $foData = generateFoFile($eventID);
 
     $serviceClient = new FOPServiceClient();
-    $pdfFile = $serviceClient->processData($foData, tempnam(sys_get_temp_dir(), 'confirmation.') . '.pdf');
+    $pdfFile = $serviceClient->processData($foData, getcwd() . '/confirmations/' . 'confirmation' . rand() . '.pdf');
 
-    return sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
+    echo sprintf('Generated Confirmation PDF: <strong><a href="%s">download PDF</a></strong>', $pdfFile);
 }
 
 function generateFoFile($eventID)
 {
     $eventDB = getMainDB();
 
-    // Need Information where xsl is located...
-    $xsl = new DOMDocument();
-    $xsl->load('confirmationReservation.xsl');
-
-    // transform
-    $xslt_proc = new XSLTProcessor();
-    $xslt_proc->importStylesheet($xsl);
+    $xslt_proc = createXSLProcessor('confirmationReservation.xsl');
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);
