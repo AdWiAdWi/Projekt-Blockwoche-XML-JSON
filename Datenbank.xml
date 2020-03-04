@@ -178,7 +178,7 @@
                         <geburtstag>2020-02-28</geburtstag>
                         <behinderung>Psychische Behinderung</behinderung>
                         <einzelzimmer>true</einzelzimmer>
-                        <spezielles></spezielles>
+                        <spezielles/>
                   </teilnehmer>
             </teilnehmerListe>
       </event>
@@ -194,7 +194,7 @@
                   <behinderung>Höhrbehinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>6</anzahlTeilnehmer>
+            <anzahlTeilnehmer>7</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -255,9 +255,9 @@
                         <geburtstag>2020-02-29</geburtstag>
                         <behinderung>Höhrbehinderung</behinderung>
                         <einzelzimmer>true</einzelzimmer>
-                        <spezielles></spezielles>
+                        <spezielles/>
                   </teilnehmer>
-            <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer></teilnehmerListe>
+            <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer><teilnehmer><vorname/><nachname/><geschlecht>Männlich</geschlecht><adresse/><stadt/><telefonnummer>0000000001</telefonnummer><geburtstag>2020-03-03</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
 
       <event name="Schwimmen" id="3">
@@ -330,7 +330,7 @@
                         <geburtstag>2020-02-14</geburtstag>
                         <behinderung>Geistige Behinderung</behinderung>
                         <einzelzimmer>false</einzelzimmer>
-                        <spezielles></spezielles>
+                        <spezielles/>
                   </teilnehmer>
                   <teilnehmer>
                         <vorname>Christian</vorname>
@@ -342,7 +342,7 @@
                         <geburtstag>2020-02-14</geburtstag>
                         <behinderung>Geistige Behinderung</behinderung>
                         <einzelzimmer>false</einzelzimmer>
-                        <spezielles></spezielles>
+                        <spezielles/>
                   </teilnehmer>
             </teilnehmerListe>
       </event>
