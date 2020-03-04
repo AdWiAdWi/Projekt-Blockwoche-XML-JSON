@@ -17,8 +17,8 @@ function validateForm() {
       return false;
     }
 
-    var z = document.forms["myForm"]["adresse"].value;
-    if (z == "") {
+    var b = document.forms["myForm"]["adresse"].value;
+    if (b == "") {
       alert("Adresse muss ausgefüllt sein");
       return false;
     }
@@ -29,6 +29,6 @@ function validateForm() {
       return false;
     }
 
-    
+
 
   }
