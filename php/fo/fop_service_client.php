@@ -46,7 +46,7 @@ class FOPServiceClient {
         $ext = pathinfo($filePath, PATHINFO_EXTENSION);
         $ret .= (strlen($ext) == 0) ? '' : '.';
         $fileName = $ret . $ext;
-        return sprintf ("download.php?file=%s", urlencode($fileName));
+        return sprintf (getcwd() . '\php\fo\download.php?file=%s', urlencode($fileName));
     }
 
     /**

@@ -423,7 +423,7 @@
                   <behinderung>Psychische Behinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>10</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>4</anzahlTeilnehmer>
+            <anzahlTeilnehmer>7</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -474,7 +474,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Adrian</vorname><nachname>Willi</nachname><geschlecht>Anderes</geschlecht><adresse>Elfenweg 8</adresse><stadt>Bern</stadt><telefonnummer>238047239847</telefonnummer><geburtstag>1990-12-13</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Adrian</vorname><nachname>Willi</nachname><geschlecht>Anderes</geschlecht><adresse>Elfenweg 8</adresse><stadt>Bern</stadt><telefonnummer>238047239847</telefonnummer><geburtstag>1990-12-13</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Adrian</vorname><nachname>Willi</nachname><geschlecht>Anderes</geschlecht><adresse>Elfenweg 8</adresse><stadt>Bern</stadt><telefonnummer>238047239847</telefonnummer><geburtstag>1990-12-13</geburtstag><behinderung>Keine Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
 
 
