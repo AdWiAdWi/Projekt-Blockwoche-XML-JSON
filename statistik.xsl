@@ -119,7 +119,7 @@
         <div class="statistic-box">
           <h3>Auslastung der Plätze insgesamt in Prozent</h3>
 
-            <svg width="90%" height="65px"
+            <svg width="90%" height="65px" alt="Statistik über die Auslastung der Events"
             viewBox="0 0 1132 65" preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg" version="1.1"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -159,7 +159,7 @@
     <div class="statistic-box">
     <h3>Aufteilung der Geschlechter der Teilnehmer</h3>
 
-       <svg width="90%" height="65px"
+       <svg width="90%" height="65px" alt="Statistik über die Aufteilung der Geschlechter der Teilnehmenden"
         viewBox="0 0 1132 65" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" version="1.1"
         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -209,7 +209,7 @@
     <h3>Aufteilung Veranstaltungen pro Sportart</h3>
 
 
-          <svg width="90%" height="500px"
+          <svg width="90%" height="500px" alt="Statistik über die Aufteilung der Veranstaltungen pro Sportart"
           
           xmlns="http://www.w3.org/2000/svg" version="1.1"
           xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -301,7 +301,7 @@
     <h3>Aufteilung Behinderung aller Teilnehmenden</h3>
 
 
-        <svg width="90%" height="500px"
+        <svg width="90%" height="500px" alt="Statistik über die Aufteilung der Behinderungen aller Teilnehmenden"
 			
 			 xmlns="http://www.w3.org/2000/svg" version="1.1"
 			 xmlns:xlink="http://www.w3.org/1999/xlink">
