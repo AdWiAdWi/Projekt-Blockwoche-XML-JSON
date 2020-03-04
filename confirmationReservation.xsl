@@ -1,10 +1,7 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
-    <xsl:param name="offerID"  />
-    <xsl:param name="courseID"  />
-    <xsl:variable name="selectedOffer" select="document('../database/offer.xml')//*[@id = $offerID]" />
-    <xsl:variable name="selectedCourse" select="$selectedOffer//*[@courseId = $courseID]" />
-
+    <xsl:param name="eventID"  />
+    
     <xsl:template match="/">
         <fo:root>
             <fo:layout-master-set>
@@ -20,14 +17,14 @@
             <fo:page-sequence master-reference="masterpage">
                 <!-- static content, such as footer(region-before) and header(region-after) -->
                 <fo:flow flow-name="xsl-region-body" display-align="center" width="21cm">
-                    <xsl:apply-templates select="//Reservation[@offerId = $offerID and @courseId = $courseID]" />
+                    <xsl:apply-templates select="/events/event[@id = $eventID]" />
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
 
 
-    <xsl:template match="Reservation[last()]">
+    <xsl:template match="event">
         <fo:table space-after.optimum="20pt" font-size="11pt" margin="10">
             <fo:table-column column-number="1" />
             <fo:table-column column-number="2"/>
@@ -36,7 +33,7 @@
                 <fo:table-row>
                     <fo:table-cell number-columns-spanned="3" height="100" display-align="after" text-align="center">
                         <fo:block font-size="24pt" font-family="Georgia" color="white" text-align="center">
-                            Vielen Dank <xsl:value-of select="FirstName" />
+                            Vielen Dank <xsl:value-of select="//teilnehmer[last()]/vorname/text()" />
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
@@ -56,7 +53,7 @@
                 <fo:table-row border-after-width="0.1" border-after-color="grey" border-after-style="solid">
                     <fo:table-cell column-number="2"  text-align="center">
                         <fo:block font-size="14pt" font-family="Georgia" color="white">
-                            <fo:block><xsl:value-of select="$selectedOffer/title" /></fo:block>
+                            <fo:block><xsl:value-of select="/title/text()" /></fo:block>
                             <fo:block color="grey">Kurs</fo:block>
                         </fo:block>
                     </fo:table-cell>
@@ -69,20 +66,20 @@
                 <fo:table-row>
                     <fo:table-cell border-right-width="0.1" border-right-style="solid" border-right-color="grey">
                         <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="$selectedCourse/@time" /><xsl:text> </xsl:text><xsl:value-of select="$selectedCourse/@date" /></fo:block>
-                            <fo:block color="grey">Datum &amp; Zeit</fo:block>
+                            <fo:block><xsl:value-of select="/startdatum/text()" /><xsl:text> </xsl:text><xsl:value-of select="/dauerInTagen/text()" /></fo:block>
+                            <fo:block color="grey">Datum &amp; Dauer in Tagen</fo:block>
                         </fo:block>
                     </fo:table-cell>
                     <fo:table-cell border-right-width="0.1" border-right-style="solid" border-right-color="grey">
                         <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="$selectedCourse/@trainer" /></fo:block>
-                            <fo:block color="grey">Trainer</fo:block>
+                            <fo:block><xsl:value-of select="/handicap/behinderung/text()" /></fo:block> 
+                            <fo:block color="grey">Behinderung</fo:block>
                         </fo:block>
                     </fo:table-cell>
                     <fo:table-cell>
                         <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="$selectedOffer/price" /></fo:block>
-                            <fo:block color="grey">Preis</fo:block>
+                            <fo:block><xsl:value-of select="/beschreibung/text()" /></fo:block>
+                            <fo:block color="grey">Beschreibung</fo:block>
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>

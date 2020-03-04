@@ -194,7 +194,7 @@
                   <behinderung>Höhrbehinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>15</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>5</anzahlTeilnehmer>
+            <anzahlTeilnehmer>6</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -257,7 +257,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles>fh</spezielles>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer></teilnehmerListe>
       </event>
 
       <event name="Schwimmen" id="3">
