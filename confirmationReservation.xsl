@@ -3,6 +3,7 @@
     <xsl:param name="eventID"  />
     
     <xsl:template match="/">
+
         <fo:root>
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="masterpage" page-height="29.7cm" page-width="21cm" margin="2" >
@@ -32,14 +33,14 @@
             <fo:table-body>
                 <fo:table-row>
                     <fo:table-cell number-columns-spanned="3" height="100" display-align="after" text-align="center">
-                        <fo:block font-size="24pt" font-family="Georgia" color="white" text-align="center">
-                            Vielen Dank <xsl:value-of select="//teilnehmer[last()]/vorname/text()" />
+                        <fo:block font-size="24pt"  color="white" text-align="center">
+                            Vielen Dank <xsl:value-of select="teilnehmerListe/teilnehmer[last()]/vorname/text()" />
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
                 <fo:table-row>
                     <fo:table-cell number-columns-spanned="3"  height="50"  text-align="center">
-                        <fo:block font-size="14pt" font-family="Georgia" color="white">
+                        <fo:block font-size="14pt"  color="white">
                             <fo:block>Deine Reservierung wurde bestätigt.</fo:block>
                         </fo:block>
                     </fo:table-cell>
@@ -52,9 +53,9 @@
 
                 <fo:table-row border-after-width="0.1" border-after-color="grey" border-after-style="solid">
                     <fo:table-cell column-number="2"  text-align="center">
-                        <fo:block font-size="14pt" font-family="Georgia" color="white">
-                            <fo:block><xsl:value-of select="/title/text()" /></fo:block>
-                            <fo:block color="grey">Kurs</fo:block>
+                        <fo:block font-size="12pt"  color="white">
+                            <fo:block font-size="16pt" color="rgb(253, 163, 157)">Themenwoche</fo:block>
+                            <fo:block><xsl:value-of select="title/text()" /></fo:block>
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
@@ -65,21 +66,28 @@
                 </fo:table-row>
                 <fo:table-row>
                     <fo:table-cell border-right-width="0.1" border-right-style="solid" border-right-color="grey">
-                        <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="/startdatum/text()" /><xsl:text> </xsl:text><xsl:value-of select="/dauerInTagen/text()" /></fo:block>
-                            <fo:block color="grey">Datum &amp; Dauer in Tagen</fo:block>
+                        <fo:block font-size="12pt"  color="white" text-align="center">
+                            <fo:block font-size="16pt" color="rgb(253, 163, 157)"> Datum &amp; Dauer in Tagen</fo:block>
+                            <fo:block>
+                            <xsl:value-of select="startdatum/text()" />
+                            <xsl:text> 
+                            &amp;
+                            </xsl:text>
+                            <xsl:value-of select="dauerInTagen/text()" />
+                            Tag(e)
+                            </fo:block>
                         </fo:block>
                     </fo:table-cell>
                     <fo:table-cell border-right-width="0.1" border-right-style="solid" border-right-color="grey">
-                        <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="/handicap/behinderung/text()" /></fo:block> 
-                            <fo:block color="grey">Behinderung</fo:block>
+                        <fo:block font-size="12pt"  color="white" text-align="center">
+                            <fo:block font-size="16pt" color="rgb(253, 163, 157)">Behinderung</fo:block>
+                            <fo:block><xsl:value-of select="handicap/behinderung/text()" /></fo:block> 
                         </fo:block>
                     </fo:table-cell>
                     <fo:table-cell>
-                        <fo:block font-size="14pt" font-family="Georgia" color="white" text-align="center">
-                            <fo:block><xsl:value-of select="/beschreibung/text()" /></fo:block>
-                            <fo:block color="grey">Beschreibung</fo:block>
+                        <fo:block font-size="12pt"  color="white" text-align="center">
+                            <fo:block font-size="16pt"  color="rgb(253, 163, 157)">Beschreibung</fo:block>
+                            <fo:block><xsl:value-of select="beschreibung/text()" /></fo:block>
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
