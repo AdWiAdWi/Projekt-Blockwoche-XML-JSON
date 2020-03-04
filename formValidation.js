@@ -29,6 +29,18 @@ function validateForm() {
       return false;
     }
 
+    var c = document.forms["myForm"]["telefonnummer"].value;
+    if (c == "") {
+      alert("Telefonnummer muss ausgefüllt sein");
+      return false;
+    }
+
+    var d = document.forms["myForm"]["geburtstag"].value;
+    if (d == "") {
+      alert("Geburtstag muss ausgefüllt sein");
+      return false;
+    }
+
 
 
   }
