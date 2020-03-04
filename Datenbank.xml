@@ -169,16 +169,16 @@
                         <spezielles>asdf</spezielles>
                   </teilnehmer>
                   <teilnehmer>
-                        <vorname>asdf</vorname>
-                        <nachname>sadf</nachname>
+                        <vorname>Nico</vorname>
+                        <nachname>Iseli</nachname>
                         <geschlecht>Weiblich</geschlecht>
-                        <adresse>asdf</adresse>
-                        <stadt>fdsaf</stadt>
+                        <adresse>Strasse</adresse>
+                        <stadt>Luzern</stadt>
                         <telefonnummer>234234</telefonnummer>
                         <geburtstag>2020-02-28</geburtstag>
                         <behinderung>Psychische Behinderung</behinderung>
                         <einzelzimmer>true</einzelzimmer>
-                        <spezielles>sadf</spezielles>
+                        <spezielles></spezielles>
                   </teilnehmer>
             </teilnehmerListe>
       </event>
@@ -246,16 +246,16 @@
                         <spezielles/>
                   </teilnehmer>
                   <teilnehmer>
-                        <vorname>fg</vorname>
-                        <nachname>fg</nachname>
+                        <vorname>Adolf</vorname>
+                        <nachname>Steiner</nachname>
                         <geschlecht>Männlich</geschlecht>
-                        <adresse>fg</adresse>
-                        <stadt>df</stadt>
+                        <adresse>derWeg</adresse>
+                        <stadt>Hausstadt</stadt>
                         <telefonnummer>33</telefonnummer>
                         <geburtstag>2020-02-29</geburtstag>
                         <behinderung>Höhrbehinderung</behinderung>
                         <einzelzimmer>true</einzelzimmer>
-                        <spezielles>fh</spezielles>
+                        <spezielles></spezielles>
                   </teilnehmer>
             <teilnehmer><vorname>Markus</vorname><nachname>Rühl</nachname><geschlecht>Männlich</geschlecht><adresse>Massenstrasse 69</adresse><stadt>Massenhausen</stadt><telefonnummer>0690006969</telefonnummer><geburtstag>1999-01-01</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Not Vegan</spezielles></teilnehmer></teilnehmerListe>
       </event>
@@ -321,28 +321,28 @@
                         <spezielles/>
                   </teilnehmer>
                   <teilnehmer>
-                        <vorname>sadf</vorname>
-                        <nachname>asdf</nachname>
+                        <vorname>Daniel</vorname>
+                        <nachname>Müller</nachname>
                         <geschlecht>Männlich</geschlecht>
-                        <adresse>sadf</adresse>
-                        <stadt>asdf</stadt>
+                        <adresse>Senfstrasse</adresse>
+                        <stadt>Miami</stadt>
                         <telefonnummer>33434</telefonnummer>
                         <geburtstag>2020-02-14</geburtstag>
                         <behinderung>Geistige Behinderung</behinderung>
                         <einzelzimmer>false</einzelzimmer>
-                        <spezielles>asdf</spezielles>
+                        <spezielles></spezielles>
                   </teilnehmer>
                   <teilnehmer>
-                        <vorname>sadf</vorname>
-                        <nachname>asdf</nachname>
+                        <vorname>Christian</vorname>
+                        <nachname>Dummermuth</nachname>
                         <geschlecht>Männlich</geschlecht>
-                        <adresse>sadf</adresse>
-                        <stadt>asdf</stadt>
+                        <adresse>Weg</adresse>
+                        <stadt>Luzern</stadt>
                         <telefonnummer>33434</telefonnummer>
                         <geburtstag>2020-02-14</geburtstag>
                         <behinderung>Geistige Behinderung</behinderung>
                         <einzelzimmer>false</einzelzimmer>
-                        <spezielles>asdf</spezielles>
+                        <spezielles></spezielles>
                   </teilnehmer>
             </teilnehmerListe>
       </event>
@@ -561,105 +561,28 @@
             <title>sadf</title>
             <dauerInTagen>1</dauerInTagen>
             <startdatum>2020-02-24</startdatum>
-            <beschreibung>sadf</beschreibung>
+            <beschreibung>Basketball für klein und gross.</beschreibung>
             <handicap>
                   <behinderung>Höhrbehinderung</behinderung>
             </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlMöglicheTeilnehmer>10</anzahlMöglicheTeilnehmer>
             <anzahlTeilnehmer>0</anzahlTeilnehmer>
             <findetStatt>1</findetStatt>
             <teilnehmerListe/>
       </event>
-      <event name="Basketball" id="9">
-            <title>sadf</title>
-            <dauerInTagen>2</dauerInTagen>
-            <startdatum>2020-02-22</startdatum>
-            <beschreibung>sadf</beschreibung>
-            <handicap>
-                  <behinderung>Geistige Behinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Schnitzeljagd" id="10">
-            <title>sadf</title>
-            <dauerInTagen>6</dauerInTagen>
-            <startdatum>2020-02-23</startdatum>
-            <beschreibung>sadf</beschreibung>
-            <handicap>
-                  <behinderung>Geistige Behinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Fussball" id="11">
-            <title/>
-            <dauerInTagen>7</dauerInTagen>
-            <startdatum>2020-02-22</startdatum>
-            <beschreibung>asdf20</beschreibung>
-            <handicap>
-                  <behinderung>Höhrbehinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>50</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Basketball" id="12">
-            <title/>
-            <dauerInTagen>1</dauerInTagen>
-            <startdatum>2020-02-22</startdatum>
-            <beschreibung>sdf</beschreibung>
-            <handicap>
-                  <behinderung>Geistige Behinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>1</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Fussball" id="13">
-            <title>sadf</title>
-            <dauerInTagen>7</dauerInTagen>
-            <startdatum>2020-04-27</startdatum>
-            <beschreibung>asdf</beschreibung>
-            <handicap>
-                  <behinderung>Keine Behinderung</behinderung>
-                  <behinderung>Psychische Behinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Basketball" id="14">
-            <title>lkdsjf</title>
-            <dauerInTagen>1</dauerInTagen>
-            <startdatum>2020-02-28</startdatum>
-            <beschreibung>lkdsjfldsj</beschreibung>
-            <handicap>
-                  <behinderung>Geistige Behinderung</behinderung>
-            </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>0</anzahlTeilnehmer>
-            <findetStatt>1</findetStatt>
-            <teilnehmerListe/>
-      </event>
-      <event name="Basketball" id="15">
-            <title>Spiel und Spass mit Basketball</title>
+     
+     
+      <event name="Schnitzeljagd" id="15">
+            <title>Schnitzeljagd</title>
             <dauerInTagen>6</dauerInTagen>
             <startdatum>2020-03-04</startdatum>
-            <beschreibung>blablabla</beschreibung>
+            <beschreibung>Spiel und Spass bei verschiedenen Formen der Schnitzeljagd</beschreibung>
             <handicap>
                   <behinderung>Höhrbehinderung</behinderung>
                   <behinderung>Geistige Behinderung</behinderung>
                   <behinderung>Keine Behinderung</behinderung>
             </handicap>
-            <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
+            <anzahlMöglicheTeilnehmer>10</anzahlMöglicheTeilnehmer>
             <anzahlTeilnehmer>0</anzahlTeilnehmer>
             <findetStatt>1</findetStatt>
             <teilnehmerListe/>
