@@ -101,10 +101,10 @@
                                     <input class="form-control" type="text" name="adresse" placeholder="Adresse*" />
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="stadt" placeholder="Stadt*" />
+                                    <input class="form-control" type="text" name="stadt" placeholder="Stadt*"/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="telefonnummer" placeholder="Telefonnummer*" />
+                                    <input class="form-control" type="text" name="telefonnummer" placeholder="Telefonnummer (Bitte Nummer ohne Leerschläge eingeben!)*" />
                                 </div>
                                 <div class="form-group">
                                     <label>Geburtsdatum</label>
