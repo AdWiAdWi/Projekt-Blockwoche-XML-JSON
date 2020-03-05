@@ -12,7 +12,7 @@ function loadReservation($eventID) {
        // create xhtml doc
        // this process should be used for every html we show to the user!
        $xsl = new DOMDocument();
-       $xsl->load('reservation.xsl');
+       $xsl->load('transformation/reservation.xsl');
        $processor = new XSLTProcessor();
        $processor->importStylesheet($xsl);
        $processor->setParameter( '', 'selectedEvent', $eventID);

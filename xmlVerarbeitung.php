@@ -45,7 +45,7 @@ function loadXSLwithPdfLink($pdfLink)
 {
     $xml = getMainDB();
     $xsl = new DOMDocument();
-    $xsl->load('bestätigungReservation.xsl');
+    $xsl->load('transformation/bestätigungReservation.xsl');
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
     $processor->setParameter( '', 'pdfLink', $pdfLink);
@@ -80,7 +80,7 @@ function createXSLProcessor($xslPath)
 function loadIndex()
 {
 
-    $processor = createXSLProcessor('index.xsl');
+    $processor = createXSLProcessor('transformation/index.xsl');
     $processor->setParameter('', 'date', date('Ymd'));
 
     $parsedParams = parse();
@@ -116,7 +116,7 @@ function generateFoFile($eventID, $fileName)
 {
     $eventDB = getMainDB();
 
-    $xslt_proc = createXSLProcessor('confirmationReservation.xsl');
+    $xslt_proc = createXSLProcessor('transformation/confirmationReservation.xsl');
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);

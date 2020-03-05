@@ -16,10 +16,10 @@ if ($_POST["absenden"]) {
 
     if ($insertIntoEventDB) {
         echo "Insertion successfull";
-        loadXSLwithMainDB('bestätigungEventHinzufuegen.xsl');
+        loadXSLwithMainDB('transformation/bestätigungEventHinzufuegen.xsl');
     } else {
         echo "Insertion not successfull";
-        loadXSLwithMainDB('fehlerEventHinzufuegen.xsl');
+        loadXSLwithMainDB('transformation/fehlerEventHinzufuegen.xsl');
     }
 
 }

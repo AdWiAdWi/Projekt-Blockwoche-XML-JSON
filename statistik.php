@@ -11,7 +11,7 @@ function main()
     // create xhtml doc
     // this process should be used for every html we show to the user!
     $xsl = new DOMDocument();
-    $xsl->load('statistik.xsl');
+    $xsl->load('transformation/statistik.xsl');
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
     $dom = $processor->transformToDoc($xml);

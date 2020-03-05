@@ -24,7 +24,7 @@ if ($_POST["absenden"]) {
         $pdfLink = transformXmlToPdf($eventID);
         loadXSLwithPdfLink($pdfLink);
     } else {
-        loadXSLwithMainDB('fehlerReservation.xsl');
+        loadXSLwithMainDB('transformation/fehlerReservation.xsl');
     }
 }
 
