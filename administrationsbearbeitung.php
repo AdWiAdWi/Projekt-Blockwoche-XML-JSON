@@ -15,10 +15,8 @@ if ($_POST["absenden"]) {
     $insertIntoEventDB = insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $beschreibung, $behinderungen, $eventDatenbank, $title, $anzahlMöglicheTeilnehmer);
 
     if ($insertIntoEventDB) {
-        echo "Insertion successfull";
         loadXSLwithMainDB('transformation/bestätigungEventHinzufuegen.xsl');
     } else {
-        echo "Insertion not successfull";
         loadXSLwithMainDB('transformation/fehlerEventHinzufuegen.xsl');
     }
 
