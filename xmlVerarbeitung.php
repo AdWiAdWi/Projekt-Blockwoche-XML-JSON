@@ -108,7 +108,7 @@ function loadIndex()
 function transformXmlToPdf($eventID)
 {
     generateFoFile($eventID);
-    $foFile = 'confirmation.fo';
+    $foFile = 'files/confirmation.fo';
     $serviceClient = new FOPServiceClient();
     return $serviceClient->processFile($foFile);;
 }
@@ -121,5 +121,5 @@ function generateFoFile($eventID)
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);
-    $dom->save('confirmation.fo');
+    $dom->save('files/confirmation.fo');
 }
