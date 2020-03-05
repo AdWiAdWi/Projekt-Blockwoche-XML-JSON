@@ -115,8 +115,6 @@
                                 <div class="form-group">
                                     <label>Behinderung</label>
                                     <select class="form-control" name="behinderung">
-
-                                    
                                             <xsl:for-each select="handicap/behinderung">
                                                 <xsl:element name="option">
                                                     <xsl:attribute name="value">
@@ -124,8 +122,7 @@
                                                     </xsl:attribute>
                                                     <xsl:value-of select="text()"/>
                                                 </xsl:element>
-                                            </xsl:for-each>
-                                        
+                                            </xsl:for-each> 
                                         <!--
                                         <option value="Geistige Behinderung">Geistige Behinderung</option>
                                         <option value="Höhrbehinderung">Höhrbehinderung</option>
