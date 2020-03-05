@@ -115,13 +115,26 @@
                                 <div class="form-group">
                                     <label>Behinderung</label>
                                     <select class="form-control" name="behinderung">
-                                         <option value="Geistige Behinderung">Geistige Behinderung</option>
+
+                                    
+                                            <xsl:for-each select="handicap/behinderung">
+                                                <xsl:element name="option">
+                                                    <xsl:attribute name="value">
+                                                        <xsl:value-of select="text()"/>
+                                                    </xsl:attribute>
+                                                    <xsl:value-of select="text()"/>
+                                                </xsl:element>
+                                            </xsl:for-each>
+                                        
+                                        <!--
+                                        <option value="Geistige Behinderung">Geistige Behinderung</option>
                                         <option value="Höhrbehinderung">Höhrbehinderung</option>
                                         <option value="Körperbehinderung">Körperbehinderung</option>
                                         <option value="Psychische Behinderung">Psychische Behinderung</option>
                                         <option value="Sehbehinderung">Sehbehinderung</option>
                                         <option value="Keine Behinderung">Keine Behinderung</option>
                                         <option value="Diverse Behinderungen">Diverse Behinderungen</option>
+                                        -->
                                     </select>
                                 </div>
                                 <div class="form-group">
