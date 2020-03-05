@@ -16,7 +16,7 @@
 			<!-- CSS -->
     		<link href="css/style.css" rel="stylesheet" />
 
-            <script src="formValidation.js"></script>
+            <script src="script/formValidation.js"></script>
 
 			<!-- Title -->
 			<title>Reservation</title>

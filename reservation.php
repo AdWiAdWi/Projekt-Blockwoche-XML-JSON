@@ -24,7 +24,7 @@ if ($_POST["absenden"]) {
         $pdfLink = transformXmlToPdf($eventID);
         loadXSLwithPdfLink($pdfLink);
     } else {
-        loadXSLwithMainDB('fehlerReservation.xsl');
+        loadXSLwithMainDB('transformation/fehlerReservation.xsl');
     }
 }
 
@@ -79,13 +79,11 @@ function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telef
     $anzahlAngemeldeteTeilnehmerNode = $xpath->query($anzahlAngemeldeteTeilnehmerXpath)->item(0);
 
     if ($anzahlMöglicheTeilnehmerInEvent > $anzahlAngemeldeteTeilnehmerNode->nodeValue) {
-        echo "Es hat noch genug Platz in diesem Event";
         // Anzahl Teilnehmer um 1 erhöhen
         $anzahlAngemeldeteTeilnehmerNode->nodeValue = $anzahlAngemeldeteTeilnehmerNode->nodeValue + 1;
 
         // Validierung XML, Wenn OK, soll PDF generiert werden.
-        if (validationOfNewXML($eventXML, "schemaEventDB.xsd")) {
-            echo "Validation successfull";
+        if (validationOfNewXML($eventXML, 'schemas/schemaEventDB.xsd')) {
             $eventXML->save("Datenbank.xml");
             return true;
         } else {

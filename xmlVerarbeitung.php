@@ -18,7 +18,6 @@ function validationOfNewXML($xml, $xsd)
         libxml_clear_errors();
         return false;
     } else {
-        echo "Validation successfull";
         return true;
     }
 }
@@ -46,7 +45,7 @@ function loadXSLwithPdfLink($pdfLink)
 {
     $xml = getMainDB();
     $xsl = new DOMDocument();
-    $xsl->load('bestätigungReservation.xsl');
+    $xsl->load('transformation/bestätigungReservation.xsl');
     $processor = new XSLTProcessor();
     $processor->importStylesheet($xsl);
     $processor->setParameter( '', 'pdfLink', $pdfLink);
@@ -81,11 +80,11 @@ function createXSLProcessor($xslPath)
 function loadIndex()
 {
 
-    $processor = createXSLProcessor('index.xsl');
+    $processor = createXSLProcessor('transformation/index.xsl');
     $processor->setParameter('', 'date', date('Ymd'));
 
     $parsedParams = parse();
-    if ($parsedParams->schemaValidate('filter.xsd')) {
+    if ($parsedParams->schemaValidate('schemas/filter.xsd')) {
         if (isset($_GET['startdatum'])) {
             $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
         } else {
@@ -107,19 +106,19 @@ function loadIndex()
 
 function transformXmlToPdf($eventID)
 {
-    generateFoFile($eventID);
-    $foFile = 'confirmation.fo';
+    $foFile = 'files/confirmation-'.uniqid().'.fo';
+    generateFoFile($eventID, $foFile);
     $serviceClient = new FOPServiceClient();
     return $serviceClient->processFile($foFile);;
 }
 
-function generateFoFile($eventID)
+function generateFoFile($eventID, $fileName)
 {
     $eventDB = getMainDB();
 
-    $xslt_proc = createXSLProcessor('confirmationReservation.xsl');
+    $xslt_proc = createXSLProcessor('transformation/confirmationReservation.xsl');
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);
-    $dom->save('confirmation.fo');
+    $dom->save($fileName);
 }

@@ -16,10 +16,10 @@ if ($_POST["absenden"]) {
 
     if ($insertIntoEventDB) {
         echo "Insertion successfull";
-        loadXSLwithMainDB('bestätigungEventHinzufuegen.xsl');
+        loadXSLwithMainDB('transformation/bestätigungEventHinzufuegen.xsl');
     } else {
         echo "Insertion not successfull";
-        loadXSLwithMainDB('fehlerEventHinzufuegen.xsl');
+        loadXSLwithMainDB('transformation/fehlerEventHinzufuegen.xsl');
     }
 
 }
@@ -82,7 +82,7 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     $eventsNode->appendChild($importedEvent);
 
     // Neues XML validieren und abspeichern
-    if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
+    if (validationOfNewXML($eventDatenbank, 'schemas/schemaEventDB.xsd')){
         $eventDatenbank->save("Datenbank.xml");
         return true;
     } else {

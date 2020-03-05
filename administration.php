@@ -1,5 +1,5 @@
 <?php
 include("xmlVerarbeitung.php");
-loadXSLwithMainDB("administration.xsl");
+loadXSLwithMainDB("transformation/administration.xsl");
 
 ?>

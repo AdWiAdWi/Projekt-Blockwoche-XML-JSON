@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
+<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/schemaEventDB.xsd">
       <event name="Fussball" id="1">
             <title>Fussballturnier</title>
             <dauerInTagen>3</dauerInTagen>
@@ -9,7 +9,7 @@
                   <behinderung>Psychische Behinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>14</anzahlTeilnehmer>
+            <anzahlTeilnehmer>19</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -180,7 +180,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
 
 
@@ -488,7 +488,7 @@
                   <behinderung>Diverse Behinderungen</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>5</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>4</anzahlTeilnehmer>
+            <anzahlTeilnehmer>5</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -527,7 +527,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            <teilnehmer><vorname>Adrian</vorname><nachname>Fischer</nachname><geschlecht>Männlich</geschlecht><adresse>Steinhofstrasse9</adresse><stadt>Burgdorf</stadt><telefonnummer>234234</telefonnummer><geburtstag>1998-03-28</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Brauche ein grosses Zimmer</spezielles></teilnehmer></teilnehmerListe>
+            <teilnehmer><vorname>Adrian</vorname><nachname>Fischer</nachname><geschlecht>Männlich</geschlecht><adresse>Steinhofstrasse9</adresse><stadt>Burgdorf</stadt><telefonnummer>234234</telefonnummer><geburtstag>1998-03-28</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>false</einzelzimmer><spezielles>Brauche ein grosses Zimmer</spezielles></teilnehmer><teilnehmer><vorname>Frederico</vorname><nachname>Fischer</nachname><geschlecht>Männlich</geschlecht><adresse>Elfenweg, 7</adresse><stadt>Burgdorf</stadt><telefonnummer>+41765205522</telefonnummer><geburtstag>1990-03-20</geburtstag><behinderung>Psychische Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles>asdf</spezielles></teilnehmer></teilnehmerListe>
       </event>
 
 

@@ -29,16 +29,7 @@ class FOPServiceClient {
         $pdfData = $this->renderFile($foData);
         $this->writeFile($pdfData, $pdfFilePath);
 
-        $link = $this->createDownloadLink($pdfFilePath);
-        return $link;
-    }
-
-    private function createDownloadLink($filePath) {
-        $ret = pathinfo($filePath, PATHINFO_FILENAME);
-        $ext = pathinfo($filePath, PATHINFO_EXTENSION);
-        $ret .= (strlen($ext) == 0) ? '' : '.';
-        $fileName = $ret . $ext;
-        return sprintf ("download.php?file=%s", urlencode($fileName));
+        return $pdfFilePath;
     }
 
     /**
