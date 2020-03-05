@@ -9,7 +9,7 @@
                   <behinderung>Psychische Behinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>15</anzahlTeilnehmer>
+            <anzahlTeilnehmer>19</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -180,7 +180,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            <teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
+            <teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer><teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
 
 
