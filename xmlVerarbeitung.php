@@ -106,7 +106,12 @@ function loadIndex()
 
 function transformXmlToPdf($eventID)
 {
-    $foFile = 'files/confirmation-'.uniqid().'.fo';
+    $folder = 'files';
+    if(!is_dir($folder)){
+        mkdir($folder);
+    }
+    $foFile = $folder.'/confirmation-'.uniqid().'.fo';
+    
     generateFoFile($eventID, $foFile);
     $serviceClient = new FOPServiceClient();
     return $serviceClient->processFile($foFile);;
