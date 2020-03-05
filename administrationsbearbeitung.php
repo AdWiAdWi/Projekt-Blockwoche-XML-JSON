@@ -82,7 +82,7 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     $eventsNode->appendChild($importedEvent);
 
     // Neues XML validieren und abspeichern
-    if (validationOfNewXML($eventDatenbank, 'schemaEventDB.xsd')){
+    if (validationOfNewXML($eventDatenbank, 'schemas/schemaEventDB.xsd')){
         $eventDatenbank->save("Datenbank.xml");
         return true;
     } else {

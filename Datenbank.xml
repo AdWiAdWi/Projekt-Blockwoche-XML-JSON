@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaEventDB.xsd">
+<events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/schemaEventDB.xsd">
       <event name="Fussball" id="1">
             <title>Fussballturnier</title>
             <dauerInTagen>3</dauerInTagen>
@@ -9,7 +9,7 @@
                   <behinderung>Psychische Behinderung</behinderung>
             </handicap>
             <anzahlMöglicheTeilnehmer>20</anzahlMöglicheTeilnehmer>
-            <anzahlTeilnehmer>14</anzahlTeilnehmer>
+            <anzahlTeilnehmer>15</anzahlTeilnehmer>
             <findetStatt>true</findetStatt>
             <teilnehmerListe>
                   <teilnehmer>
@@ -180,7 +180,7 @@
                         <einzelzimmer>true</einzelzimmer>
                         <spezielles/>
                   </teilnehmer>
-            </teilnehmerListe>
+            <teilnehmer><vorname>Jonas</vorname><nachname>Wyss</nachname><geschlecht>Männlich</geschlecht><adresse>Theilerstrasse</adresse><stadt>Zug</stadt><telefonnummer>07912314697</telefonnummer><geburtstag>2020-03-12</geburtstag><behinderung>Geistige Behinderung</behinderung><einzelzimmer>true</einzelzimmer><spezielles/></teilnehmer></teilnehmerListe>
       </event>
 
 

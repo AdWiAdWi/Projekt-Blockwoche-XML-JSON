@@ -85,7 +85,7 @@ function loadIndex()
     $processor->setParameter('', 'date', date('Ymd'));
 
     $parsedParams = parse();
-    if ($parsedParams->schemaValidate('filter.xsd')) {
+    if ($parsedParams->schemaValidate('schemas/filter.xsd')) {
         if (isset($_GET['startdatum'])) {
             $processor->setParameter('', 'selectedDate', $_GET['startdatum']);
         } else {
