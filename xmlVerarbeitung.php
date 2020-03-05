@@ -18,7 +18,6 @@ function validationOfNewXML($xml, $xsd)
         libxml_clear_errors();
         return false;
     } else {
-        echo "Validation successfull";
         return true;
     }
 }
@@ -107,13 +106,13 @@ function loadIndex()
 
 function transformXmlToPdf($eventID)
 {
-    generateFoFile($eventID);
-    $foFile = 'files/confirmation.fo';
+    $foFile = 'files/confirmation-'.uniqid().'.fo';
+    generateFoFile($eventID, $foFile);
     $serviceClient = new FOPServiceClient();
     return $serviceClient->processFile($foFile);;
 }
 
-function generateFoFile($eventID)
+function generateFoFile($eventID, $fileName)
 {
     $eventDB = getMainDB();
 
@@ -121,5 +120,5 @@ function generateFoFile($eventID)
     $xslt_proc->setParameter('', 'eventID', $eventID);
 
     $dom = $xslt_proc->transformToDoc($eventDB);
-    $dom->save('files/confirmation.fo');
+    $dom->save($fileName);
 }

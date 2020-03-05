@@ -84,7 +84,6 @@ function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telef
 
         // Validierung XML, Wenn OK, soll PDF generiert werden.
         if (validationOfNewXML($eventXML, 'schemas/schemaEventDB.xsd')) {
-            echo "Validation successfull";
             $eventXML->save("Datenbank.xml");
             return true;
         } else {
