@@ -69,7 +69,7 @@
 						Wir sind ein Sportzentrum und Hotelbetrieb für Athleten mit Leidenschaft. Unser Motto ist "Sport für alle!" - Denn Sport ist gesund und sollte jedem zugänglich gemacht werden. Deshalb versuchen wir auch stark im Behindertensport Fuss zu fassen und unser Angebot bestmöglich auf die jeweiligen Fähigkeiten unserer Kunden auszurichten.
 							<br />
 							<br />
-						Unsere Infastruktur umfasst eine Schwimmanlage, Fussballplätze, eine Sporthalle sowie eine Rennbahn. Unsere Anlage ist umgegeben von atemberaubenden Berlandschaften, Flüssen und Wälder - Der perfekte Rückzugsort, um sich zu erholen oder sportlich auszutoben.
+						Unsere Infastruktur umfasst eine Schwimmanlage, Fussballplätze, eine Sporthalle sowie eine Rennbahn. Unsere Anlage ist umgegeben von atemberaubenden Berglandschaften, Flüssen und Wälder - Der perfekte Rückzugsort, um sich zu erholen oder sportlich auszutoben.
 							<br />
 							<div class="row offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 								<div class="iconborder col-md-4 text-center">
