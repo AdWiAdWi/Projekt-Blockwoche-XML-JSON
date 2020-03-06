@@ -87,11 +87,9 @@ function insertIntoDB($vorname, $nachname, $geschlecht, $adresse, $stadt, $telef
             $eventXML->save("Datenbank.xml");
             return true;
         } else {
-            echo "Problem with creating and validating new Registration!";
             return false;
         }
     } else {
-        echo "Maximale Anzahl Teilnehmer am Event bereits erreicht!";
         return false;
     }
 }

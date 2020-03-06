@@ -67,7 +67,6 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
     $xpath = new DOMXPath($eventDatenbank);
     $eventsLength = $xpath->query('//event/@id')->length;
     $newEventID = $xpath->query('//event/@id')->item($eventsLength - 1)->nodeValue + 1;
-    echo $newEventID;
     $idAttribute = $xml->createAttribute('id');
     $event->appendChild($idAttribute);
     $event->setAttribute('id', $newEventID);
@@ -84,7 +83,6 @@ function insertIntoEventDatenbank($eventType, $startDatum, $dauerInTagen, $besch
         $eventDatenbank->save("Datenbank.xml");
         return true;
     } else {
-        echo "Problem with creating and validation new Registration!";
         return false;
     }
 }
